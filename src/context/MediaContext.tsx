@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import React, { createContext, useContext, useState, useEffect, useRef, useCallback, ReactNode } from "react";
 
 export interface Record {
   id: number;
@@ -78,25 +78,29 @@ const MediaContext = createContext<MediaContextType | undefined>(undefined);
 export function MediaProvider({ children }: { children: ReactNode }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const currentRecord = RECORDS[activeIndex];
 
-  const nextRecord = () => {
+  const nextRecord = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % RECORDS.length);
-  };
+  }, []);
 
-  const prevRecord = () => {
+  const prevRecord = useCallback(() => {
     setActiveIndex((prev) => (prev - 1 + RECORDS.length) % RECORDS.length);
-  };
+  }, []);
 
+  // Always play Old Town Road
   useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isPlaying) {
-      interval = setInterval(() => {
-        nextRecord();
-      }, 3500);
+    if (!audioRef.current) {
+      audioRef.current = new Audio("/Lil Nas X - Old Town Road (Official Video) ft. Billy Ray Cyrus.mp3");
+      audioRef.current.loop = true;
     }
-    return () => clearInterval(interval);
+    if (isPlaying) {
+      audioRef.current.play().catch(() => {});
+    } else {
+      audioRef.current.pause();
+    }
   }, [isPlaying]);
 
   return (
