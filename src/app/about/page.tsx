@@ -52,8 +52,8 @@ export default function AboutPage() {
 
             <div className="relative aspect-square rounded-[3rem] overflow-hidden group shadow-2xl border border-[#013DA6]/10">
               <Image
-                src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop"
-                alt="Studio Atmosphere"
+                src="/photos/dude.png"
+                alt="Glass Bison"
                 fill
                 className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
               />

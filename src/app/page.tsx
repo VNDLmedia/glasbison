@@ -284,8 +284,8 @@ export default function Home() {
                   <Reveal delay={0.1} animation="scale">
                     <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-[#013DA6]/10 group shadow-2xl bg-[#013DA6]/5">
                       <Image
-                        src="/john legend grammys.jpg"
-                        alt="John Legend at the Grammys"
+                        src="/photos/dude-mit-award.png"
+                        alt="Award Recognition"
                         fill
                         className="object-cover transition-transform duration-[3s] group-hover:scale-110"
                       />
@@ -304,8 +304,8 @@ export default function Home() {
                   <Reveal delay={0.3} animation="scale">
                     <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-[#013DA6]/10 group shadow-2xl bg-[#013DA6]/5">
                       <Image
-                        src="/photos/kai-grammys.jpeg"
-                        alt="Kai at the Grammys"
+                        src="/photos/award.png"
+                        alt="Industry Award"
                         fill
                         className="object-cover transition-transform duration-[3s] group-hover:scale-110"
                       />

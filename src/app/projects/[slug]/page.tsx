@@ -14,7 +14,7 @@ const PROJECT_DATA = {
   "global-shaping": {
     title: "Global Sound<br />Shaping",
     category: "Strategic A&R",
-    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop",
+    image: "/photos/kai-grammys.jpeg",
     fullDesc: "This project focused on scaling the impact of high-tier producers by integrating them into the global A&R workflows of major label groups. We developed a proprietary framework for talent scouting and catalog management that ensured maximum visibility for every record produced.",
     results: ["12 Billboard #1 Placements", "4x Platinum Certifications", "Global Sync Strategy Implementation"],
     stats: "2.4B Streams"
