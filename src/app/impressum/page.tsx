@@ -26,14 +26,14 @@ export default function Impressum() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             CONTENT — Multi-Column Layout
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="pb-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
+        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
-              <div className="lg:col-span-6 space-y-24">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+              <div className="lg:col-span-6 space-y-20">
                 <Reveal delay={0.1}>
                   <section>
-                    <h2 className="text-[10px] font-black text-[#013DA6]/30 uppercase tracking-[0.3em] mb-8 italic">Company</h2>
-                    <div className="text-3xl md:text-5xl font-display leading-tight text-[#013DA6] tracking-tight font-normal">
+                    <h2 className="text-[10px] font-black text-[#013DA6]/30 uppercase tracking-[0.3em] mb-6 italic">Company</h2>
+                    <div className="text-2xl md:text-4xl font-sans font-black leading-tight text-[#013DA6] tracking-[0.02em] uppercase">
                       {CONTACT.company}
                     </div>
                     <div className="mt-8 text-xl md:text-2xl font-light text-[#013DA6]/60 leading-relaxed font-sans italic">
@@ -57,11 +57,11 @@ export default function Impressum() {
                 </Reveal>
               </div>
 
-              <div className="lg:col-span-6 space-y-24">
+              <div className="lg:col-span-6 space-y-20">
                 <Reveal delay={0.3}>
                   <section>
-                    <h2 className="text-[10px] font-black text-[#013DA6]/30 uppercase tracking-[0.3em] mb-8 italic">Editorial Responsibility</h2>
-                    <div className="text-2xl md:text-3xl font-light text-[#013DA6]/60 leading-relaxed italic font-sans">
+                    <h2 className="text-[10px] font-black text-[#013DA6]/30 uppercase tracking-[0.3em] mb-6 italic">Editorial Responsibility</h2>
+                    <div className="text-xl md:text-2xl font-light text-[#013DA6]/60 leading-relaxed italic font-sans">
                       <p className="text-[#013DA6] font-medium not-italic mb-2">Maximilian Fritsch</p>
                       <p>{CONTACT.address.street}</p>
                       <p>{CONTACT.address.zip} {CONTACT.address.city}</p>
@@ -85,9 +85,9 @@ export default function Impressum() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             FOOTER MOMENT
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-64 bg-[#013DA6] text-center">
+        <section className="py-24 md:py-40 bg-[#013DA6] text-center">
           <Reveal>
-            <h2 className="font-display text-6xl md:text-[12rem] tracking-tighter opacity-10 leading-none italic">Unbreakable.</h2>
+            <h2 className="font-sans font-black text-5xl md:text-7xl lg:text-8xl tracking-[0.04em] uppercase opacity-10 leading-[1]">Unbreakable.</h2>
           </Reveal>
         </section>
       </main>

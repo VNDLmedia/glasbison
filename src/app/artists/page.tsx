@@ -27,11 +27,11 @@ export default function ArtistsPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             GALLERY — Blue on White Grid
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="pb-24 md:pb-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
+        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-7xl mx-auto">
-            <Reveal className="mb-24">
-              <h2 className="font-display text-5xl md:text-8xl tracking-tighter leading-none mb-8 text-[#013DA6]">Selected<br />Artists.</h2>
-              <p className="text-xl text-[#013DA6]/40 font-light max-w-xl italic">
+            <Reveal className="mb-20">
+              <h2 className="font-sans font-black text-4xl md:text-6xl tracking-[0.04em] uppercase leading-[1] mb-6 text-[#013DA6]">Selected<br />Artists.</h2>
+              <p className="text-lg text-[#013DA6]/40 font-light max-w-xl italic">
                 A curated selection of producers and songwriters who have collectively generated over 70 billion streams.
               </p>
             </Reveal>
@@ -57,7 +57,7 @@ export default function ArtistsPage() {
             <div className="space-y-12">
               <Reveal>
                 <p className="label !text-white/20 mb-6 italic uppercase tracking-[0.4em]">Operational Excellence</p>
-                <h2 className="font-display text-5xl md:text-8xl leading-[0.85] tracking-tighter">Beyond<br />Management.</h2>
+                <h2 className="font-sans font-black text-4xl md:text-6xl leading-[1] tracking-[0.04em] uppercase">Beyond<br />Management.</h2>
               </Reveal>
               <Reveal delay={0.2}>
                 <p className="text-xl md:text-2xl text-white/60 font-light leading-relaxed italic">
@@ -81,11 +81,11 @@ export default function ArtistsPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             CTA — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-64 px-6 bg-white text-[#013DA6] text-center relative z-10 rounded-t-[4rem]">
+        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] text-center relative z-10 rounded-t-[4rem]">
           <div className="max-w-4xl mx-auto">
             <Reveal>
-              <h2 className="font-display text-6xl md:text-[12rem] leading-[0.8] tracking-tighter mb-16">Define the<br />Next Sound.</h2>
-              <p className="text-xl md:text-3xl font-light text-[#013DA6]/40 mb-20 max-w-2xl mx-auto italic">
+              <h2 className="font-sans font-black text-5xl md:text-7xl lg:text-8xl leading-[1] tracking-[0.04em] uppercase mb-12">Define the<br />Next Sound.</h2>
+              <p className="text-lg md:text-2xl font-light text-[#013DA6]/40 mb-16 max-w-2xl mx-auto italic">
                 We are selectively reviewing new talent. If your vision matches our drive, let&apos;s talk.
               </p>
               <a href="/contact" className="btn btn-white !bg-[#013DA6] !text-white !px-16 !py-8 !text-lg !rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all font-bold tracking-widest uppercase">

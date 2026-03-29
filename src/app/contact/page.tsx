@@ -28,14 +28,14 @@ export default function ContactPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             FORM SECTION — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-32 items-start">
+        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
             {/* Left: Deep Info */}
             <div className="lg:col-span-5 space-y-24">
               <Reveal delay={0.1}>
                 <div className="space-y-6">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#013DA6]/30 italic">Direct Channel</h3>
-                  <a href={`mailto:${CONTACT.email}`} className="text-3xl md:text-5xl font-display text-[#013DA6] hover:opacity-60 transition-all border-b-2 border-[#013DA6]/10 pb-4 inline-block tracking-tighter">
+                  <a href={`mailto:${CONTACT.email}`} className="text-2xl md:text-3xl font-sans font-bold text-[#013DA6] hover:opacity-60 transition-all border-b-2 border-[#013DA6]/10 pb-4 inline-block tracking-[0.02em]">
                     {CONTACT.email}
                   </a>
                   <p className="text-lg text-[#013DA6]/40 font-light max-w-xs italic">For general inquiries, partnership proposals and press requests.</p>
@@ -45,7 +45,7 @@ export default function ContactPage() {
               <Reveal delay={0.2}>
                 <div className="space-y-6">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#013DA6]/30 italic">HQ / Representation</h3>
-                  <p className="text-2xl md:text-4xl font-light text-[#013DA6]/60 leading-relaxed italic tracking-tight">
+                  <p className="text-xl md:text-2xl font-light text-[#013DA6]/60 leading-relaxed italic tracking-tight">
                     {CONTACT.address.city}, Germany<br />
                     Operating Worldwide.
                   </p>
@@ -88,11 +88,11 @@ export default function ContactPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             STATEMENT MOMENT — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-64 px-6 bg-[#013DA6] text-white text-center relative overflow-hidden">
+        <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white text-center relative overflow-hidden">
           <div className="max-w-4xl mx-auto relative z-10">
             <Reveal>
-              <h2 className="font-display text-5xl md:text-[10rem] leading-[0.8] tracking-tighter mb-12 italic">Unbreakable<br />Vision.</h2>
-              <p className="text-xl md:text-2xl text-white/40 font-light max-w-xl mx-auto italic leading-relaxed">
+              <h2 className="font-sans font-black text-5xl md:text-7xl lg:text-8xl leading-[1] tracking-[0.04em] uppercase mb-10">Unbreakable<br />Vision.</h2>
+              <p className="text-lg md:text-xl text-white/40 font-light max-w-xl mx-auto italic leading-relaxed">
                 We believe in the power of creative intent. Let&apos;s build something that lasts.
               </p>
             </Reveal>

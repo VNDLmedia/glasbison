@@ -51,9 +51,9 @@ export default function ProjectsPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             PROJECT GALLERY — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="pb-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
+        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
               {PROJECTS.map((project, i) => (
                 <Reveal key={project.slug} delay={i * 0.1} animation="scale">
                   <Link href={`/projects/${project.slug}`} className="group block space-y-10">
@@ -73,7 +73,7 @@ export default function ProjectsPage() {
                     
                     <div className="pb-8 border-b border-[#013DA6]/10 font-sans">
                       <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#013DA6]/30 mb-6 block italic">{project.category}</span>
-                      <h3 className="text-4xl md:text-6xl font-display text-[#013DA6] leading-none mb-8 tracking-tight group-hover:translate-x-2 transition-transform duration-500">{project.title}</h3>
+                      <h3 className="text-3xl md:text-4xl font-sans font-black text-[#013DA6] leading-[1] mb-6 tracking-[0.02em] uppercase group-hover:translate-x-2 transition-transform duration-500">{project.title}</h3>
                       <p className="text-xl text-[#013DA6]/50 font-light max-w-md leading-relaxed italic">{project.desc}</p>
                     </div>
                   </Link>
@@ -86,11 +86,11 @@ export default function ProjectsPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             NETWORK MOMENT — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-64 px-6 bg-[#013DA6] text-white relative overflow-hidden">
+        <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white relative overflow-hidden">
           <div className="max-w-5xl mx-auto text-center relative z-10">
             <Reveal>
-              <h2 className="font-display text-6xl md:text-[12rem] leading-[0.8] tracking-tighter mb-16 italic">Scale With<br />Precision.</h2>
-              <p className="text-xl md:text-3xl font-light text-white/40 max-w-2xl mx-auto leading-relaxed italic">
+              <h2 className="font-sans font-black text-5xl md:text-7xl lg:text-8xl leading-[1] tracking-[0.04em] uppercase mb-12">Scale With<br />Precision.</h2>
+              <p className="text-lg md:text-2xl font-light text-white/40 max-w-2xl mx-auto leading-relaxed italic">
                 We bridge the gap between creative vision and global market infrastructure. Our projects are the proof.
               </p>
             </Reveal>

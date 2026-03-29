@@ -24,20 +24,20 @@ export default function AboutPage() {
         <ReturnHome />
 
         {/* Narrative Section */}
-        <section className="pb-24 md:pb-48 px-6 bg-white text-[#013DA6] rounded-b-[3rem] md:rounded-b-[5rem] relative z-10 shadow-2xl">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div className="space-y-12">
+        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] rounded-b-[3rem] md:rounded-b-[5rem] relative z-10 shadow-2xl">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div className="space-y-10">
               <Reveal>
-                <h2 className="font-display text-5xl md:text-8xl leading-none tracking-tighter">The Vision.</h2>
-                <div className="w-20 h-1.5 bg-[#013DA6] mt-8 rounded-full" />
+                <h2 className="font-sans font-black text-4xl md:text-6xl leading-[1] tracking-[0.04em] uppercase">The Vision.</h2>
+                <div className="w-20 h-1.5 bg-[#013DA6] mt-6 rounded-full" />
               </Reveal>
               <Reveal delay={0.1}>
-                <p className="text-xl md:text-2xl font-light leading-relaxed italic text-[#013DA6]/70">
+                <p className="text-lg md:text-xl font-light leading-relaxed italic text-[#013DA6]/70">
                   In an industry often defined by noise, we focus on resonance. We don&apos;t just secure placements; we build sustainable ecosystems where creative talent can thrive for decades.
                 </p>
               </Reveal>
               <Reveal delay={0.2}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <div>
                     <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-4 opacity-40 italic">Precision</h4>
                     <p className="text-sm font-medium leading-relaxed opacity-60">Every move is calculated. From contract structures to studio pairings, we operate with surgical precision.</p>
@@ -49,9 +49,9 @@ export default function AboutPage() {
                 </div>
               </Reveal>
             </div>
-            
+
             <div className="relative aspect-square rounded-[3rem] overflow-hidden group shadow-2xl border border-[#013DA6]/10">
-              <Image 
+              <Image
                 src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop"
                 alt="Studio Atmosphere"
                 fill
@@ -63,25 +63,25 @@ export default function AboutPage() {
         </section>
 
         {/* Global Reach */}
-        <section className="py-24 md:py-48 px-6 bg-[#013DA6]">
+        <section className="py-24 md:py-40 px-6 bg-[#013DA6]">
           <div className="max-w-7xl mx-auto text-center">
             <Reveal>
               <p className="label mb-8 text-white/30 italic uppercase tracking-[0.4em]">Global Infrastructure</p>
-              <h2 className="font-display text-5xl md:text-9xl tracking-tighter mb-20 leading-none">
+              <h2 className="font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-[0.04em] uppercase mb-16 leading-[1]">
                 Unlimited<br />Reach.
               </h2>
             </Reveal>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
               {[
                 { title: "Network", desc: "Access to decision-makers across every major territory and label group globally." },
                 { title: "Protection", desc: "Top-tier legal and administrative support to safeguard your intellectual property." },
                 { title: "Drive", desc: "Relentless pursuit of excellence in every session, every deal, and every release." }
               ].map((item, i) => (
                 <Reveal key={item.title} delay={i * 0.1}>
-                  <div className="p-10 border border-white/10 rounded-[2.5rem] bg-white/5 h-full transition-colors hover:bg-white/10">
-                    <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                    <p className="text-white/40 font-light leading-relaxed italic">{item.desc}</p>
+                  <div className="p-8 border border-white/10 rounded-[2rem] bg-white/5 h-full transition-colors hover:bg-white/10">
+                    <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                    <p className="text-white/40 font-light leading-relaxed italic text-sm">{item.desc}</p>
                   </div>
                 </Reveal>
               ))}

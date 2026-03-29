@@ -39,3 +39,20 @@ export function BisonWordmark({ height = 28, variant = "white", className = "" }
     />
   );
 }
+
+interface BisonSchriftzugProps {
+  height?: number;
+  className?: string;
+}
+
+export function BisonSchriftzug({ height = 80, className = "" }: BisonSchriftzugProps) {
+  return (
+    <Image
+      src="/Schriftzug.svg"
+      alt="Glass Bison"
+      width={Math.round(height * 8.55)}
+      height={height}
+      className={className}
+    />
+  );
+}

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Reveal } from "./Reveal";
-import { BisonLogo } from "./BisonLogo";
+import { BisonLogo, BisonSchriftzug } from "./BisonLogo";
 
 interface SubpageHeroProps {
   label: string;
@@ -11,24 +11,29 @@ interface SubpageHeroProps {
   subtitle?: string;
 }
 
-export function SubpageHero({ 
-  label, 
-  title, 
-  description, 
-  subtitle 
+export function SubpageHero({
+  label,
+  title,
+  description,
+  subtitle
 }: SubpageHeroProps) {
   return (
-    <section className="min-h-[90vh] flex flex-col justify-center px-6 relative overflow-hidden bg-[#013DA6] text-white">
-      {/* Refined Background Logo - Smaller and better positioned */}
-      <div className="absolute right-[-10%] bottom-[-10%] pointer-events-none opacity-[0.03]">
-        <BisonLogo size={800} variant="white" />
+    <section className="min-h-[90vh] flex flex-col justify-end px-6 relative overflow-hidden bg-[#013DA6] text-white">
+      {/* Background Schriftzug Watermark */}
+      <div className="absolute left-[5%] top-[15%] pointer-events-none opacity-[0.04]">
+        <BisonSchriftzug height={60} className="hidden md:block" />
       </div>
-      
-      <div className="max-w-7xl mx-auto w-full relative z-10 pt-32 pb-24">
+
+      {/* Background Logo */}
+      <div className="absolute right-[-5%] bottom-[-5%] pointer-events-none opacity-[0.03]">
+        <BisonLogo size={500} variant="white" />
+      </div>
+
+      <div className="max-w-7xl mx-auto w-full relative z-10 pt-48 pb-20 md:pb-28">
         <Reveal>
-          <p className="label mb-8 text-white/40 italic uppercase tracking-[0.5em]">{label}</p>
-          
-          <h1 className="font-display text-6xl md:text-[11rem] leading-[0.8] tracking-tighter mb-16">
+          <p className="label mb-10 text-white/40 italic uppercase tracking-[0.5em]">{label}</p>
+
+          <h1 className="font-sans font-black text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] leading-[1] tracking-[0.04em] uppercase mb-12">
             {title.split("<br />").map((line, i) => (
               <React.Fragment key={i}>
                 {line}
@@ -38,20 +43,20 @@ export function SubpageHero({
           </h1>
         </Reveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-12 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mt-8 items-end">
           {subtitle && (
-            <div className="lg:col-span-8">
+            <div className="lg:col-span-7">
               <Reveal delay={0.2}>
-                <p className="text-2xl md:text-5xl font-light leading-[1.1] text-white/80 italic">
+                <p className="text-xl md:text-3xl lg:text-4xl font-light leading-[1.2] text-white/70 italic">
                   {subtitle}
                 </p>
               </Reveal>
             </div>
           )}
           {description && (
-            <div className={`lg:col-span-4 ${!subtitle ? 'lg:col-start-9' : ''}`}>
+            <div className={`lg:col-span-4 ${!subtitle ? 'lg:col-start-9' : 'lg:col-start-9'}`}>
               <Reveal delay={0.3}>
-                <p className="text-lg text-white/30 font-light leading-relaxed max-w-sm italic">
+                <p className="text-base md:text-lg text-white/30 font-light leading-relaxed max-w-sm italic">
                   {description}
                 </p>
               </Reveal>
@@ -60,8 +65,8 @@ export function SubpageHero({
         </div>
       </div>
 
-      {/* Standardized Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-20">
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-20">
         <div className="w-px h-12 bg-gradient-to-b from-white to-transparent" />
       </div>
     </section>

@@ -25,20 +25,20 @@ export default function Datenschutz() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             CONTENT — Deep Dive
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="pb-24 md:pb-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
+        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
               {/* Sticky Sidebar Info */}
               <div className="lg:col-span-4">
-                <div className="sticky top-32 space-y-12">
+                <div className="sticky top-32 space-y-10">
                   <Reveal>
-                    <div className="p-8 border border-[#013DA6]/10 rounded-[2.5rem] bg-[#013DA6]/[0.02]">
-                      <h3 className="text-[10px] font-black text-[#013DA6] uppercase tracking-[0.3em] mb-6 italic">Last Updated</h3>
-                      <p className="text-xl font-medium font-sans">March 2026</p>
+                    <div className="p-8 border border-[#013DA6]/10 rounded-[2rem] bg-[#013DA6]/[0.02]">
+                      <h3 className="text-[10px] font-black text-[#013DA6] uppercase tracking-[0.3em] mb-4 italic">Last Updated</h3>
+                      <p className="text-lg font-medium font-sans">March 2026</p>
                     </div>
                   </Reveal>
                   <Reveal delay={0.1}>
-                    <div className="p-8 space-y-6 text-[#013DA6]">
+                    <div className="p-8 space-y-5 text-[#013DA6]">
                       <h3 className="text-[10px] font-black opacity-30 uppercase tracking-[0.3em] italic">Contact Privacy</h3>
                       <p className="text-sm opacity-60 leading-relaxed font-light font-sans">
                         For all data-related inquiries, please reach out to our legal department.
@@ -52,13 +52,13 @@ export default function Datenschutz() {
               {/* Main Policy Content */}
               <div className="lg:col-span-8 text-[#013DA6]">
                 <Reveal delay={0.2}>
-                  <div className="space-y-24">
+                  <div className="space-y-20">
                     <section>
-                      <h2 className="text-[10px] font-black opacity-20 uppercase tracking-[0.4em] mb-8 font-sans">01 / Introduction</h2>
-                      <p className="text-2xl md:text-4xl font-light leading-relaxed italic mb-8">
+                      <h2 className="text-[10px] font-black opacity-20 uppercase tracking-[0.4em] mb-6 font-sans">01 / Introduction</h2>
+                      <p className="text-xl md:text-2xl font-light leading-relaxed italic mb-6">
                         We prioritize the protection of your creative and personal assets.
                       </p>
-                      <div className="prose prose-sm max-w-none opacity-60 font-light leading-relaxed space-y-6 text-lg font-sans italic">
+                      <div className="prose prose-sm max-w-none opacity-60 font-light leading-relaxed space-y-5 text-base font-sans italic">
                         <p>
                           This website collects minimal data necessary for functionality. All processes are designed to respect the privacy of our visitors and clients.
                         </p>
@@ -66,8 +66,8 @@ export default function Datenschutz() {
                     </section>
 
                     <section>
-                      <h2 className="text-[10px] font-black opacity-20 uppercase tracking-[0.4em] mb-8 font-sans">02 / Controller</h2>
-                      <div className="text-xl md:text-3xl font-medium leading-tight space-y-2 italic font-sans">
+                      <h2 className="text-[10px] font-black opacity-20 uppercase tracking-[0.4em] mb-6 font-sans">02 / Controller</h2>
+                      <div className="text-lg md:text-2xl font-medium leading-snug space-y-2 italic font-sans">
                         <p>{CONTACT.company}</p>
                         <p className="opacity-40 font-light not-italic">{CONTACT.address.street}</p>
                         <p className="opacity-40 font-light not-italic">{CONTACT.address.zip} {CONTACT.address.city}</p>
@@ -75,8 +75,8 @@ export default function Datenschutz() {
                     </section>
 
                     <section>
-                      <h2 className="text-[10px] font-black opacity-20 uppercase tracking-[0.4em] mb-8 font-sans">03 / Data Security</h2>
-                      <div className="prose prose-sm max-w-none opacity-60 font-light leading-relaxed space-y-6 text-lg font-sans italic">
+                      <h2 className="text-[10px] font-black opacity-20 uppercase tracking-[0.4em] mb-6 font-sans">03 / Data Security</h2>
+                      <div className="prose prose-sm max-w-none opacity-60 font-light leading-relaxed space-y-5 text-base font-sans italic">
                         <p>
                           We implement industry-standard encryption and security protocols to protect your data. Our infrastructure is reviewed regularly to ensure compliance with the highest standards.
                         </p>
@@ -92,9 +92,9 @@ export default function Datenschutz() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             FOOTER MOMENT
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-64 bg-[#013DA6] text-center">
+        <section className="py-24 md:py-40 bg-[#013DA6] text-center">
           <Reveal>
-            <h2 className="font-display text-6xl md:text-[12rem] tracking-tighter opacity-10 leading-none">Safe &<br />Secure.</h2>
+            <h2 className="font-sans font-black text-5xl md:text-7xl lg:text-8xl tracking-[0.04em] uppercase opacity-10 leading-[1]">Safe &<br />Secure.</h2>
           </Reveal>
         </section>
       </main>

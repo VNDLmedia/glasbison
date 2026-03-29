@@ -326,31 +326,42 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             SERVICES — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="services" className="py-24 md:py-48 px-6 bg-[#013DA6] text-white relative z-10">
+        <section id="services" className="py-24 md:py-40 px-6 bg-[#013DA6] text-white relative z-10">
           <div className="max-w-7xl mx-auto">
-            <Reveal className="mb-24 md:mb-40">
+            {/* Header */}
+            <Reveal className="mb-20 md:mb-28">
               <p className="label mb-6 text-white/40">What We Do</p>
-              <h2 className="font-display text-5xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tighter font-normal">
-                Full-Service<br />Empowerment.
-              </h2>
-              <p className="text-white/30 text-xl font-light max-w-lg mt-12 leading-relaxed">
-                From high-level strategy to studio precision — we guide visionaries to build lasting legacies in a fast-paced industry.
-              </p>
+              <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
+                <h2 className="font-sans font-black text-4xl md:text-6xl lg:text-7xl leading-[1] tracking-[0.04em] uppercase">
+                  Full-Service<br />Empowerment.
+                </h2>
+                <p className="text-white/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
+                  From high-level strategy to studio precision — we guide visionaries to build lasting legacies in a fast-paced industry.
+                </p>
+              </div>
             </Reveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+            {/* Service Rows */}
+            <div className="border-t border-white/10">
               {SERVICES.map((s, i) => (
-                <Reveal key={s.slug} delay={i * 0.08} className="h-full">
-                  <TiltCard>
-                    <div className="p-10 md:p-14 relative overflow-hidden group border border-white/10 rounded-[3rem] bg-white/5 hover:bg-white/10 transition-colors h-full min-h-[320px]">
-                      <span className="absolute -bottom-10 -right-4 font-display text-[10rem] text-white/[0.03] pointer-events-none select-none group-hover:text-white/[0.06] transition-colors duration-700">
+                <Reveal key={s.slug} delay={i * 0.06}>
+                  <div className="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-10 md:py-14 border-b border-white/10 items-baseline hover:bg-white/[0.03] transition-colors duration-300 px-4 -mx-4 rounded-xl cursor-default">
+                    <div className="md:col-span-1">
+                      <span className="font-sans font-black text-2xl md:text-4xl text-white/10 group-hover:text-white/25 transition-colors duration-300 tracking-[0.04em]">
                         {s.slug}
                       </span>
-                      <span className="label text-white/30 block mb-8 text-xs">{s.slug}</span>
-                      <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-6">{s.title}</h3>
-                      <p className="text-lg text-white/40 font-light leading-relaxed">{s.desc}</p>
                     </div>
-                  </TiltCard>
+                    <div className="md:col-span-4">
+                      <h3 className="font-sans font-bold text-lg md:text-xl tracking-[0.02em] group-hover:translate-x-1 transition-transform duration-300">
+                        {s.title}
+                      </h3>
+                    </div>
+                    <div className="md:col-span-7">
+                      <p className="text-white/35 font-light text-base md:text-lg leading-relaxed">
+                        {s.desc}
+                      </p>
+                    </div>
+                  </div>
                 </Reveal>
               ))}
             </div>
@@ -360,22 +371,20 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             NETWORK — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="network" className="py-24 md:py-48 px-6 bg-[#013DA6] text-white relative z-10">
+        <section id="network" className="py-24 md:py-40 px-6 bg-[#013DA6] text-white relative z-10">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 md:mb-40 gap-8">
-              <Reveal>
-                <p className="label mb-6 text-white/40">Global Network</p>
-                <h2 className="font-display text-5xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tighter font-normal">
+            <Reveal className="mb-20 md:mb-28">
+              <p className="label mb-6 text-white/40">Global Network</p>
+              <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
+                <h2 className="font-sans font-black text-4xl md:text-6xl lg:text-7xl leading-[1] tracking-[0.04em] uppercase">
                   Strategic<br />Partnerships.
                 </h2>
-              </Reveal>
-              <Reveal delay={0.2} className="max-w-md lg:text-right">
-                <p className="text-white/30 text-xl font-light leading-relaxed">
+                <p className="text-white/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
                   Our influence spans across every major player in the music and entertainment landscape. A network built on trust and results.
                 </p>
-              </Reveal>
-            </div>
-            
+              </div>
+            </Reveal>
+
             <NetworkGrid />
           </div>
         </section>
@@ -383,23 +392,19 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             LABELS & COLLABS — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 bg-[#013DA6] overflow-hidden relative z-10">
-          <p className="label text-center mb-12 text-white/20 italic">Label &amp; Publisher Relationships</p>
+        <section className="py-16 md:py-24 bg-[#013DA6] overflow-hidden relative z-10">
           <Marquee speed={40}>
-            <div className="flex gap-24 px-12 italic">
+            <div className="flex gap-20 px-10">
               {LABELS.map((l) => (
-                <span key={l} className="text-sm md:text-base font-bold text-white/10 uppercase tracking-[0.4em] whitespace-nowrap">{l}</span>
+                <span key={l} className="text-xs md:text-sm font-bold text-white/10 uppercase tracking-[0.4em] whitespace-nowrap">{l}</span>
               ))}
             </div>
           </Marquee>
-          
-          <div className="h-12" />
-          
-          <p className="label text-center mb-12 text-white/20 italic">Selected Artist Collaborations</p>
+          <div className="h-8" />
           <Marquee speed={50} reverse>
-            <div className="flex gap-24 px-12">
+            <div className="flex gap-16 px-10">
               {ARTIST_CREDITS.map((a) => (
-                <span key={a} className="text-xl md:text-3xl font-display text-white/5 uppercase tracking-[0.2em] whitespace-nowrap">{a}</span>
+                <span key={a} className="text-base md:text-lg font-sans font-bold text-white/[0.06] uppercase tracking-[0.15em] whitespace-nowrap">{a}</span>
               ))}
             </div>
           </Marquee>
@@ -408,52 +413,56 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             ABOUT — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="about" className="py-24 md:py-48 px-6 bg-[#013DA6] relative z-10">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-32 items-start">
-            <div>
-              <Reveal>
-                <p className="label mb-8 text-white/40">About</p>
-                <h2 className="font-display text-5xl md:text-8xl lg:text-9xl leading-[0.95] mb-12 font-normal">
+        <section id="about" className="py-24 md:py-40 px-6 bg-[#013DA6] relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <Reveal className="mb-20 md:mb-28">
+              <p className="label mb-6 text-white/40">About</p>
+              <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
+                <h2 className="font-sans font-black text-4xl md:text-6xl lg:text-7xl leading-[1] tracking-[0.04em] uppercase">
                   Strength Meets<br />Transparency.
                 </h2>
-              </Reveal>
-              <Reveal delay={0.1}>
-                <p className="text-white/30 text-xl font-light leading-relaxed mb-8">
-                  Glass Bison stands for strength within the music industry. The bison represents resilience, drive, and the ability to move with force through a competitive, fast-paced environment.
-                </p>
-              </Reveal>
-              <Reveal delay={0.2}>
-                <p className="text-white/30 text-xl font-light leading-relaxed mb-12">
-                  The glass reflects clarity and protection — recognizing that great music and creative vision are valuable and worth safeguarding.
-                </p>
-              </Reveal>
-              <Reveal delay={0.3}>
-                <div className="flex items-center gap-4">
-                  <BisonLogo size={24} variant="white" className="opacity-30" />
-                  <span className="label !text-white/20 font-bold">Music and Entertainment</span>
+                <div className="max-w-md lg:text-right">
+                  <p className="text-white/30 text-lg font-light leading-relaxed">
+                    The bison represents resilience and force. The glass reflects clarity and protection — great music deserves safeguarding.
+                  </p>
                 </div>
-              </Reveal>
-            </div>
+              </div>
+            </Reveal>
 
-            <div className="space-y-6">
+            <div className="border-t border-white/10">
               {[
-                { n: "I", t: "Resilience", d: "We navigate challenges with unyielding determination, protecting our clients' interests at every turn." },
-                { n: "II", t: "Transparency", d: "Clear communication, honest feedback, and open books. You always know where you stand." },
-                { n: "III", t: "Vision", d: "We don't chase the next hit. We build sustainable, long-term careers with real cultural impact." },
+                { n: "01", t: "Resilience", d: "We navigate challenges with unyielding determination, protecting our clients' interests at every turn." },
+                { n: "02", t: "Transparency", d: "Clear communication, honest feedback, and open books. You always know where you stand." },
+                { n: "03", t: "Vision", d: "We don't chase the next hit. We build sustainable, long-term careers with real cultural impact." },
               ].map((p, i) => (
-                <Reveal key={p.n} delay={i * 0.1} direction="left">
-                  <div className="p-10 border border-white/10 rounded-[2.5rem] bg-white/5 hover:bg-white/10 transition-colors group">
-                    <div className="flex gap-8">
-                      <span className="font-display text-4xl text-white/10 shrink-0 w-12 font-normal group-hover:text-white/30 transition-colors">{p.n}</span>
-                      <div>
-                        <h3 className="text-xl font-bold mb-3">{p.t}</h3>
-                        <p className="text-base text-white/30 font-light leading-relaxed">{p.d}</p>
-                      </div>
+                <Reveal key={p.n} delay={i * 0.06}>
+                  <div className="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-10 md:py-14 border-b border-white/10 items-baseline hover:bg-white/[0.03] transition-colors duration-300 px-4 -mx-4 rounded-xl cursor-default">
+                    <div className="md:col-span-1">
+                      <span className="font-sans font-black text-2xl md:text-4xl text-white/10 group-hover:text-white/25 transition-colors duration-300 tracking-[0.04em]">
+                        {p.n}
+                      </span>
+                    </div>
+                    <div className="md:col-span-3">
+                      <h3 className="font-sans font-bold text-lg md:text-xl tracking-[0.02em] group-hover:translate-x-1 transition-transform duration-300">
+                        {p.t}
+                      </h3>
+                    </div>
+                    <div className="md:col-span-8">
+                      <p className="text-white/35 font-light text-base md:text-lg leading-relaxed">
+                        {p.d}
+                      </p>
                     </div>
                   </div>
                 </Reveal>
               ))}
             </div>
+
+            <Reveal delay={0.3} className="mt-12">
+              <div className="flex items-center gap-4">
+                <BisonLogo size={20} variant="white" className="opacity-25" />
+                <span className="text-[10px] font-bold text-white/20 uppercase tracking-[0.25em]">Music and Entertainment</span>
+              </div>
+            </Reveal>
           </div>
         </section>
 
