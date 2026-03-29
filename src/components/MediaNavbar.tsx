@@ -33,7 +33,7 @@ export function MediaNavbar() {
   return (
     <div className={`fixed top-6 right-6 z-[60] hidden lg:flex items-center transition-all duration-500 ${isScrolled ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}`}>
       <div 
-        className="liquid-glass !rounded-full px-4 py-2 flex items-center gap-4 bg-white/5 border-white/10 backdrop-blur-3xl shadow-2xl transition-all duration-500 hover:bg-white/10 group cursor-pointer"
+        className="liquid-glass !rounded-full px-4 py-2 flex items-center gap-4 !bg-[#013DA6]/70 !border-white/10 !backdrop-blur-2xl shadow-[0_20px_50px_rgba(1,61,166,0.4)] transition-all duration-500 hover:!bg-[#013DA6]/80 group cursor-pointer"
       >
         
         {/* Album Art (Small) */}
