@@ -19,7 +19,7 @@ export const RECORDS: Record[] = [
     artist: "Lil Nas X",
     genre: "Pop / Hip-Hop",
     color: "#e11d48",
-    coverUrl: "/covers/Lil Nas X Montero.jpg",
+    coverUrl: "/Covers/Lil Nas X Montero.jpg",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const RECORDS: Record[] = [
     artist: "Gunna",
     genre: "Hip-Hop / Melodic",
     color: "#2563eb",
-    coverUrl: "/covers/Gunna Drip too Hard.jpg",
+    coverUrl: "/Covers/Gunna Drip too Hard.jpg",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ export const RECORDS: Record[] = [
     artist: "Migos",
     genre: "Hip-Hop / Trap",
     color: "#f97316",
-    coverUrl: "/covers/Migos Culture.jpg",
+    coverUrl: "/Covers/Migos Culture.jpg",
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ export const RECORDS: Record[] = [
     artist: "Nicki Minaj",
     genre: "Hip-Hop / Pop",
     color: "#d946ef",
-    coverUrl: "/covers/Nicki Minaj Pink Friday.jpg",
+    coverUrl: "/Covers/Nicki Minaj Pink Friday.jpg",
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ export const RECORDS: Record[] = [
     artist: "Latto",
     genre: "Hip-Hop",
     color: "#059669",
-    coverUrl: "/covers/Latto 777.jpg",
+    coverUrl: "/Covers/Latto 777.jpg",
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ export const RECORDS: Record[] = [
     artist: "Pooh Shiesty",
     genre: "Hip-Hop / Trap",
     color: "#4f46e5",
-    coverUrl: "/covers/Pooh Shiesty Certified.jpg",
+    coverUrl: "/Covers/Pooh Shiesty Certified.jpg",
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ export const RECORDS: Record[] = [
     artist: "T-Pain",
     genre: "R&B / Hip-Hop",
     color: "#0891b2",
-    coverUrl: "/covers/T Pain Right Hand.jpg",
+    coverUrl: "/Covers/T Pain Right Hand.jpg",
   },
   {
     id: 8,
@@ -75,7 +75,7 @@ export const RECORDS: Record[] = [
     artist: "Lil Yachty",
     genre: "Hip-Hop / Experimental",
     color: "#dc2626",
-    coverUrl: "/covers/Lil Yachty Lil Boat.jpg",
+    coverUrl: "/Covers/Lil Yachty Lil Boat.jpg",
   },
 ];
 
