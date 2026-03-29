@@ -120,7 +120,7 @@ function DiscographySection() {
   const color = RECORDS[activeIndex]?.color || "#013DA6";
   return (
     <section id="discography" className="py-12 md:py-20 px-6 text-white relative z-10 overflow-hidden transition-colors duration-1000" style={{ backgroundColor: color }}>
-      <div className="absolute inset-0 bg-[#013DA6]/70 pointer-events-none" />
+      <div className="absolute inset-0 bg-[#013DA6]/85 pointer-events-none" />
       <div className="max-w-7xl mx-auto relative z-10">
         <Reveal className="mb-8 md:mb-14 text-center lg:text-left">
           <p className="label mb-3 text-white/40">Discography</p>
