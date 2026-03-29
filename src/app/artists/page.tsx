@@ -1,0 +1,138 @@
+"use client";
+
+import React from "react";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { Reveal } from "@/components/Reveal";
+import { ArtistGallery } from "@/components/ArtistGallery";
+import { BisonLogo } from "@/components/BisonLogo";
+import Image from "next/image";
+
+export default function ArtistsPage() {
+  return (
+    <div className="min-h-screen bg-[#013DA6] text-white flex flex-col font-sans">
+      <Navbar />
+      
+      <main className="flex-1">
+        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            HERO — Massive & Cinematic (Blue)
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+        <section className="min-h-[90vh] flex flex-col justify-center px-6 relative overflow-hidden bg-[#013DA6]">
+          {/* Huge Background Logo */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 pointer-events-none opacity-[0.03]">
+            <BisonLogo size={1200} variant="white" />
+          </div>
+          
+          <div className="max-w-7xl mx-auto w-full relative z-10 pt-24">
+            <Reveal>
+              <p className="label mb-12 text-white/40 italic uppercase tracking-[0.5em]">The Roster</p>
+              <h1 className="font-display text-7xl md:text-[14rem] leading-[0.75] tracking-tighter mb-16">
+                Sonic<br />Visionaries.
+              </h1>
+            </Reveal>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-20">
+              <div className="lg:col-span-7">
+                <Reveal delay={0.2}>
+                  <p className="text-2xl md:text-5xl font-light leading-[1.1] text-white/80 italic">
+                    Representing the architects behind the world&apos;s most defining records.
+                  </p>
+                </Reveal>
+              </div>
+              <div className="lg:col-span-5 flex items-end">
+                <Reveal delay={0.3}>
+                  <p className="text-lg text-white/30 font-light leading-relaxed max-w-sm">
+                    Our artists don&apos;t just follow trends—they set them. We provide the strategic infrastructure for long-term cultural dominance.
+                  </p>
+                </Reveal>
+              </div>
+            </div>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-20">
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] vertical-text">Explore Roster</span>
+            <div className="w-px h-12 bg-gradient-to-b from-white to-transparent" />
+          </div>
+        </section>
+
+        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            TRANSITION — White Space
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+        <section className="py-24 bg-white" />
+
+        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            GALLERY — Blue on White Grid
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-t-[4rem] -mt-20 shadow-2xl">
+          <div className="max-w-7xl mx-auto">
+            <Reveal className="mb-24">
+              <h2 className="font-display text-5xl md:text-8xl tracking-tighter leading-none mb-8">Selected<br />Artists.</h2>
+              <p className="text-xl text-[#013DA6]/40 font-light max-w-xl">
+                A curated selection of producers and songwriters who have collectively generated over 70 billion streams.
+              </p>
+            </Reveal>
+            <ArtistGallery />
+          </div>
+        </section>
+
+        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            PHILOSOPHY — White on Blue
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+        <section className="py-24 md:py-48 px-6 bg-[#013DA6] text-white overflow-hidden relative">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
+              <Image 
+                src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop"
+                alt="Studio Vibes"
+                fill
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+              />
+              <div className="absolute inset-0 bg-[#013DA6]/20 mix-blend-overlay" />
+            </div>
+            
+            <div className="space-y-12">
+              <Reveal>
+                <p className="label !text-white/20 mb-6 italic uppercase tracking-[0.4em]">Operational Excellence</p>
+                <h2 className="font-display text-5xl md:text-8xl leading-[0.85] tracking-tighter">Beyond<br />Management.</h2>
+              </Reveal>
+              <Reveal delay={0.2}>
+                <p className="text-xl md:text-2xl text-white/60 font-light leading-relaxed italic">
+                  &quot;We don&apos;t just manage schedules; we manage legacies. Every career move is a strategic step towards industry permanence.&quot;
+                </p>
+              </Reveal>
+              <div className="grid grid-cols-2 gap-8 pt-8 border-t border-white/10">
+                <div>
+                  <h4 className="font-bold text-white mb-2 italic">A&R Direction</h4>
+                  <p className="text-sm text-white/30 font-light leading-relaxed">Active song-plugging and session curation with global major artists.</p>
+                </div>
+                <div>
+                  <h4 className="font-bold text-white mb-2 italic">Strategic Deals</h4>
+                  <p className="text-sm text-white/30 font-light leading-relaxed">Structuring publishing and label partnerships that protect your future.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            CTA — Blue on White
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+        <section className="py-24 md:py-64 px-6 bg-white text-[#013DA6] text-center relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <Reveal>
+              <h2 className="font-display text-6xl md:text-[12rem] leading-[0.8] tracking-tighter mb-16">Define the<br />Next Sound.</h2>
+              <p className="text-xl md:text-3xl font-light text-[#013DA6]/40 mb-20 max-w-2xl mx-auto italic">
+                We are selectively reviewing new talent. If your vision matches our drive, let&apos;s talk.
+              </p>
+              <a href="/contact" className="btn btn-white !bg-[#013DA6] !text-white !px-16 !py-8 !text-lg !rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all">
+                Submit Inquiry
+              </a>
+            </Reveal>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+}
