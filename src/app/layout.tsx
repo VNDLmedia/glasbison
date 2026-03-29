@@ -10,6 +10,8 @@ import { CookieNotice } from "@/components/CookieNotice";
 const rafaella = localFont({
   src: "../../public/Rafaella.otf",
   variable: "--font-rafaella",
+  weight: "100 900",
+  display: "swap",
 });
 
 export const metadata: Metadata = {

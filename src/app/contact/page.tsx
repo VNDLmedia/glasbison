@@ -91,7 +91,7 @@ export default function ContactPage() {
         <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white text-center relative overflow-hidden">
           <div className="max-w-4xl mx-auto relative z-10">
             <Reveal>
-              <h2 className="font-sans font-black text-5xl md:text-7xl lg:text-8xl leading-[1] tracking-[0.04em] uppercase mb-10">Unbreakable<br />Vision.</h2>
+              <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-10 italic">Unbreakable<br />Vision.</h2>
               <p className="text-lg md:text-xl text-white/40 font-light max-w-xl mx-auto italic leading-relaxed">
                 We believe in the power of creative intent. Let&apos;s build something that lasts.
               </p>

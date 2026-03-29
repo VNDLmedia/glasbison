@@ -18,7 +18,7 @@ export default function NotFound() {
 
         <div className="relative z-10 text-center">
           <p className="label mb-8">Error 404</p>
-          <h1 className="font-sans font-black text-5xl md:text-7xl lg:text-8xl leading-[1] mb-10 tracking-[0.04em] uppercase">
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] mb-10 tracking-tight italic">
             Lost in<br />the Sound.
           </h1>
           <p className="text-white/40 text-lg md:text-xl font-light max-w-md mx-auto mb-16 leading-relaxed">

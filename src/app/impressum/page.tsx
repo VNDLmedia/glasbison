@@ -87,7 +87,7 @@ export default function Impressum() {
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
         <section className="py-24 md:py-40 bg-[#013DA6] text-center">
           <Reveal>
-            <h2 className="font-sans font-black text-5xl md:text-7xl lg:text-8xl tracking-[0.04em] uppercase opacity-10 leading-[1]">Unbreakable.</h2>
+            <h2 className="font-display text-5xl md:text-7xl lg:text-8xl tracking-tight opacity-10 leading-[0.95] italic">Unbreakable.</h2>
           </Reveal>
         </section>
       </main>

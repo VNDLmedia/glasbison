@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Reveal } from "./Reveal";
-import { BisonSchriftzug } from "./BisonLogo";
+import { BisonWordmarkFull } from "./BisonLogo";
 
 interface SubpageHeroProps {
   label: string;
@@ -19,18 +19,18 @@ export function SubpageHero({
 }: SubpageHeroProps) {
   return (
     <section className="min-h-[90vh] flex flex-col justify-end px-6 relative overflow-hidden bg-[#013DA6] text-white">
-      {/* Prominent Schriftzug Logo */}
-      <div className="absolute left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-[0.06]">
-        <BisonSchriftzug height={40} className="block md:hidden" />
-        <BisonSchriftzug height={100} className="hidden md:block lg:hidden" />
-        <BisonSchriftzug height={140} className="hidden lg:block" />
+      {/* Bison Wordmark Watermark */}
+      <div className="absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-[0.05]">
+        <BisonWordmarkFull height={180} className="block md:hidden" />
+        <BisonWordmarkFull height={320} className="hidden md:block lg:hidden" />
+        <BisonWordmarkFull height={420} className="hidden lg:block" />
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10 pt-48 pb-20 md:pb-28">
         <Reveal>
           <p className="label mb-10 text-white/40 italic uppercase tracking-[0.5em]">{label}</p>
 
-          <h1 className="font-sans font-black text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] leading-[1] tracking-[0.04em] uppercase mb-12">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] leading-[0.95] tracking-tight mb-12">
             {title.split("<br />").map((line, i) => (
               <React.Fragment key={i}>
                 {line}

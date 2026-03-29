@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme inline {
+@theme {
   --color-brand: #013DA6;
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-display: var(--font-rafaella);
@@ -95,8 +95,6 @@ body::-webkit-scrollbar { display: none; }
 
 .font-display {
   font-family: var(--font-display);
-  font-weight: normal;
-  font-style: normal;
 }
 
 .label {

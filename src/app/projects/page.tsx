@@ -118,7 +118,7 @@ export default function ProjectsPage() {
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-20 md:mb-28">
               <p className="label mb-6 text-white/40">Impact</p>
-              <h2 className="font-sans font-black text-4xl md:text-6xl lg:text-7xl leading-[1] tracking-[0.04em] uppercase">
+              <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
                 Scale With<br />Precision.
               </h2>
             </Reveal>

@@ -31,7 +31,7 @@ export function Navbar() {
         <div
           className={`flex items-center justify-between transition-all duration-500 w-full ${
             isScrolled
-              ? "liquid-glass max-w-fit !rounded-full px-6 py-3 !overflow-visible shadow-[0_20px_50px_rgba(1,61,166,0.2)] border-white/20 bg-[#013DA6]/10"
+              ? "liquid-glass max-w-fit !rounded-full px-6 py-3 !overflow-visible shadow-[0_20px_50px_rgba(1,61,166,0.3)] border-white/15 bg-[#013DA6]/60 backdrop-blur-xl"
               : "max-w-7xl px-0 py-0 bg-transparent border-transparent"
           }`}
           style={{ transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}

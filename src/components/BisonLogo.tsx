@@ -79,3 +79,21 @@ export function BisonLogoSchriftzug({ height = 80, className = "" }: BisonLogoSc
     />
   );
 }
+
+interface BisonWordmarkFullProps {
+  height?: number;
+  className?: string;
+}
+
+export function BisonWordmarkFull({ height = 120, className = "" }: BisonWordmarkFullProps) {
+  // Full wordmark (bison + text), aspect ratio ~1.76:1
+  return (
+    <Image
+      src="/brand/wordmark-white.svg"
+      alt="Glass Bison"
+      width={Math.round(height * 1.76)}
+      height={height}
+      className={className}
+    />
+  );
+}

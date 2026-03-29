@@ -28,7 +28,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div className="space-y-10">
               <Reveal>
-                <h2 className="font-sans font-black text-4xl md:text-6xl leading-[1] tracking-[0.04em] uppercase">The Vision.</h2>
+                <h2 className="font-display text-4xl md:text-6xl leading-[0.95] tracking-tight">The Vision.</h2>
                 <div className="w-20 h-1.5 bg-[#013DA6] mt-6 rounded-full" />
               </Reveal>
               <Reveal delay={0.1}>
@@ -67,7 +67,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto text-center">
             <Reveal>
               <p className="label mb-8 text-white/30 italic uppercase tracking-[0.4em]">Global Infrastructure</p>
-              <h2 className="font-sans font-black text-4xl md:text-6xl lg:text-7xl tracking-[0.04em] uppercase mb-16 leading-[1]">
+              <h2 className="font-display text-5xl md:text-7xl lg:text-8xl tracking-tight mb-16 leading-[0.95] italic">
                 Unlimited<br />Reach.
               </h2>
             </Reveal>

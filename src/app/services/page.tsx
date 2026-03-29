@@ -34,7 +34,7 @@ export default function ServicesPage() {
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start border-b border-[#013DA6]/10 pb-20 md:pb-28">
                     <div className="lg:col-span-4">
                       <span className="font-sans font-black text-5xl md:text-7xl text-[#013DA6]/10 block mb-6 tracking-[0.04em]">{service.slug}</span>
-                      <h3 className="text-2xl md:text-4xl font-sans font-black text-[#013DA6] leading-[1] tracking-[0.04em] uppercase">{service.title}</h3>
+                      <h3 className="text-2xl md:text-4xl font-display text-[#013DA6] leading-[0.95] tracking-tight">{service.title}</h3>
                     </div>
                     <div className="lg:col-span-8 lg:pt-8">
                       <p className="text-xl md:text-2xl font-light leading-relaxed text-[#013DA6]/60 italic mb-10">
@@ -55,7 +55,7 @@ export default function ServicesPage() {
         <section className="py-24 md:py-48 px-6 bg-[#013DA6] text-white relative overflow-hidden text-center">
           <div className="max-w-5xl mx-auto relative z-10">
             <Reveal>
-              <h2 className="font-sans font-black text-5xl md:text-7xl lg:text-8xl leading-[1] tracking-[0.04em] uppercase mb-12">Scale Without<br />Compromise.</h2>
+              <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-12 italic">Scale Without<br />Compromise.</h2>
               <p className="text-lg md:text-2xl font-light text-white/40 max-w-2xl mx-auto leading-relaxed italic">
                 We believe that great talent deserves an infrastructure that matches its ambition. Our services are the engine for that growth.
               </p>

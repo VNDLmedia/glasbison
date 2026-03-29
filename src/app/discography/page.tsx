@@ -30,7 +30,7 @@ export default function DiscographyPage() {
         <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-20">
-              <h2 className="font-sans font-black text-4xl md:text-6xl tracking-[0.04em] uppercase leading-[1] mb-8">The<br />Hits.</h2>
+              <h2 className="font-display text-5xl md:text-7xl tracking-tight leading-[0.95] mb-8 italic">The<br />Hits.</h2>
               <div className="w-24 h-1.5 bg-[#013DA6] rounded-full" />
             </Reveal>
 
@@ -85,7 +85,7 @@ export default function DiscographyPage() {
         <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white relative overflow-hidden">
           <div className="max-w-5xl mx-auto text-center relative z-10">
             <Reveal>
-              <h2 className="font-sans font-black text-5xl md:text-7xl lg:text-8xl leading-[1] tracking-[0.04em] uppercase mb-12">70+ Billion<br />Streams.</h2>
+              <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-12 italic">70+ Billion<br />Streams.</h2>
               <p className="text-lg md:text-2xl font-light text-white/40 max-w-2xl mx-auto leading-relaxed italic">
                 Our management and A&R strategy is backed by data. We optimize for reach without compromising artistic integrity.
               </p>

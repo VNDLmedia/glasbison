@@ -210,7 +210,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-24 md:mb-40 text-center lg:text-left">
               <p className="label mb-6 text-white/40">Discography</p>
-              <h2 className="font-display text-5xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tighter font-normal">
+              <h2 className="font-display text-5xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tight font-normal">
                 The Catalog of<br />Excellence.
               </h2>
             </Reveal>
@@ -225,7 +225,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-24 md:mb-40">
               <p className="label mb-6 !text-[#013DA6]/40">Artist Credits</p>
-              <h2 className="font-display text-5xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tighter font-normal text-[#013DA6]">
+              <h2 className="font-display text-5xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tight font-normal text-[#013DA6]">
                 The Visionaries<br />Behind the Hits.
               </h2>
             </Reveal>
@@ -245,7 +245,7 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 md:mb-40 gap-8">
               <Reveal>
                 <p className="label mb-6 !text-[#013DA6]/40">Proven Results</p>
-                <h2 className="font-display text-5xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tighter font-normal text-[#013DA6]">
+                <h2 className="font-display text-5xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tight font-normal text-[#013DA6]">
                   The Gold<br />Standard.
                 </h2>
               </Reveal>
@@ -332,7 +332,7 @@ export default function Home() {
             <Reveal className="mb-20 md:mb-28">
               <p className="label mb-6 text-white/40">What We Do</p>
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
-                <h2 className="font-sans font-black text-4xl md:text-6xl lg:text-7xl leading-[1] tracking-[0.04em] uppercase">
+                <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
                   Full-Service<br />Empowerment.
                 </h2>
                 <p className="text-white/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
@@ -376,7 +376,7 @@ export default function Home() {
             <Reveal className="mb-20 md:mb-28">
               <p className="label mb-6 text-white/40">Global Network</p>
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
-                <h2 className="font-sans font-black text-4xl md:text-6xl lg:text-7xl leading-[1] tracking-[0.04em] uppercase">
+                <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
                   Strategic<br />Partnerships.
                 </h2>
                 <p className="text-white/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
@@ -418,7 +418,7 @@ export default function Home() {
             <Reveal className="mb-20 md:mb-28">
               <p className="label mb-6 text-white/40">About</p>
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
-                <h2 className="font-sans font-black text-4xl md:text-6xl lg:text-7xl leading-[1] tracking-[0.04em] uppercase">
+                <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
                   Strength Meets<br />Transparency.
                 </h2>
                 <div className="max-w-md lg:text-right">
