@@ -187,8 +187,8 @@ export default function Home() {
             {ACHIEVEMENTS.map((a, i) => (
               <Reveal key={a.label} delay={i * 0.12} animation="scale" className="h-full">
                 <TiltCard>
-                  <div className="p-8 md:p-12 text-center h-full flex flex-col justify-center border border-[#013DA6]/10 rounded-[2.5rem] hover:bg-[#013DA6]/5 transition-colors group min-h-[240px]">
-                    <div className="font-display text-5xl md:text-7xl mb-4 font-normal group-hover:scale-110 transition-transform duration-500">
+                  <div className="p-6 md:p-10 text-center h-full flex flex-col justify-center border border-[#013DA6]/10 rounded-[2rem] hover:bg-[#013DA6]/5 transition-colors group min-h-[180px]">
+                    <div className="font-sans font-black text-3xl md:text-5xl mb-4 tracking-tight group-hover:scale-110 transition-transform duration-500">
                       {a.value.includes("+") ? (
                         <CountUp target={parseInt(a.value)} suffix="+" duration={2} />
                       ) : (
@@ -210,8 +210,8 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-24 md:mb-40 text-center lg:text-left">
               <p className="label mb-6 text-white/40">Discography</p>
-              <h2 className="font-display text-5xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tight font-normal">
-                The Catalog of<br />Excellence.
+              <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight font-normal">
+                Discography.
               </h2>
             </Reveal>
             <VinylCarousel />
@@ -225,7 +225,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-24 md:mb-40">
               <p className="label mb-6 !text-[#013DA6]/40">Artist Credits</p>
-              <h2 className="font-display text-5xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tight font-normal text-[#013DA6]">
+              <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight font-normal text-[#013DA6]">
                 The Visionaries<br />Behind the Hits.
               </h2>
             </Reveal>
@@ -245,7 +245,7 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 md:mb-40 gap-8">
               <Reveal>
                 <p className="label mb-6 !text-[#013DA6]/40">Proven Results</p>
-                <h2 className="font-display text-5xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tight font-normal text-[#013DA6]">
+                <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight font-normal text-[#013DA6]">
                   The Gold<br />Standard.
                 </h2>
               </Reveal>
@@ -309,7 +309,7 @@ export default function Home() {
                           <p className="text-sm text-[#013DA6]/40 mt-2 font-light italic">{c.title}</p>
                         </div>
                         <div className="text-right">
-                          <span className="font-display text-3xl md:text-5xl text-[#013DA6]/10 group-hover:text-[#013DA6]/30 transition-all duration-700 block leading-none mb-2">
+                          <span className="font-sans font-black text-2xl md:text-4xl text-[#013DA6]/10 group-hover:text-[#013DA6]/30 transition-all duration-700 block leading-none mb-2">
                             {c.units.split(" ")[0]}
                           </span>
                           <span className="text-[10px] text-[#013DA6]/20 uppercase tracking-widest font-bold">Units</span>
@@ -333,7 +333,7 @@ export default function Home() {
               <p className="label mb-6 text-white/40">What We Do</p>
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
                 <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
-                  Full-Service<br />Empowerment.
+                  Our<br />Services.
                 </h2>
                 <p className="text-white/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
                   From high-level strategy to studio precision — we guide visionaries to build lasting legacies in a fast-paced industry.
@@ -520,7 +520,7 @@ export default function Home() {
             <div className="lg:col-span-6">
               <Reveal>
                 <p className="label mb-8 !text-[#013DA6]/40">Contact</p>
-                <h2 className="font-display text-5xl md:text-8xl lg:text-9xl leading-[0.92] mb-10 font-normal text-[#013DA6]">
+                <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-10 font-normal text-[#013DA6]">
                   Let&apos;s Build<br />Something Great.
                 </h2>
               </Reveal>

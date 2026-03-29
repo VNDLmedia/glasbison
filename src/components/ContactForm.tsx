@@ -42,7 +42,7 @@ export function ContactForm() {
         <div className="w-16 h-16 bg-[#013DA6] rounded-full flex items-center justify-center mb-8 shadow-xl shadow-[#013DA6]/20">
           <Check className="w-8 h-8 text-white" />
         </div>
-        <h3 className="text-4xl md:text-5xl font-display text-[#013DA6] mb-6 leading-none">Success.</h3>
+        <h3 className="text-4xl md:text-5xl sans font-bold text-[#013DA6] mb-6 leading-none">Success.</h3>
         <p className="text-[#013DA6]/50 text-xl font-light max-w-sm mb-12">
           Your message has been sent. We will review it and get back to you shortly.
         </p>
@@ -70,7 +70,7 @@ export function ContactForm() {
             >
               <div>
                 <p className="label !text-[#013DA6]/30 mb-4">Step 01 — Interest</p>
-                <h3 className="text-4xl md:text-6xl font-display text-[#013DA6] mb-12 tracking-tight leading-none">I am interested in...</h3>
+                <h3 className="text-4xl md:text-6xl sans font-bold text-[#013DA6] mb-12 tracking-tight leading-none">I am interested in...</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {options.map((opt) => (
                     <button
@@ -104,7 +104,7 @@ export function ContactForm() {
                   <p className="label !text-[#013DA6]/30">Step 02 — Personal</p>
                   <button onClick={prevStep} className="text-[10px] font-bold text-[#013DA6]/40 hover:text-[#013DA6] transition-colors uppercase tracking-widest">Back</button>
                 </div>
-                <h3 className="text-4xl md:text-6xl font-display text-[#013DA6] mb-12 tracking-tight leading-none">My name is...</h3>
+                <h3 className="text-4xl md:text-6xl sans font-bold text-[#013DA6] mb-12 tracking-tight leading-none">My name is...</h3>
                 <div className="space-y-12">
                   <div className="relative">
                     <input
@@ -155,7 +155,7 @@ export function ContactForm() {
                   <p className="label !text-[#013DA6]/30">Step 03 — Message</p>
                   <button onClick={prevStep} className="text-[10px] font-black text-[#013DA6]/40 hover:text-[#013DA6] transition-colors uppercase tracking-widest">Back</button>
                 </div>
-                <h3 className="text-4xl md:text-6xl font-display text-[#013DA6] mb-12 tracking-tight leading-none">How can we help?</h3>
+                <h3 className="text-4xl md:text-6xl sans font-bold text-[#013DA6] mb-12 tracking-tight leading-none">How can we help?</h3>
                 <div className="relative">
                   <textarea
                     required

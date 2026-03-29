@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Reveal } from "./Reveal";
-import { BisonWordmarkFull } from "./BisonLogo";
 
 interface SubpageHeroProps {
   label: string;
@@ -20,11 +19,13 @@ export function SubpageHero({
   return (
     <section className="min-h-[90vh] flex flex-col justify-end px-6 relative overflow-hidden bg-[#013DA6] text-white">
       {/* Bison Wordmark Watermark */}
-      <div className="absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-[0.07]">
-        <BisonWordmarkFull height={200} className="block md:hidden" />
-        <BisonWordmarkFull height={360} className="hidden md:block lg:hidden" />
-        <BisonWordmarkFull height={480} className="hidden lg:block" />
-      </div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/brand/wordmark-white.svg"
+        alt=""
+        aria-hidden="true"
+        className="absolute left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 pointer-events-none w-[280px] md:w-[500px] lg:w-[650px] h-auto opacity-[0.08]"
+      />
 
       <div className="max-w-7xl mx-auto w-full relative z-10 pt-48 pb-20 md:pb-28">
         <Reveal>

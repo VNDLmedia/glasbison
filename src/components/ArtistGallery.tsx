@@ -32,7 +32,7 @@ interface Artist {
 const ARTISTS: Artist[] = [
   {
     name: "Lil Nas X",
-    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop",
+    image: "/artists/Lil-Nas-X.png",
     size: "large",
     bio: "Record-breaking artist and cultural icon. Known for blending genre boundaries and cinematic visual storytelling.",
     stats: "70+ Billion Streams · Diamond Certified",
@@ -42,7 +42,7 @@ const ARTISTS: Artist[] = [
   },
   {
     name: "Gunna",
-    image: "https://images.unsplash.com/photo-1571266028243-3716f02d2d2e?q=80&w=1000&auto=format&fit=crop",
+    image: "/artists/Gunna.png",
     size: "normal",
     bio: "The master of melodic flow. A driving force in modern trap and fashion icon.",
     stats: "Multi-Platinum · #1 Billboard Albums",
@@ -52,7 +52,7 @@ const ARTISTS: Artist[] = [
   },
   {
     name: "Nicki Minaj",
-    image: "https://images.unsplash.com/photo-1516280440614-37939bb92b8f?q=80&w=1000&auto=format&fit=crop",
+    image: "/artists/Nicki-Minaj.png",
     size: "normal",
     bio: "The Queen of Rap. A legendary lyricist and mogul with global cultural influence.",
     stats: "Diamond Certified · 100+ Hot 100 Entries",
@@ -62,7 +62,7 @@ const ARTISTS: Artist[] = [
   },
   {
     name: "Latto",
-    image: "https://images.unsplash.com/photo-1520127877030-ed4aac148934?q=80&w=1000&auto=format&fit=crop",
+    image: "/artists/Latto.png",
     size: "tall",
     bio: "Atlanta's finest. Blazing a trail with sharp wit and undeniable star power.",
     stats: "Grammy Nominated · Platinum Hits",
@@ -72,7 +72,7 @@ const ARTISTS: Artist[] = [
   },
   {
     name: "Pooh Shiesty",
-    image: "https://images.unsplash.com/photo-1514525253341-b01a306e7f5c?q=80&w=1000&auto=format&fit=crop",
+    image: "/artists/puh-scheißt-die.png",
     size: "normal",
     bio: "The new face of Memphis rap. Authenticity mixed with relentless energy.",
     stats: "Double Platinum · Shiesty Season",
@@ -81,18 +81,8 @@ const ARTISTS: Artist[] = [
     instagram: "poohshiesty",
   },
   {
-    name: "Migos",
-    image: "https://images.unsplash.com/photo-1493225457124-a1a2a5f5f9af?q=80&w=1000&auto=format&fit=crop",
-    size: "large",
-    bio: "The trio that changed the sound of hip-hop forever. Pioneers of the modern triplet flow.",
-    stats: "Diamond Certified · Culture Icons",
-    genre: "Hip-Hop / Group",
-    spotifyId: "699OTQXzgjhbtIUqwh49go",
-    instagram: "migos",
-  },
-  {
     name: "T-Pain",
-    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop",
+    image: "/artists/T-Pain.png",
     size: "normal",
     bio: "A visionary producer and singer who revolutionized the use of pitch-correction as an artistic tool.",
     stats: "Grammy Winner · Legend Status",
@@ -102,7 +92,7 @@ const ARTISTS: Artist[] = [
   },
   {
     name: "Lil Yachty",
-    image: "https://images.unsplash.com/photo-1557672172-298e090bd0f1?q=80&w=1000&auto=format&fit=crop",
+    image: "/artists/Lil-Yachty.png",
     size: "normal",
     bio: "Creative chameleon. From 'Bubblegum Trap' to psychedelic rock, always pushing boundaries.",
     stats: "Multi-Platinum · Creative Director",
@@ -217,7 +207,7 @@ export function ArtistGallery() {
                     {selectedArtist.genre}
                   </div>
                   
-                  <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-[#013DA6] mb-4 font-display">
+                  <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-[#013DA6] mb-4 font-sans">
                     {selectedArtist.name}
                   </h2>
                   
