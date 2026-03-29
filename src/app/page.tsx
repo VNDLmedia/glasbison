@@ -180,8 +180,8 @@ export default function Home() {
                 src="/brand/logo-white.svg"
                 alt=""
                 aria-hidden="true"
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] md:w-[400px] lg:w-[550px] h-auto pointer-events-none"
-                style={{ opacity: Math.min(0.04, progress * 0.08), transition: "opacity 0.3s" }}
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] lg:w-[800px] h-auto pointer-events-none"
+                style={{ opacity: Math.min(0.05, progress * 0.1), transition: "opacity 0.3s" }}
               />
               <div className="max-w-5xl text-center relative z-10">
                 <h2
@@ -450,7 +450,7 @@ export default function Home() {
             src="/brand/logo-white.svg"
             alt=""
             aria-hidden="true"
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] md:w-[400px] lg:w-[500px] h-auto pointer-events-none opacity-[0.04]"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] lg:w-[800px] h-auto pointer-events-none opacity-[0.05]"
           />
           <div className="max-w-7xl mx-auto relative z-10">
             <Reveal className="mb-20 md:mb-28">
