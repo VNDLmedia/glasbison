@@ -38,8 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${rafaella.variable} antialiased font-sans`}>
+    <html lang="en" className={rafaella.variable}>
+      <body className="antialiased font-sans">
         <MediaProvider>
           <OrganizationJsonLd />
           <WebSiteJsonLd />
