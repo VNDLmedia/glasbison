@@ -22,21 +22,16 @@ export default function DiscographyPage() {
         />
 
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-            FEATURED TRACKS — Blue on White
+            CATALOG GRID — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-t-[4rem] -mt-20 shadow-2xl">
+        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-t-[4rem] -mt-24 shadow-2xl">
           <div className="max-w-7xl mx-auto">
-            <Reveal className="mb-32">
-              <h2 className="font-display text-5xl md:text-8xl tracking-tighter leading-none mb-12">The<br />Hits.</h2>
-              <div className="w-24 h-1.5 bg-[#013DA6] rounded-full" />
-            </Reveal>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-32">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
               {RECORDS.map((record, i) => (
-                <Reveal key={record.id} delay={i * 0.1} animation="fade">
-                  <div className="group space-y-10">
-                    {/* Embedded Spotify Player with Custom Styling */}
-                    <div className="relative aspect-video rounded-[3rem] overflow-hidden bg-[#013DA6]/5 border border-[#013DA6]/10 shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                <Reveal key={record.id} delay={i * 0.05} animation="fade">
+                  <div className="group flex flex-col h-full bg-[#013DA6]/[0.02] border border-[#013DA6]/5 rounded-[3rem] p-8 transition-all duration-500 hover:bg-[#013DA6]/[0.04] hover:border-[#013DA6]/10">
+                    {/* Embedded Spotify Player */}
+                    <div className="relative aspect-square rounded-[2.5rem] overflow-hidden bg-black shadow-2xl transition-all duration-700 group-hover:scale-[1.02] mb-10">
                       <iframe
                         src={`https://open.spotify.com/embed/album/${record.spotifyId || "3Gt2MkrPnDN3MY6cRiIkig"}?utm_source=generator&theme=0`}
                         width="100%"
@@ -48,24 +43,26 @@ export default function DiscographyPage() {
                     </div>
                     
                     {/* Record Info */}
-                    <div className="flex justify-between items-end pb-8 border-b border-[#013DA6]/10">
-                      <div>
-                        <div className="flex items-center gap-4 mb-4">
-                          <span className="text-[10px] font-black text-[#013DA6]/40 uppercase tracking-widest">{record.genre}</span>
-                          <div className="w-1.5 h-1.5 bg-[#013DA6]/20 rounded-full" />
-                          <span className="text-[10px] font-bold text-[#013DA6]/20 uppercase tracking-widest">Multi-Platinum</span>
-                        </div>
-                        <h3 className="text-4xl md:text-5xl font-display text-[#013DA6] mb-3 leading-none tracking-tight">{record.title}</h3>
-                        <p className="text-2xl text-[#013DA6]/40 font-light italic">{record.artist}</p>
+                    <div className="flex flex-col flex-1">
+                      <div className="flex items-center gap-3 mb-4">
+                        <span className="text-[10px] font-black text-[#013DA6]/40 uppercase tracking-[0.2em]">{record.genre}</span>
+                        <div className="w-1.5 h-1.5 bg-[#013DA6]/10 rounded-full" />
+                        <span className="text-[10px] font-bold text-[#013DA6]/30 uppercase tracking-[0.2em]">RIAA Platinum</span>
                       </div>
-                      <a 
-                        href={`https://open.spotify.com/album/${record.spotifyId}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-6 rounded-full bg-[#013DA6] text-white shadow-xl hover:scale-110 active:scale-95 transition-all"
-                      >
-                        <SocialIcon platform="spotify" className="w-6 h-6" />
-                      </a>
+                      <h3 className="text-3xl font-display text-[#013DA6] mb-3 leading-tight tracking-tight">{record.title}</h3>
+                      <p className="text-xl text-[#013DA6]/40 font-light italic mb-8">{record.artist}</p>
+                      
+                      <div className="mt-auto flex justify-between items-center pt-8 border-t border-[#013DA6]/10">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#013DA6]/20 italic">Verified Credit</span>
+                        <a 
+                          href={`https://open.spotify.com/album/${record.spotifyId}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-4 rounded-full bg-[#013DA6] text-white shadow-xl hover:scale-110 active:scale-95 transition-all"
+                        >
+                          <SocialIcon platform="spotify" className="w-4 h-4" />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </Reveal>
@@ -87,7 +84,6 @@ export default function DiscographyPage() {
             </Reveal>
           </div>
           
-          {/* Animated Background Text */}
           <div className="absolute top-1/2 left-0 w-full whitespace-nowrap font-display text-[20vw] text-white/[0.02] pointer-events-none select-none -translate-y-1/2 uppercase tracking-widest">
             GLOBAL IMPACT — GLOBAL IMPACT — GLOBAL IMPACT
           </div>

@@ -49,7 +49,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-1 ml-8 mr-6 relative z-10">
+          <div className="hidden md:flex items-center gap-1 ml-8 mr-12 relative z-10">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -72,13 +72,6 @@ export function Navbar() {
             })}
           </div>
 
-          {/* CTA */}
-          <div className="hidden md:block relative z-10">
-            <Link href="/contact" className={`btn btn-glass !text-[10px] !py-2 !px-6 whitespace-nowrap !rounded-full transition-all ${pathname === '/contact' ? '!bg-white !text-[#013DA6]' : ''}`}>
-              Get in Touch
-            </Link>
-          </div>
-
           {/* Mobile Menu Toggle */}
           <button
             className="md:hidden relative z-50 p-2 text-white/70 hover:text-white transition-colors ml-auto"
@@ -96,7 +89,7 @@ export function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-[#013DA6] flex flex-col justify-center items-center transition-opacity duration-500 md:hidden ${
+        className={`fixed inset-0 z-[100] bg-[#013DA6] flex flex-col justify-center items-center transition-opacity duration-500 md:hidden ${
           isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
