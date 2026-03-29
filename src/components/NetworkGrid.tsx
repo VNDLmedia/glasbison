@@ -30,7 +30,7 @@ export function NetworkGrid({ variant = "white" }: NetworkGridProps) {
   const border = isBlue ? "border-[#013DA6]/10" : "border-white/10";
   const labelColor = isBlue ? "text-[#013DA6]/25" : "text-white/20";
   const hoverBg = isBlue ? "hover:bg-[#013DA6]/[0.03]" : "hover:bg-white/[0.03]";
-  const logoFilter = isBlue ? "grayscale opacity-30 group-hover:opacity-60" : "grayscale brightness-0 invert opacity-30 group-hover:opacity-60";
+  const logoFilter = isBlue ? "opacity-60 group-hover:opacity-100" : "brightness-0 invert opacity-60 group-hover:opacity-100";
 
   return (
     <div className="space-y-16">
@@ -52,7 +52,7 @@ export function NetworkGrid({ variant = "white" }: NetworkGridProps) {
                 <img
                   src={m.logo}
                   alt={m.name}
-                  className={`h-8 md:h-10 w-auto max-w-[160px] object-contain transition-all duration-500 ${logoFilter}`}
+                  className={`h-10 md:h-14 w-auto max-w-[180px] object-contain transition-all duration-500 ${logoFilter}`}
                 />
               </a>
             </Reveal>
@@ -78,7 +78,7 @@ export function NetworkGrid({ variant = "white" }: NetworkGridProps) {
                 <img
                   src={l.logo}
                   alt={l.name}
-                  className={`h-6 md:h-8 w-auto max-w-[120px] object-contain transition-all duration-500 ${logoFilter}`}
+                  className={`h-8 md:h-10 w-auto max-w-[140px] object-contain transition-all duration-500 ${logoFilter}`}
                 />
               </a>
             </Reveal>
