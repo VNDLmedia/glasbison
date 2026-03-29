@@ -5,7 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { ArtistGallery } from "@/components/ArtistGallery";
-import { BisonLogo } from "@/components/BisonLogo";
+import { SubpageHero } from "@/components/SubpageHero";
 import Image from "next/image";
 
 export default function ArtistsPage() {
@@ -14,46 +14,12 @@ export default function ArtistsPage() {
       <Navbar />
       
       <main className="flex-1">
-        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-            HERO — Massive & Cinematic (Blue)
-        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="min-h-[90vh] flex flex-col justify-center px-6 relative overflow-hidden bg-[#013DA6]">
-          {/* Huge Background Logo */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 pointer-events-none opacity-[0.03]">
-            <BisonLogo size={1200} variant="white" />
-          </div>
-          
-          <div className="max-w-7xl mx-auto w-full relative z-10 pt-24">
-            <Reveal>
-              <p className="label mb-12 text-white/40 italic uppercase tracking-[0.5em]">The Roster</p>
-              <h1 className="font-display text-7xl md:text-[14rem] leading-[0.75] tracking-tighter mb-16">
-                Sonic<br />Visionaries.
-              </h1>
-            </Reveal>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-20">
-              <div className="lg:col-span-7">
-                <Reveal delay={0.2}>
-                  <p className="text-2xl md:text-5xl font-light leading-[1.1] text-white/80 italic">
-                    Representing the architects behind the world&apos;s most defining records.
-                  </p>
-                </Reveal>
-              </div>
-              <div className="lg:col-span-5 flex items-end">
-                <Reveal delay={0.3}>
-                  <p className="text-lg text-white/30 font-light leading-relaxed max-w-sm">
-                    Our artists don&apos;t just follow trends—they set them. We provide the strategic infrastructure for long-term cultural dominance.
-                  </p>
-                </Reveal>
-              </div>
-            </div>
-          </div>
-
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-20">
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] vertical-text">Explore Roster</span>
-            <div className="w-px h-12 bg-gradient-to-b from-white to-transparent" />
-          </div>
-        </section>
+        <SubpageHero 
+          label="The Roster"
+          title="Sonic<br />Visionaries."
+          subtitle="Representing the architects behind the world's most defining records."
+          description="Our artists don't just follow trends—they set them. We provide the strategic infrastructure for long-term cultural dominance."
+        />
 
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             TRANSITION — White Space
@@ -66,8 +32,8 @@ export default function ArtistsPage() {
         <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-t-[4rem] -mt-20 shadow-2xl">
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-24">
-              <h2 className="font-display text-5xl md:text-8xl tracking-tighter leading-none mb-8">Selected<br />Artists.</h2>
-              <p className="text-xl text-[#013DA6]/40 font-light max-w-xl">
+              <h2 className="font-display text-5xl md:text-8xl tracking-tighter leading-none mb-8 text-[#013DA6]">Selected<br />Artists.</h2>
+              <p className="text-xl text-[#013DA6]/40 font-light max-w-xl italic">
                 A curated selection of producers and songwriters who have collectively generated over 70 billion streams.
               </p>
             </Reveal>
@@ -80,7 +46,7 @@ export default function ArtistsPage() {
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
         <section className="py-24 md:py-48 px-6 bg-[#013DA6] text-white overflow-hidden relative">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
+            <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
               <Image 
                 src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop"
                 alt="Studio Vibes"
@@ -124,7 +90,7 @@ export default function ArtistsPage() {
               <p className="text-xl md:text-3xl font-light text-[#013DA6]/40 mb-20 max-w-2xl mx-auto italic">
                 We are selectively reviewing new talent. If your vision matches our drive, let&apos;s talk.
               </p>
-              <a href="/contact" className="btn btn-white !bg-[#013DA6] !text-white !px-16 !py-8 !text-lg !rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all">
+              <a href="/contact" className="btn btn-white !bg-[#013DA6] !text-white !px-16 !py-8 !text-lg !rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all font-bold tracking-widest uppercase">
                 Submit Inquiry
               </a>
             </Reveal>

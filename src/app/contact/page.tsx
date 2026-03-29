@@ -4,10 +4,10 @@ import React from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
-import { BisonLogo } from "@/components/BisonLogo";
 import { ContactForm } from "@/components/ContactForm";
 import { CONTACT, SOCIAL_LINKS } from "@/lib/constants";
 import { SocialIcon } from "@/components/SocialIcons";
+import { SubpageHero } from "@/components/SubpageHero";
 
 export default function ContactPage() {
   return (
@@ -15,32 +15,12 @@ export default function ContactPage() {
       <Navbar />
       
       <main className="flex-1">
-        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-            HERO — Massive & Cinematic (Blue)
-        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="min-h-[85vh] flex flex-col justify-center px-6 relative overflow-hidden bg-[#013DA6]">
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-[0.03]">
-            <BisonLogo size={1000} variant="white" />
-          </div>
-          
-          <div className="max-w-7xl mx-auto w-full relative z-10 pt-24 text-center md:text-left">
-            <Reveal>
-              <p className="label mb-12 text-white/40 italic uppercase tracking-[0.5em]">Inquiry Management</p>
-              <h1 className="font-display text-7xl md:text-[14rem] leading-[0.75] tracking-tighter mb-16">
-                Start the<br />Dialogue.
-              </h1>
-            </Reveal>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-20">
-              <div className="lg:col-span-8">
-                <Reveal delay={0.2}>
-                  <p className="text-2xl md:text-5xl font-light leading-[1.1] text-white/80 italic">
-                    We are selectively expanding our roster and network.
-                  </p>
-                </Reveal>
-              </div>
-            </div>
-          </div>
-        </section>
+        <SubpageHero 
+          label="Inquiry Management"
+          title="Start the<br />Dialogue."
+          subtitle="Selectively expanding our roster and global network."
+          description="Tell us about your vision, your goals, and your creative drive. Let's define the next sound together."
+        />
 
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             FORM SECTION — Blue on White
@@ -96,9 +76,7 @@ export default function ContactPage() {
             {/* Right: Modern Form */}
             <div className="lg:col-span-7">
               <Reveal delay={0.4}>
-                <div className="p-2 md:p-4">
-                  <ContactForm />
-                </div>
+                <ContactForm />
               </Reveal>
             </div>
           </div>
@@ -110,7 +88,7 @@ export default function ContactPage() {
         <section className="py-24 md:py-64 px-6 bg-[#013DA6] text-white text-center relative overflow-hidden">
           <div className="max-w-4xl mx-auto relative z-10">
             <Reveal>
-              <h2 className="font-display text-5xl md:text-[10rem] leading-[0.8] tracking-tighter mb-12">Unbreakable<br />Vision.</h2>
+              <h2 className="font-display text-5xl md:text-[10rem] leading-[0.8] tracking-tighter mb-12 italic">Unbreakable<br />Vision.</h2>
               <p className="text-xl md:text-2xl text-white/40 font-light max-w-xl mx-auto italic leading-relaxed">
                 We believe in the power of creative intent. Let&apos;s build something that lasts.
               </p>

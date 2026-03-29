@@ -4,10 +4,9 @@ import React from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
-import { BisonLogo } from "@/components/BisonLogo";
 import { RECORDS } from "@/context/MediaContext";
 import { SocialIcon } from "@/components/SocialIcons";
-import Image from "next/image";
+import { SubpageHero } from "@/components/SubpageHero";
 
 export default function DiscographyPage() {
   return (
@@ -15,32 +14,12 @@ export default function DiscographyPage() {
       <Navbar />
       
       <main className="flex-1">
-        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-            HERO — Massive & Cinematic (Blue)
-        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="min-h-[85vh] flex flex-col justify-center px-6 relative overflow-hidden bg-[#013DA6]">
-          <div className="absolute left-0 bottom-0 translate-y-1/4 -translate-x-1/4 pointer-events-none opacity-[0.03]">
-            <BisonLogo size={1000} variant="white" />
-          </div>
-          
-          <div className="max-w-7xl mx-auto w-full relative z-10 pt-24">
-            <Reveal>
-              <p className="label mb-12 text-white/40 italic uppercase tracking-[0.5em]">The Sonic Legacy</p>
-              <h1 className="font-display text-7xl md:text-[14rem] leading-[0.75] tracking-tighter mb-16">
-                The<br />Catalog.
-              </h1>
-            </Reveal>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-20">
-              <div className="lg:col-span-8">
-                <Reveal delay={0.2}>
-                  <p className="text-2xl md:text-5xl font-light leading-[1.1] text-white/80 italic">
-                    A definitive archive of culturally defining records and multi-platinum hits.
-                  </p>
-                </Reveal>
-              </div>
-            </div>
-          </div>
-        </section>
+        <SubpageHero 
+          label="The Sonic Legacy"
+          title="The<br />Catalog."
+          subtitle="A definitive archive of culturally defining records and multi-platinum hits."
+          description="Representing producers and songwriters behind over 70 Billion global streams and countless chart-topping moments."
+        />
 
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             FEATURED TRACKS — Blue on White
@@ -102,14 +81,14 @@ export default function DiscographyPage() {
           <div className="max-w-5xl mx-auto text-center relative z-10">
             <Reveal>
               <h2 className="font-display text-6xl md:text-[12rem] leading-[0.8] tracking-tighter mb-16 italic">70+ Billion<br />Streams.</h2>
-              <p className="text-xl md:text-3xl font-light text-white/40 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-3xl font-light text-white/40 max-w-2xl mx-auto leading-relaxed italic">
                 Our management and A&R strategy is backed by data. We optimize for reach without compromising artistic integrity.
               </p>
             </Reveal>
           </div>
           
           {/* Animated Background Text */}
-          <div className="absolute top-1/2 left-0 w-full whitespace-nowrap font-display text-[20vw] text-white/[0.02] pointer-events-none select-none -translate-y-1/2">
+          <div className="absolute top-1/2 left-0 w-full whitespace-nowrap font-display text-[20vw] text-white/[0.02] pointer-events-none select-none -translate-y-1/2 uppercase tracking-widest">
             GLOBAL IMPACT — GLOBAL IMPACT — GLOBAL IMPACT
           </div>
         </section>

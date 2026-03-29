@@ -1,86 +1,96 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+"use client";
+
+import React from "react";
 import { CONTACT, SITE_NAME } from "@/lib/constants";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
-export const metadata: Metadata = {
-  title: "Impressum",
-  robots: { index: false, follow: false },
-};
+import { Reveal } from "@/components/Reveal";
+import { SubpageHero } from "@/components/SubpageHero";
 
 export default function Impressum() {
   return (
     <div className="flex flex-col min-h-screen bg-[#013DA6] text-white font-sans">
       <Navbar />
-      <main className="flex-1 pt-48 pb-32 px-6 md:px-12">
-        <div className="max-w-4xl mx-auto">
-          <Reveal>
-            <Link
-              href="/"
-              className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors mb-12 inline-block border-b border-white/10 pb-1"
-            >
-              &larr; Return to Home
-            </Link>
-            <h1 className="font-display text-5xl md:text-8xl leading-[0.85] mb-20 tracking-tighter">
-              Imprint.
-            </h1>
-          </Reveal>
+      
+      <main className="flex-1">
+        <SubpageHero 
+          label="Identity & Legal"
+          title="Imprint."
+          subtitle="Unyielding power protected by absolute clarity."
+          description="Glass Bison is more than a name. It is our operational philosophy."
+        />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
-            <Reveal delay={0.1}>
-              <section className="space-y-8">
-                <div>
-                  <h2 className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em] mb-4">Angaben gemäß § 5 TMG</h2>
-                  <p className="text-xl md:text-2xl font-light leading-relaxed">
-                    {CONTACT.company}<br />
-                    {CONTACT.address.street}<br />
-                    {CONTACT.address.zip} {CONTACT.address.city}
-                  </p>
-                </div>
+        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            CONTENT — Multi-Column Layout
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-t-[4rem] -mt-24 shadow-2xl">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+              <div className="lg:col-span-6 space-y-24">
+                <Reveal delay={0.1}>
+                  <section>
+                    <h2 className="text-[10px] font-black text-[#013DA6]/30 uppercase tracking-[0.3em] mb-8 italic">Company</h2>
+                    <div className="text-3xl md:text-5xl font-display leading-tight text-[#013DA6] tracking-tight font-normal">
+                      {CONTACT.company}
+                    </div>
+                    <div className="mt-8 text-xl md:text-2xl font-light text-[#013DA6]/60 leading-relaxed font-sans">
+                      <p>{CONTACT.address.street}</p>
+                      <p>{CONTACT.address.zip} {CONTACT.address.city}</p>
+                      <p>Germany</p>
+                    </div>
+                  </section>
+                </Reveal>
 
-                <div>
-                  <h2 className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em] mb-4">Kontakt</h2>
-                  <p className="text-xl md:text-2xl font-light leading-relaxed">
-                    E-Mail: {CONTACT.email}<br />
-                    Telefon: {CONTACT.phone}
-                  </p>
-                </div>
-              </section>
-            </Reveal>
+                <Reveal delay={0.2}>
+                  <section>
+                    <h2 className="text-[10px] font-black text-[#013DA6]/30 uppercase tracking-[0.3em] mb-8 italic">Direct</h2>
+                    <div className="space-y-4 font-sans">
+                      <a href={`mailto:${CONTACT.email}`} className="text-2xl md:text-3xl font-medium border-b-2 border-[#013DA6]/10 pb-2 inline-block hover:opacity-60 transition-all italic">
+                        {CONTACT.email}
+                      </a>
+                      <p className="text-xl font-light text-[#013DA6]/40">{CONTACT.phone}</p>
+                    </div>
+                  </section>
+                </Reveal>
+              </div>
 
-            <Reveal delay={0.2}>
-              <section className="space-y-12">
-                <div>
-                  <h2 className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em] mb-4">Verantwortlich für den Inhalt</h2>
-                  <p className="text-base text-white/50 leading-relaxed font-light">
-                    {CONTACT.company}<br />
-                    Maximilian Fritsch<br />
-                    {CONTACT.address.street}<br />
-                    {CONTACT.address.zip} {CONTACT.address.city}
-                  </p>
-                </div>
+              <div className="lg:col-span-6 space-y-24">
+                <Reveal delay={0.3}>
+                  <section>
+                    <h2 className="text-[10px] font-black text-[#013DA6]/30 uppercase tracking-[0.3em] mb-8 italic">Editorial Responsibility</h2>
+                    <div className="text-2xl md:text-3xl font-light text-[#013DA6]/60 leading-relaxed italic font-sans">
+                      <p className="text-[#013DA6] font-medium not-italic mb-2">{CONTACT.company}</p>
+                      <p>Maximilian Fritsch</p>
+                      <p>{CONTACT.address.street}</p>
+                      <p>{CONTACT.address.zip} {CONTACT.address.city}</p>
+                    </div>
+                  </section>
+                </Reveal>
 
-                <div className="prose prose-invert prose-sm opacity-40 font-light leading-relaxed space-y-6">
-                  <p>
-                    Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte
-                    externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber
-                    verantwortlich.
-                  </p>
-                  <p>
-                    Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
-                    dem deutschen Urheberrecht. Jede Art der Verwertung bedürfen der schriftlichen
-                    Zustimmung von {SITE_NAME}.
-                  </p>
-                </div>
-              </section>
-            </Reveal>
+                <Reveal delay={0.4}>
+                  <section className="p-10 bg-[#013DA6]/[0.02] border border-[#013DA6]/10 rounded-[3rem] font-sans">
+                    <h2 className="text-[10px] font-black text-[#013DA6]/30 uppercase tracking-[0.3em] mb-6 italic">Copyright</h2>
+                    <p className="text-sm font-light leading-relaxed text-[#013DA6]/50 italic">
+                      The content and works created by the site operator on these pages are subject to German copyright law. Any kind of exploitation requires the written consent of {SITE_NAME}.
+                    </p>
+                  </section>
+                </Reveal>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            FOOTER MOMENT
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+        <section className="py-24 md:py-64 bg-[#013DA6] text-center">
+          <Reveal>
+            <h2 className="font-display text-6xl md:text-[12rem] tracking-tighter opacity-10 leading-none italic">Unbreakable.</h2>
+          </Reveal>
+        </section>
       </main>
+      
       <Footer />
     </div>
   );
 }
-
-import { Reveal } from "@/components/Reveal";
