@@ -15,89 +15,133 @@ const PROJECTS = [
     title: "Global Sound Shaping",
     category: "Strategic A&R",
     image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop",
-    desc: "Bridging the gap between independent creators and major label infrastructure."
+    desc: "Bridging the gap between independent creators and major label infrastructure through targeted A&R campaigns across territories.",
+    stats: ["12+ Major Placements", "3 Territories", "2024–Present"],
   },
   {
     slug: "producer-elevation",
     title: "Producer Elevation",
     category: "Management",
     image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop",
-    desc: "Transforming regional beatmakers into global cultural architects."
+    desc: "Transforming regional beatmakers into global cultural architects through structured career development and label introductions.",
+    stats: ["5 Producers Signed", "Platinum Results", "Ongoing"],
   },
   {
     slug: "strategic-placements",
     title: "Strategic Placements",
     category: "Network",
     image: "https://images.unsplash.com/photo-1514525253341-b01a306e7f5c?q=80&w=1000&auto=format&fit=crop",
-    desc: "Curating high-impact sessions that define the Billboard charts."
-  }
+    desc: "Curating high-impact sessions that define the Billboard charts. Connecting songwriters with A-list recording artists.",
+    stats: ["30+ Sessions", "Billboard Entries", "2023–Present"],
+  },
+  {
+    slug: "catalog-administration",
+    title: "Catalog Administration",
+    category: "Publishing",
+    image: "https://images.unsplash.com/photo-1493225457124-a1a2a5f5f9af?q=80&w=1000&auto=format&fit=crop",
+    desc: "Full-service catalog management — from royalty collection and split negotiations to sync licensing and copyright protection.",
+    stats: ["70+ Certifications", "Global Collection", "Active"],
+  },
+  {
+    slug: "brand-partnerships",
+    title: "Brand Partnerships",
+    category: "Business Development",
+    image: "https://images.unsplash.com/photo-1557672172-298e090bd0f1?q=80&w=1000&auto=format&fit=crop",
+    desc: "Connecting our roster with premium brand opportunities — from endorsement deals to creative collaborations that amplify reach.",
+    stats: ["Select Partners", "Multi-Platform", "2024–Present"],
+  },
 ];
 
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-[#013DA6] text-white flex flex-col font-sans">
       <Navbar />
-      
+
       <main className="flex-1">
-        <SubpageHero 
+        <SubpageHero
           label="Selected Initiatives"
           title="Our<br />Projects."
           subtitle="Transforming industry frameworks through strategic innovation."
-          description="We bridge the gap between creative intent and global infrastructure through calculated, high-impact projects."
+          description="Calculated, high-impact projects that bridge creative intent and global infrastructure."
         />
 
         <ReturnHome />
 
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-            PROJECT GALLERY — Blue on White
+            PROJECT LIST — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
         <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
-              {PROJECTS.map((project, i) => (
-                <Reveal key={project.slug} delay={i * 0.1} animation="scale">
-                  <Link href={`/projects/${project.slug}`} className="group block space-y-10">
-                    <div className="relative aspect-[16/10] rounded-[3rem] overflow-hidden shadow-2xl border border-[#013DA6]/10">
-                      <Image 
+          <div className="max-w-7xl mx-auto space-y-20 md:space-y-32">
+            {PROJECTS.map((project, i) => (
+              <Reveal key={project.slug} delay={i * 0.08}>
+                <Link href={`/projects/${project.slug}`} className="group block">
+                  <div className={`grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center ${i % 2 === 1 ? "lg:direction-rtl" : ""}`}>
+                    {/* Image */}
+                    <div className={`relative aspect-[16/10] rounded-[2rem] overflow-hidden shadow-xl border border-[#013DA6]/10 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+                      <Image
                         src={project.image}
                         alt={project.title}
                         fill
                         className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-[#013DA6]/5 mix-blend-overlay" />
-                      {/* View Button Overlay */}
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/20 backdrop-blur-sm">
-                        <span className="px-8 py-4 rounded-full bg-white text-[#013DA6] font-bold uppercase tracking-widest text-[10px] shadow-2xl scale-90 group-hover:scale-100 transition-transform duration-500">View Project</span>
+                    </div>
+
+                    {/* Content */}
+                    <div className={`space-y-6 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+                      <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#013DA6]/30 italic">{project.category}</span>
+                      <h3 className="font-sans font-black text-3xl md:text-5xl text-[#013DA6] leading-[1] tracking-[0.02em] uppercase group-hover:translate-x-1 transition-transform duration-500">
+                        {project.title}
+                      </h3>
+                      <p className="text-lg text-[#013DA6]/50 font-light leading-relaxed max-w-lg">
+                        {project.desc}
+                      </p>
+                      <div className="flex flex-wrap gap-4 pt-2">
+                        {project.stats.map((stat) => (
+                          <span key={stat} className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#013DA6]/30 px-4 py-2 border border-[#013DA6]/10 rounded-full">
+                            {stat}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                    
-                    <div className="pb-8 border-b border-[#013DA6]/10 font-sans">
-                      <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#013DA6]/30 mb-6 block italic">{project.category}</span>
-                      <h3 className="text-3xl md:text-4xl font-sans font-black text-[#013DA6] leading-[1] mb-6 tracking-[0.02em] uppercase group-hover:translate-x-2 transition-transform duration-500">{project.title}</h3>
-                      <p className="text-xl text-[#013DA6]/50 font-light max-w-md leading-relaxed italic">{project.desc}</p>
-                    </div>
-                  </Link>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            NUMBERS — White on Blue
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+        <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white">
+          <div className="max-w-7xl mx-auto">
+            <Reveal className="mb-20 md:mb-28">
+              <p className="label mb-6 text-white/40">Impact</p>
+              <h2 className="font-sans font-black text-4xl md:text-6xl lg:text-7xl leading-[1] tracking-[0.04em] uppercase">
+                Scale With<br />Precision.
+              </h2>
+            </Reveal>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { value: "70+", label: "Certifications" },
+                { value: "7+", label: "Label Partners" },
+                { value: "50+", label: "Sessions / Year" },
+                { value: "5", label: "Active Territories" },
+              ].map((stat, i) => (
+                <Reveal key={stat.label} delay={i * 0.08}>
+                  <div className="text-center py-10 border border-white/10 rounded-[1.5rem] hover:bg-white/[0.03] transition-colors">
+                    <div className="font-sans font-black text-4xl md:text-5xl tracking-[0.04em] mb-3 text-white/80">{stat.value}</div>
+                    <div className="text-[10px] font-bold text-white/25 uppercase tracking-[0.2em]">{stat.label}</div>
+                  </div>
                 </Reveal>
               ))}
             </div>
           </div>
         </section>
-
-        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-            NETWORK MOMENT — White on Blue
-        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white relative overflow-hidden">
-          <div className="max-w-5xl mx-auto text-center relative z-10">
-            <Reveal>
-              <h2 className="font-sans font-black text-5xl md:text-7xl lg:text-8xl leading-[1] tracking-[0.04em] uppercase mb-12">Scale With<br />Precision.</h2>
-              <p className="text-lg md:text-2xl font-light text-white/40 max-w-2xl mx-auto leading-relaxed italic">
-                We bridge the gap between creative vision and global market infrastructure. Our projects are the proof.
-              </p>
-            </Reveal>
-          </div>
-        </section>
       </main>
-      
+
       <Footer />
     </div>
   );

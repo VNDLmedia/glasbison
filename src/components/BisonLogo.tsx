@@ -7,13 +7,14 @@ interface BisonIconProps {
 }
 
 export function BisonLogo({ size = 48, variant = "white", className = "" }: BisonIconProps) {
-  const src = variant === "white" ? "/bison-icon-white.svg" : "/bison-icon.svg";
+  const src = variant === "white" ? "/brand/logo-white.svg" : "/brand/logo-blue.svg";
+  // Aspect ratio from SVG: ~1.56:1 (width:height), so height = size / 1.56
   return (
     <Image
       src={src}
       alt="Glass Bison"
       width={size}
-      height={Math.round(size * 0.72)}
+      height={Math.round(size / 1.56)}
       className={className}
       priority
     />
@@ -27,12 +28,13 @@ interface BisonWordmarkProps {
 }
 
 export function BisonWordmark({ height = 28, variant = "white", className = "" }: BisonWordmarkProps) {
-  const src = variant === "white" ? "/bison-logo-wordmark-white.svg" : "/bison-logo-wordmark.svg";
+  const src = variant === "white" ? "/brand/schriftzug-white.svg" : "/brand/schriftzug-blue.svg";
+  // Aspect ratio ~8.5:1
   return (
     <Image
       src={src}
       alt="Glass Bison"
-      width={Math.round(height * 3.5)}
+      width={Math.round(height * 8.5)}
       height={height}
       className={className}
       priority
@@ -42,15 +44,36 @@ export function BisonWordmark({ height = 28, variant = "white", className = "" }
 
 interface BisonSchriftzugProps {
   height?: number;
+  variant?: "blue" | "white";
   className?: string;
 }
 
-export function BisonSchriftzug({ height = 80, className = "" }: BisonSchriftzugProps) {
+export function BisonSchriftzug({ height = 80, variant = "white", className = "" }: BisonSchriftzugProps) {
+  const src = variant === "white" ? "/brand/schriftzug-white.svg" : "/brand/schriftzug-blue.svg";
+  // Aspect ratio ~8.5:1
   return (
     <Image
-      src="/Schriftzug.svg"
+      src={src}
       alt="Glass Bison"
-      width={Math.round(height * 8.55)}
+      width={Math.round(height * 8.5)}
+      height={height}
+      className={className}
+    />
+  );
+}
+
+interface BisonLogoSchriftzugProps {
+  height?: number;
+  className?: string;
+}
+
+export function BisonLogoSchriftzug({ height = 80, className = "" }: BisonLogoSchriftzugProps) {
+  // Logo + Schriftzug combined, aspect ratio ~1.5:1
+  return (
+    <Image
+      src="/brand/logo-schriftzug.svg"
+      alt="Glass Bison"
+      width={Math.round(height * 1.5)}
       height={height}
       className={className}
     />

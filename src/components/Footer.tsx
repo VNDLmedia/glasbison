@@ -3,19 +3,16 @@
 import React from "react";
 import Link from "next/link";
 import { NAV_ITEMS, SOCIAL_LINKS, CONTACT } from "../lib/constants";
-import { BisonLogo, BisonWordmark } from "./BisonLogo";
+import { BisonLogo, BisonSchriftzug } from "./BisonLogo";
 import { SocialIcon } from "./SocialIcons";
 
 export function Footer() {
   return (
     <footer className="relative bg-[#013DA6] dot-grid pt-24 pb-8 overflow-hidden z-10">
-      {/* Separator mit Logo */}
-      <div className="flex items-center justify-center w-full px-4 mb-20">
-        <div className="h-px w-full max-w-[200px] md:max-w-md bg-gradient-to-r from-transparent to-white/6" />
-        <div className="px-6 bg-[#013DA6] z-10">
-          <BisonLogo size={20} variant="white" className="opacity-10" />
-        </div>
-        <div className="h-px w-full max-w-[200px] md:max-w-md bg-gradient-to-l from-transparent to-white/6" />
+      {/* Schriftzug */}
+      <div className="flex justify-center mb-20">
+        <BisonSchriftzug height={28} className="opacity-15 md:hidden" />
+        <BisonSchriftzug height={40} className="opacity-15 hidden md:block" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -23,10 +20,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-20">
           {/* Spalte 1: Info (col-span-4 auf md) */}
           <div className="md:col-span-4 flex flex-col gap-6">
-            <div className="flex items-center gap-3 opacity-60">
-              <BisonLogo size={24} variant="white" />
-              <BisonWordmark height={16} variant="white" />
-            </div>
+            <BisonSchriftzug height={18} className="opacity-60" />
             <p className="text-white/60 text-sm leading-relaxed max-w-sm">
               Glass Bison is a Grammy-nominated music management company representing producers and songwriters with 70+ gold, platinum, and diamond certifications.
             </p>
