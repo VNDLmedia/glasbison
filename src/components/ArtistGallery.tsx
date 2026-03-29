@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Reveal } from "./Reveal";
-import { X, Instagram, TrendingUp, Music } from "lucide-react";
+import { X, Instagram, TrendingUp, Music, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const SpotifyIcon = () => (
   <svg 
@@ -105,6 +106,15 @@ const ARTISTS: Artist[] = [
 export function ArtistGallery() {
   const [selectedArtist, setSelectedArtist] = useState<Artist | null>(null);
 
+  useEffect(() => {
+    if (selectedArtist) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [selectedArtist]);
+
   return (
     <>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 w-full">
@@ -152,6 +162,16 @@ export function ArtistGallery() {
             </Reveal>
           );
         })}
+        {/* View All Tile */}
+        <Reveal delay={ARTISTS.length * 0.05} animation="scale" className="col-span-1 row-span-1 aspect-square">
+          <Link
+            href="/artists"
+            className="group relative w-full h-full flex flex-col items-center justify-center rounded-2xl md:rounded-[2.5rem] border border-[#013DA6]/10 bg-[#013DA6]/[0.03] hover:bg-[#013DA6]/[0.08] transition-all duration-500 cursor-pointer"
+          >
+            <ArrowRight className="w-6 h-6 text-[#013DA6]/30 group-hover:text-[#013DA6] group-hover:translate-x-1 transition-all duration-300 mb-3" />
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#013DA6]/30 group-hover:text-[#013DA6] transition-colors duration-300">View All</span>
+          </Link>
+        </Reveal>
       </div>
 
       {/* Artist Modal */}

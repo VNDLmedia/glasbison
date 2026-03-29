@@ -206,11 +206,11 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             DISCOGRAPHY — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="discography" className="py-24 md:py-48 px-6 bg-[#013DA6] text-white relative z-10">
+        <section id="discography" className="py-16 md:py-28 px-6 bg-[#013DA6] text-white relative z-10">
           <div className="max-w-7xl mx-auto">
-            <Reveal className="mb-24 md:mb-40 text-center lg:text-left">
-              <p className="label mb-6 text-white/40">Discography</p>
-              <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight font-normal">
+            <Reveal className="mb-12 md:mb-20 text-center lg:text-left">
+              <p className="label mb-4 text-white/40">Discography</p>
+              <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.9] tracking-tight font-normal">
                 Discography.
               </h2>
             </Reveal>
@@ -262,8 +262,8 @@ export default function Home() {
                   <Reveal delay={0.1} animation="scale">
                     <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-[#013DA6]/10 group shadow-2xl bg-[#013DA6]/5">
                       <Image
-                        src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop"
-                        alt="Proven Result 1"
+                        src="/john legend grammys.jpg"
+                        alt="John Legend at the Grammys"
                         fill
                         className="object-cover transition-transform duration-[3s] group-hover:scale-110"
                       />
@@ -282,8 +282,8 @@ export default function Home() {
                   <Reveal delay={0.3} animation="scale">
                     <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-[#013DA6]/10 group shadow-2xl bg-[#013DA6]/5">
                       <Image
-                        src="https://images.unsplash.com/photo-1571266028243-3716f02d2d2e?q=80&w=1000&auto=format&fit=crop"
-                        alt="Proven Result 2"
+                        src="/photos/kai-grammys.jpeg"
+                        alt="Kai at the Grammys"
                         fill
                         className="object-cover transition-transform duration-[3s] group-hover:scale-110"
                       />
@@ -371,21 +371,21 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             NETWORK — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="network" className="py-24 md:py-40 px-6 bg-[#013DA6] text-white relative z-10">
+        <section id="network" className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10">
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-20 md:mb-28">
-              <p className="label mb-6 text-white/40">Global Network</p>
+              <p className="label mb-6 !text-[#013DA6]/40">Global Network</p>
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
-                <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
+                <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#013DA6]">
                   Strategic<br />Partnerships.
                 </h2>
-                <p className="text-white/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
+                <p className="text-[#013DA6]/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
                   Our influence spans across every major player in the music and entertainment landscape. A network built on trust and results.
                 </p>
               </div>
             </Reveal>
 
-            <NetworkGrid />
+            <NetworkGrid variant="blue" />
           </div>
         </section>
 

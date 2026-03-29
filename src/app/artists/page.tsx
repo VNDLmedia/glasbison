@@ -1,13 +1,65 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
-import { ArtistGallery } from "@/components/ArtistGallery";
 import { SubpageHero } from "@/components/SubpageHero";
 import { ReturnHome } from "@/components/ReturnHome";
-import Link from "next/link";
+
+const ARTISTS = [
+  {
+    name: "Lil Nas X",
+    image: "/artists/Lil-Nas-X.png",
+    role: "Artist",
+    stats: "Diamond Certified · 70B+ Streams",
+    genre: "Pop / Hip-Hop",
+  },
+  {
+    name: "Gunna",
+    image: "/artists/Gunna.png",
+    role: "Artist",
+    stats: "Multi-Platinum · #1 Billboard Albums",
+    genre: "Hip-Hop / Melodic",
+  },
+  {
+    name: "Nicki Minaj",
+    image: "/artists/Nicki-Minaj.png",
+    role: "Artist",
+    stats: "Diamond Certified · 100+ Hot 100 Entries",
+    genre: "Hip-Hop / Pop",
+  },
+  {
+    name: "Latto",
+    image: "/artists/Latto.png",
+    role: "Artist",
+    stats: "Grammy Nominated · Platinum Hits",
+    genre: "Hip-Hop",
+  },
+  {
+    name: "Pooh Shiesty",
+    image: "/artists/puh-scheißt-die.png",
+    role: "Artist",
+    stats: "Double Platinum · Shiesty Season",
+    genre: "Hip-Hop / Trap",
+  },
+  {
+    name: "T-Pain",
+    image: "/artists/T-Pain.png",
+    role: "Artist / Producer",
+    stats: "Grammy Winner · Legend Status",
+    genre: "R&B / Hip-Hop",
+  },
+  {
+    name: "Lil Yachty",
+    image: "/artists/Lil-Yachty.png",
+    role: "Artist",
+    stats: "Multi-Platinum · Creative Director",
+    genre: "Hip-Hop / Experimental",
+  },
+];
 
 export default function ArtistsPage() {
   return (
@@ -25,11 +77,45 @@ export default function ArtistsPage() {
         <ReturnHome />
 
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-            GALLERY — Blue on White
+            ARTIST LIST — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
         <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
-          <div className="max-w-7xl mx-auto">
-            <ArtistGallery />
+          <div className="max-w-7xl mx-auto space-y-0">
+            {ARTISTS.map((artist, i) => (
+              <Reveal key={artist.name} delay={i * 0.06}>
+                <div className="group grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 py-10 md:py-14 border-b border-[#013DA6]/10 items-center hover:bg-[#013DA6]/[0.02] transition-colors duration-300 px-4 -mx-4 rounded-xl cursor-default">
+                  {/* Image */}
+                  <div className="md:col-span-2">
+                    <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border border-[#013DA6]/10 group-hover:border-[#013DA6]/30 transition-all duration-500 group-hover:scale-105">
+                      <Image
+                        src={artist.image}
+                        alt={artist.name}
+                        fill
+                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Name */}
+                  <div className="md:col-span-3">
+                    <h3 className="font-sans font-bold text-2xl md:text-3xl tracking-tight group-hover:translate-x-1 transition-transform duration-300">
+                      {artist.name}
+                    </h3>
+                    <span className="text-[10px] font-bold text-[#013DA6]/30 uppercase tracking-[0.2em] mt-1 block">{artist.role}</span>
+                  </div>
+
+                  {/* Genre */}
+                  <div className="md:col-span-3">
+                    <span className="text-sm text-[#013DA6]/40 font-light">{artist.genre}</span>
+                  </div>
+
+                  {/* Stats */}
+                  <div className="md:col-span-4">
+                    <p className="text-sm text-[#013DA6]/35 font-light">{artist.stats}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </section>
 

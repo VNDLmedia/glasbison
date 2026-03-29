@@ -17,26 +17,37 @@ export function VinylCarousel() {
   const wheelTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lastOffsets = useRef<Record<number, number>>({});
 
-  const handleWheel = (e: React.WheelEvent) => {
-    const now = Date.now();
-    if (now - lastWheelTime.current < 700) return;
-    wheelAccumulator.current += e.deltaY;
-    if (wheelAccumulator.current > 60) {
-      setIsPlaying(false);
-      nextRecord();
-      wheelAccumulator.current = 0;
-      lastWheelTime.current = now;
-    } else if (wheelAccumulator.current < -60) {
-      setIsPlaying(false);
-      prevRecord();
-      wheelAccumulator.current = 0;
-      lastWheelTime.current = now;
-    }
-    if (wheelTimeout.current) clearTimeout(wheelTimeout.current);
-    wheelTimeout.current = setTimeout(() => {
-      wheelAccumulator.current = 0;
-    }, 150);
-  };
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const handleWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      const now = Date.now();
+      if (now - lastWheelTime.current < 700) return;
+      wheelAccumulator.current += e.deltaY;
+      if (wheelAccumulator.current > 60) {
+        setIsPlaying(false);
+        nextRecord();
+        wheelAccumulator.current = 0;
+        lastWheelTime.current = now;
+      } else if (wheelAccumulator.current < -60) {
+        setIsPlaying(false);
+        prevRecord();
+        wheelAccumulator.current = 0;
+        lastWheelTime.current = now;
+      }
+      if (wheelTimeout.current) clearTimeout(wheelTimeout.current);
+      wheelTimeout.current = setTimeout(() => {
+        wheelAccumulator.current = 0;
+      }, 150);
+    };
+
+    el.addEventListener("wheel", handleWheel, { passive: false });
+    return () => el.removeEventListener("wheel", handleWheel);
+  }, [setIsPlaying, nextRecord, prevRecord]);
 
   const handlePointerDown = (e: React.PointerEvent) => {
     if ((e.target as HTMLElement).closest('button')) return;
@@ -111,9 +122,9 @@ export function VinylCarousel() {
   };
 
   return (
-    <div 
+    <div
+      ref={containerRef}
       className="w-full relative text-white font-sans overflow-hidden py-12"
-      onWheel={handleWheel}
     >
       <style>{`
         @keyframes fadeSlideUp {
