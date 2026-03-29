@@ -523,7 +523,7 @@ export default function Home() {
                       }}
                     >
                       {Array.from({ length: 40 }).map((_, row) => (
-                        <span key={row} className="block text-center select-none" style={{ opacity: 0.3 + Math.random() * 0.7 }}>✦</span>
+                        <span key={row} className="block text-center select-none" style={{ opacity: 0.3 + Math.random() * 0.7 }}>★</span>
                       ))}
                     </div>
                   ))}
