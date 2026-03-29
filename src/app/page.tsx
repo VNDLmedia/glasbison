@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
-import { useMedia } from "@/context/MediaContext";
+import { useMedia, RECORDS } from "@/context/MediaContext";
 import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { TiltCard } from "@/components/TiltCard";
@@ -14,7 +14,6 @@ import { Footer } from "@/components/Footer";
 import { VinylCarousel } from "@/components/VinylCarousel";
 import { ArtistGallery } from "@/components/ArtistGallery";
 import { ContactForm } from "@/components/ContactForm";
-import { MediaNavbar } from "@/components/MediaNavbar";
 import { NetworkGrid } from "@/components/NetworkGrid";
 import {
   SERVICES,
@@ -116,6 +115,25 @@ function HeroVideo({ progress }: { progress: number }) {
   );
 }
 
+function DiscographySection() {
+  const { activeIndex } = useMedia();
+  const color = RECORDS[activeIndex]?.color || "#013DA6";
+  return (
+    <section id="discography" className="py-12 md:py-20 px-6 text-white relative z-10 overflow-hidden transition-colors duration-1000" style={{ backgroundColor: color }}>
+      <div className="absolute inset-0 bg-[#013DA6]/70 pointer-events-none" />
+      <div className="max-w-7xl mx-auto relative z-10">
+        <Reveal className="mb-8 md:mb-14 text-center lg:text-left">
+          <p className="label mb-3 text-white/40">Discography</p>
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[0.9] tracking-tight font-normal">
+            Discography.
+          </h2>
+        </Reveal>
+        <VinylCarousel />
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const { setIsPlaying } = useMedia();
   const [hasAutoPlayed, setHasAutoPlayed] = useState(false);
@@ -142,7 +160,6 @@ export default function Home() {
     <div className="min-h-screen text-white bg-[#013DA6] selection:bg-white/20 font-sans">
       <ConstellationCanvas />
       <Navbar />
-      <MediaNavbar />
 
       <main className="relative z-10">
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -251,17 +268,8 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             DISCOGRAPHY — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="discography" className="py-12 md:py-20 px-6 bg-[#013DA6] text-white relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <Reveal className="mb-8 md:mb-14 text-center lg:text-left">
-              <p className="label mb-3 text-white/40">Discography</p>
-              <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[0.9] tracking-tight font-normal">
-                Discography.
-              </h2>
-            </Reveal>
-            <VinylCarousel />
-          </div>
-        </section>
+        <DiscographySection />
+
 
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             ARTIST GALLERY — Blue on White

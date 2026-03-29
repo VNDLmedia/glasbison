@@ -112,11 +112,7 @@ export function VinylCarousel() {
         onPointerLeave={handlePointerUp}
         onPointerCancel={handlePointerUp}
       >
-        {/* Background Ambient Glow */}
-        <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[800px] rounded-full blur-[150px] opacity-20 transition-colors duration-1000 pointer-events-none" 
-          style={{ backgroundColor: RECORDS[activeIndex].color }} 
-        />
+        {/* Glow handled at section level */}
 
         {/* SPALTE 1: Steuerung (Links) */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left z-10">

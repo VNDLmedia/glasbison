@@ -6,6 +6,7 @@ import { OrganizationJsonLd, WebSiteJsonLd } from "@/lib/seo";
 import { LiquidGlassFilter } from "@/components/LiquidGlassFilter";
 import { MediaProvider } from "@/context/MediaContext";
 import { CookieNotice } from "@/components/CookieNotice";
+import { MediaNavbar } from "@/components/MediaNavbar";
 
 const rafaella = localFont({
   src: "../../public/Rafaella.otf",
@@ -44,6 +45,7 @@ export default function RootLayout({
           <OrganizationJsonLd />
           <WebSiteJsonLd />
           {children}
+          <MediaNavbar />
           <CookieNotice />
         </MediaProvider>
 
