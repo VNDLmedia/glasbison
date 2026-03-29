@@ -11,7 +11,7 @@ import { ReturnHome } from "@/components/ReturnHome";
 
 export default function DiscographyPage() {
   return (
-    <div className="min-h-screen bg-[#013DA6] text-white flex flex-col font-sans">
+    <div className="min-h-screen bg-[#011d5a] text-white flex flex-col font-sans">
       <Navbar />
       
       <main className="flex-1">
@@ -27,17 +27,17 @@ export default function DiscographyPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             CATALOG GRID — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
+        <section className="py-24 md:py-40 px-6 bg-[#f0f2f8] text-[#011d5a] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-20">
               <h2 className="font-display text-5xl md:text-7xl tracking-tight leading-[0.95] mb-8 italic">The<br />Hits.</h2>
-              <div className="w-24 h-1.5 bg-[#013DA6] rounded-full" />
+              <div className="w-24 h-1.5 bg-[#011d5a] rounded-full" />
             </Reveal>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
               {RECORDS.map((record, i) => (
                 <Reveal key={record.id} delay={i * 0.05} animation="fade">
-                  <div className="group flex flex-col h-full bg-[#013DA6]/[0.02] border border-[#013DA6]/5 rounded-[3rem] p-8 transition-all duration-500 hover:bg-[#013DA6]/[0.04] hover:border-[#013DA6]/10">
+                  <div className="group flex flex-col h-full bg-[#011d5a]/[0.02] border border-[#011d5a]/5 rounded-[3rem] p-8 transition-all duration-500 hover:bg-[#011d5a]/[0.04] hover:border-[#011d5a]/10">
                     {/* Embedded Spotify Player */}
                     <div className="relative aspect-square rounded-[2.5rem] overflow-hidden bg-black shadow-2xl transition-all duration-700 group-hover:scale-[1.02] mb-10">
                       <iframe
@@ -53,20 +53,20 @@ export default function DiscographyPage() {
                     {/* Record Info */}
                     <div className="flex flex-col flex-1">
                       <div className="flex items-center gap-3 mb-4">
-                        <span className="text-[10px] font-black text-[#013DA6]/40 uppercase tracking-[0.2em]">{record.genre}</span>
-                        <div className="w-1.5 h-1.5 bg-[#013DA6]/10 rounded-full" />
-                        <span className="text-[10px] font-bold text-[#013DA6]/30 uppercase tracking-[0.2em]">RIAA Platinum</span>
+                        <span className="text-[10px] font-black text-[#011d5a]/40 uppercase tracking-[0.2em]">{record.genre}</span>
+                        <div className="w-1.5 h-1.5 bg-[#011d5a]/10 rounded-full" />
+                        <span className="text-[10px] font-bold text-[#011d5a]/30 uppercase tracking-[0.2em]">RIAA Platinum</span>
                       </div>
-                      <h3 className="text-2xl font-sans font-bold text-[#013DA6] mb-3 leading-tight tracking-[0.01em]">{record.title}</h3>
-                      <p className="text-xl text-[#013DA6]/40 font-light italic mb-8">{record.artist}</p>
+                      <h3 className="text-2xl font-sans font-bold text-[#011d5a] mb-3 leading-tight tracking-[0.01em]">{record.title}</h3>
+                      <p className="text-xl text-[#011d5a]/40 font-light italic mb-8">{record.artist}</p>
                       
-                      <div className="mt-auto flex justify-between items-center pt-8 border-t border-[#013DA6]/10">
-                        <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#013DA6]/20 italic">Verified Credit</span>
+                      <div className="mt-auto flex justify-between items-center pt-8 border-t border-[#011d5a]/10">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#011d5a]/20 italic">Verified Credit</span>
                         <a 
                           href={`https://open.spotify.com/album/${record.spotifyId}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-4 rounded-full bg-[#013DA6] text-white shadow-xl hover:scale-110 active:scale-95 transition-all"
+                          className="p-4 rounded-full bg-[#011d5a] text-white shadow-xl hover:scale-110 active:scale-95 transition-all"
                         >
                           <SocialIcon platform="spotify" className="w-4 h-4" />
                         </a>
@@ -82,7 +82,7 @@ export default function DiscographyPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             ACHIEVEMENT MOMENT — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white relative">
+        <section className="py-24 md:py-40 px-6 bg-[#011d5a] text-white relative">
           <div className="max-w-5xl mx-auto text-center relative z-10">
             <Reveal>
               <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-12 italic">70+ Billion<br />streams.</h2>

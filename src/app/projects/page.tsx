@@ -54,7 +54,7 @@ const PROJECTS = [
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-[#013DA6] text-white flex flex-col font-sans">
+    <div className="min-h-screen bg-[#011d5a] text-white flex flex-col font-sans">
       <Navbar />
 
       <main className="flex-1">
@@ -70,35 +70,35 @@ export default function ProjectsPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             PROJECT LIST — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
+        <section className="py-24 md:py-40 px-6 bg-[#f0f2f8] text-[#011d5a] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-7xl mx-auto space-y-20 md:space-y-32">
             {PROJECTS.map((project, i) => (
               <Reveal key={project.slug} delay={i * 0.08}>
                 <Link href={`/projects/${project.slug}`} className="group block">
                   <div className={`grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center ${i % 2 === 1 ? "lg:direction-rtl" : ""}`}>
                     {/* Image */}
-                    <div className={`relative aspect-[16/10] rounded-[2rem] overflow-hidden shadow-xl border border-[#013DA6]/10 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+                    <div className={`relative aspect-[16/10] rounded-[2rem] overflow-hidden shadow-xl border border-[#011d5a]/10 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
                       <Image
                         src={project.image}
                         alt={project.title}
                         fill
                         className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-[#013DA6]/5 mix-blend-overlay" />
+                      <div className="absolute inset-0 bg-[#011d5a]/5 mix-blend-overlay" />
                     </div>
 
                     {/* Content */}
                     <div className={`space-y-6 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-                      <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#013DA6]/30 italic">{project.category}</span>
-                      <h3 className="font-sans font-black text-3xl md:text-5xl text-[#013DA6] leading-[1] tracking-[0.02em] uppercase group-hover:translate-x-1 transition-transform duration-500">
+                      <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#011d5a]/30 italic">{project.category}</span>
+                      <h3 className="font-sans font-black text-3xl md:text-5xl text-[#011d5a] leading-[1] tracking-[0.02em] uppercase group-hover:translate-x-1 transition-transform duration-500">
                         {project.title}
                       </h3>
-                      <p className="text-lg text-[#013DA6]/50 font-light leading-relaxed max-w-lg">
+                      <p className="text-lg text-[#011d5a]/50 font-light leading-relaxed max-w-lg">
                         {project.desc}
                       </p>
                       <div className="flex flex-wrap gap-4 pt-2">
                         {project.stats.map((stat) => (
-                          <span key={stat} className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#013DA6]/30 px-4 py-2 border border-[#013DA6]/10 rounded-full">
+                          <span key={stat} className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#011d5a]/30 px-4 py-2 border border-[#011d5a]/10 rounded-full">
                             {stat}
                           </span>
                         ))}
@@ -114,7 +114,7 @@ export default function ProjectsPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             NUMBERS — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white">
+        <section className="py-24 md:py-40 px-6 bg-[#011d5a] text-white">
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-20 md:mb-28">
               <p className="label mb-6 text-white/40">Impact</p>

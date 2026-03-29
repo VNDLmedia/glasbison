@@ -9,7 +9,7 @@ import { ReturnHome } from "@/components/ReturnHome";
 
 export default function Datenschutz() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#013DA6] text-white font-sans">
+    <div className="flex flex-col min-h-screen bg-[#011d5a] text-white font-sans">
       <Navbar />
       
       <main className="flex-1">
@@ -25,32 +25,32 @@ export default function Datenschutz() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             CONTENT — Deep Dive
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
+        <section className="py-24 md:py-40 px-6 bg-[#f0f2f8] text-[#011d5a] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
               {/* Sticky Sidebar Info */}
               <div className="lg:col-span-4">
                 <div className="sticky top-32 space-y-10">
                   <Reveal>
-                    <div className="p-8 border border-[#013DA6]/10 rounded-[2rem] bg-[#013DA6]/[0.02]">
-                      <h3 className="text-[10px] font-black text-[#013DA6] uppercase tracking-[0.3em] mb-4 italic">Last Updated</h3>
+                    <div className="p-8 border border-[#011d5a]/10 rounded-[2rem] bg-[#011d5a]/[0.02]">
+                      <h3 className="text-[10px] font-black text-[#011d5a] uppercase tracking-[0.3em] mb-4 italic">Last Updated</h3>
                       <p className="text-lg font-medium font-sans">March 2026</p>
                     </div>
                   </Reveal>
                   <Reveal delay={0.1}>
-                    <div className="p-8 space-y-5 text-[#013DA6]">
+                    <div className="p-8 space-y-5 text-[#011d5a]">
                       <h3 className="text-[10px] font-black opacity-30 uppercase tracking-[0.3em] italic">Contact Privacy</h3>
                       <p className="text-sm opacity-60 leading-relaxed font-light font-sans">
                         For all data-related inquiries, please reach out to our legal department.
                       </p>
-                      <a href={`mailto:${CONTACT.email}`} className="text-sm font-bold border-b border-[#013DA6]/20 pb-1 font-sans">{CONTACT.email}</a>
+                      <a href={`mailto:${CONTACT.email}`} className="text-sm font-bold border-b border-[#011d5a]/20 pb-1 font-sans">{CONTACT.email}</a>
                     </div>
                   </Reveal>
                 </div>
               </div>
 
               {/* Main Policy Content */}
-              <div className="lg:col-span-8 text-[#013DA6]">
+              <div className="lg:col-span-8 text-[#011d5a]">
                 <Reveal delay={0.2}>
                   <div className="space-y-20">
                     <section>
@@ -92,7 +92,7 @@ export default function Datenschutz() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             FOOTER MOMENT
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 bg-[#013DA6] text-center">
+        <section className="py-24 md:py-40 bg-[#011d5a] text-center">
           <Reveal>
             <h2 className="font-display text-5xl md:text-7xl lg:text-8xl tracking-tight opacity-10 leading-[0.95] italic">safe &<br />secure.</h2>
           </Reveal>

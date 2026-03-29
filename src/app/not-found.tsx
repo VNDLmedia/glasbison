@@ -8,7 +8,7 @@ import { BisonLogo } from "@/components/BisonLogo";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-[#013DA6] text-white flex flex-col font-sans">
+    <div className="min-h-screen bg-[#011d5a] text-white flex flex-col font-sans">
       <Navbar />
       <main className="flex-1 flex flex-col items-center justify-center px-6 relative">
         {/* Background Bison */}

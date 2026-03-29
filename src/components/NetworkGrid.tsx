@@ -27,9 +27,9 @@ interface NetworkGridProps {
 
 export function NetworkGrid({ variant = "white" }: NetworkGridProps) {
   const isBlue = variant === "blue";
-  const border = isBlue ? "border-[#013DA6]/10" : "border-white/10";
-  const labelColor = isBlue ? "text-[#013DA6]/25" : "text-white/20";
-  const hoverBg = isBlue ? "hover:bg-[#013DA6]/[0.03]" : "hover:bg-white/[0.03]";
+  const border = isBlue ? "border-[#011d5a]/10" : "border-white/10";
+  const labelColor = isBlue ? "text-[#011d5a]/25" : "text-white/20";
+  const hoverBg = isBlue ? "hover:bg-[#011d5a]/[0.03]" : "hover:bg-white/[0.03]";
   const logoFilter = isBlue ? "opacity-60 group-hover:opacity-100" : "brightness-0 invert opacity-60 group-hover:opacity-100";
 
   return (

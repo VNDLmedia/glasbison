@@ -166,10 +166,10 @@ export function ArtistGallery() {
         <Reveal delay={ARTISTS.length * 0.05} animation="scale" className="col-span-1 row-span-1 aspect-square">
           <Link
             href="/artists"
-            className="group relative w-full h-full flex flex-col items-center justify-center rounded-2xl md:rounded-[2.5rem] border border-[#013DA6]/10 bg-[#013DA6]/[0.03] hover:bg-[#013DA6]/[0.08] transition-all duration-500 cursor-pointer"
+            className="group relative w-full h-full flex flex-col items-center justify-center rounded-2xl md:rounded-[2.5rem] border border-[#011d5a]/10 bg-[#011d5a]/[0.03] hover:bg-[#011d5a]/[0.08] transition-all duration-500 cursor-pointer"
           >
-            <ArrowRight className="w-6 h-6 text-[#013DA6]/30 group-hover:text-[#013DA6] group-hover:translate-x-1 transition-all duration-300 mb-3" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#013DA6]/30 group-hover:text-[#013DA6] transition-colors duration-300">View All</span>
+            <ArrowRight className="w-6 h-6 text-[#e11d48]/40 group-hover:text-[#e11d48] group-hover:translate-x-1 transition-all duration-300 mb-3" />
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#011d5a]/30 group-hover:text-[#011d5a] transition-colors duration-300">View All</span>
           </Link>
         </Reveal>
       </div>
@@ -192,7 +192,7 @@ export function ArtistGallery() {
               initial={{ scale: 0.95, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 20 }}
-              className="relative w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-[#013DA6]/80 backdrop-blur-2xl border border-white/10 shadow-[0_0_80px_rgba(1,61,166,0.4)] flex flex-col md:flex-row text-white"
+              className="relative w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-[#011d5a]/80 backdrop-blur-2xl border border-white/10 shadow-[0_0_80px_rgba(1,61,166,0.4)] flex flex-col md:flex-row text-white"
             >
               {/* Close */}
               <button
@@ -210,7 +210,7 @@ export function ArtistGallery() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#013DA6]/90 via-transparent md:bg-gradient-to-r md:from-transparent md:to-[#013DA6]/60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#011d5a]/90 via-transparent md:bg-gradient-to-r md:from-transparent md:to-[#011d5a]/60" />
               </div>
 
               {/* Content */}

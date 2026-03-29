@@ -12,7 +12,7 @@ import { ReturnHome } from "@/components/ReturnHome";
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-[#013DA6] text-white flex flex-col font-sans">
+    <div className="min-h-screen bg-[#011d5a] text-white flex flex-col font-sans">
       <Navbar />
 
       <main className="flex-1">
@@ -28,24 +28,24 @@ export default function ServicesPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             SERVICES LIST — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
+        <section className="py-24 md:py-40 px-6 bg-[#f0f2f8] text-[#011d5a] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-7xl mx-auto">
-            <div className="border-t border-[#013DA6]/10">
+            <div className="border-t border-[#011d5a]/10">
               {SERVICES.map((service, i) => (
                 <Reveal key={service.slug} delay={i * 0.06}>
-                  <div className="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-10 md:py-14 border-b border-[#013DA6]/10 items-baseline hover:bg-[#013DA6]/[0.02] transition-colors duration-300 px-4 -mx-4 rounded-xl cursor-default">
+                  <div className="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-10 md:py-14 border-b border-[#011d5a]/10 items-baseline hover:bg-[#011d5a]/[0.02] transition-colors duration-300 px-4 -mx-4 rounded-xl cursor-default">
                     <div className="md:col-span-1">
-                      <span className="font-sans font-black text-2xl md:text-4xl text-[#013DA6]/10 group-hover:text-[#013DA6]/25 transition-colors duration-300 tracking-[0.04em]">
+                      <span className="font-sans font-black text-2xl md:text-4xl text-[#011d5a]/10 group-hover:text-[#011d5a]/25 transition-colors duration-300 tracking-[0.04em]">
                         {service.slug}
                       </span>
                     </div>
                     <div className="md:col-span-4">
-                      <h3 className="font-sans font-bold text-lg md:text-xl tracking-[0.02em] text-[#013DA6] group-hover:translate-x-1 transition-transform duration-300">
+                      <h3 className="font-sans font-bold text-lg md:text-xl tracking-[0.02em] text-[#011d5a] group-hover:translate-x-1 transition-transform duration-300">
                         {service.title}
                       </h3>
                     </div>
                     <div className="md:col-span-7">
-                      <p className="text-[#013DA6]/40 font-light text-base md:text-lg leading-relaxed">
+                      <p className="text-[#011d5a]/40 font-light text-base md:text-lg leading-relaxed">
                         {service.desc}
                       </p>
                     </div>
@@ -59,7 +59,7 @@ export default function ServicesPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             MANTRA — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white text-center">
+        <section className="py-24 md:py-40 px-6 bg-[#011d5a] text-white text-center">
           <div className="max-w-4xl mx-auto">
             <Reveal>
               <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-10 italic">scale Without<br />Compromise.</h2>
@@ -73,23 +73,23 @@ export default function ServicesPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             CONTACT — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10">
+        <section className="py-24 md:py-40 px-6 bg-[#f0f2f8] text-[#011d5a] relative z-10">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <div>
               <Reveal>
-                <p className="label mb-6 !text-[#013DA6]/40">Get Started</p>
-                <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#013DA6] mb-8">
+                <p className="label mb-6 !text-[#011d5a]/40">Get Started</p>
+                <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#011d5a] mb-8">
                   Let&apos;s Work<br />Together.
 
                 </h2>
               </Reveal>
               <Reveal delay={0.1}>
-                <p className="text-[#013DA6]/40 text-lg font-light leading-relaxed max-w-md mb-10">
+                <p className="text-[#011d5a]/40 text-lg font-light leading-relaxed max-w-md mb-10">
                   Tell us about your vision. Whether you need management, placements, or strategic support — we&apos;re ready.
                 </p>
               </Reveal>
               <Reveal delay={0.2}>
-                <Link href="/contact" className="btn btn-white !bg-[#013DA6] !text-white !px-10 !py-5">
+                <Link href="/contact" className="btn btn-white !bg-[#011d5a] !text-white !px-10 !py-5">
                   Contact Page
                 </Link>
               </Reveal>

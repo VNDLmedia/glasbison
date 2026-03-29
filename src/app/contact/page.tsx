@@ -12,7 +12,7 @@ import { ReturnHome } from "@/components/ReturnHome";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-[#013DA6] text-white flex flex-col font-sans">
+    <div className="min-h-screen bg-[#011d5a] text-white flex flex-col font-sans">
       <Navbar />
       
       <main className="flex-1">
@@ -28,24 +28,24 @@ export default function ContactPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             FORM SECTION — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
+        <section className="py-24 md:py-40 px-6 bg-[#f0f2f8] text-[#011d5a] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
             {/* Left: Deep Info */}
             <div className="lg:col-span-5 space-y-24">
               <Reveal delay={0.1}>
                 <div className="space-y-6">
-                  <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#013DA6]/30 italic">Direct Channel</h3>
-                  <a href={`mailto:${CONTACT.email}`} className="text-2xl md:text-3xl font-sans font-bold text-[#013DA6] hover:opacity-60 transition-all border-b-2 border-[#013DA6]/10 pb-4 inline-block tracking-[0.02em]">
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#011d5a]/30 italic">Direct Channel</h3>
+                  <a href={`mailto:${CONTACT.email}`} className="text-2xl md:text-3xl font-sans font-bold text-[#011d5a] hover:opacity-60 transition-all border-b-2 border-[#011d5a]/10 pb-4 inline-block tracking-[0.02em]">
                     {CONTACT.email}
                   </a>
-                  <p className="text-lg text-[#013DA6]/40 font-light max-w-xs italic">For general inquiries, partnership proposals and press requests.</p>
+                  <p className="text-lg text-[#011d5a]/40 font-light max-w-xs italic">For general inquiries, partnership proposals and press requests.</p>
                 </div>
               </Reveal>
 
               <Reveal delay={0.2}>
                 <div className="space-y-6">
-                  <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#013DA6]/30 italic">HQ / Representation</h3>
-                  <p className="text-xl md:text-2xl font-light text-[#013DA6]/60 leading-relaxed italic tracking-tight">
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#011d5a]/30 italic">HQ / Representation</h3>
+                  <p className="text-xl md:text-2xl font-light text-[#011d5a]/60 leading-relaxed italic tracking-tight">
                     {CONTACT.address.city}, Germany<br />
                     Operating Worldwide.
                   </p>
@@ -54,7 +54,7 @@ export default function ContactPage() {
 
               <Reveal delay={0.3}>
                 <div className="space-y-8">
-                  <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#013DA6]/30 italic">Digital Presence</h3>
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#011d5a]/30 italic">Digital Presence</h3>
                   <div className="flex gap-10">
                     {[
                       { platform: "instagram", href: SOCIAL_LINKS.instagram },
@@ -66,7 +66,7 @@ export default function ContactPage() {
                         href={s.href} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="p-6 rounded-full border border-[#013DA6]/10 text-[#013DA6]/40 hover:text-white hover:bg-[#013DA6] hover:border-[#013DA6] transition-all shadow-xl"
+                        className="p-6 rounded-full border border-[#011d5a]/10 text-[#011d5a]/40 hover:text-white hover:bg-[#011d5a] hover:border-[#011d5a] transition-all shadow-xl"
                       >
                         <SocialIcon platform={s.platform as any} className="w-8 h-8" />
                       </a>
@@ -88,7 +88,7 @@ export default function ContactPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             STATEMENT MOMENT — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white text-center relative">
+        <section className="py-24 md:py-40 px-6 bg-[#011d5a] text-white text-center relative">
           <div className="max-w-4xl mx-auto relative z-10">
             <Reveal>
               <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-10 italic">Unbreakable<br />Vision.</h2>

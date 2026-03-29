@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#013DA6] text-white flex flex-col font-sans">
+    <div className="min-h-screen bg-[#011d5a] text-white flex flex-col font-sans">
       <Navbar />
       
       <main className="flex-1">
@@ -24,15 +24,15 @@ export default function AboutPage() {
         <ReturnHome />
 
         {/* Narrative Section */}
-        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] rounded-b-[3rem] md:rounded-b-[5rem] relative z-10 shadow-2xl">
+        <section className="py-24 md:py-40 px-6 bg-[#f0f2f8] text-[#011d5a] rounded-b-[3rem] md:rounded-b-[5rem] relative z-10 shadow-2xl">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div className="space-y-10">
               <Reveal>
                 <h2 className="font-display text-4xl md:text-6xl leading-[0.95] tracking-tight">The Vision.</h2>
-                <div className="w-20 h-1.5 bg-[#013DA6] mt-6 rounded-full" />
+                <div className="w-20 h-1.5 bg-[#011d5a] mt-6 rounded-full" />
               </Reveal>
               <Reveal delay={0.1}>
-                <p className="text-lg md:text-xl font-light leading-relaxed italic text-[#013DA6]/70">
+                <p className="text-lg md:text-xl font-light leading-relaxed italic text-[#011d5a]/70">
                   In an industry often defined by noise, we focus on resonance. We don&apos;t just secure placements; we build sustainable ecosystems where creative talent can thrive for decades.
                 </p>
               </Reveal>
@@ -50,20 +50,20 @@ export default function AboutPage() {
               </Reveal>
             </div>
 
-            <div className="relative aspect-square rounded-[3rem] overflow-hidden group shadow-2xl border border-[#013DA6]/10">
+            <div className="relative aspect-square rounded-[3rem] overflow-hidden group shadow-2xl border border-[#011d5a]/10">
               <Image
                 src="/photos/dude.png"
                 alt="Glass Bison"
                 fill
                 className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-[#013DA6]/10 mix-blend-overlay" />
+              <div className="absolute inset-0 bg-[#011d5a]/10 mix-blend-overlay" />
             </div>
           </div>
         </section>
 
         {/* Global Reach */}
-        <section className="py-24 md:py-40 px-6 bg-[#013DA6]">
+        <section className="py-24 md:py-40 px-6 bg-[#011d5a]">
           <div className="max-w-7xl mx-auto text-center">
             <Reveal>
               <p className="label mb-8 text-white/30 italic uppercase tracking-[0.4em]">Global Infrastructure</p>

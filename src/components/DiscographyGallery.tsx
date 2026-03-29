@@ -66,7 +66,7 @@ export function DiscographyGallery() {
                   onClick={() => setActiveIndex(index)}
                   className={`whitespace-nowrap px-6 py-3 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-500 shrink-0 ${
                     isActive
-                      ? "bg-white text-[#013DA6] shadow-[0_0_20px_rgba(255,255,255,0.2)] scale-105"
+                      ? "bg-[#f0f2f8] text-[#011d5a] shadow-[0_0_20px_rgba(255,255,255,0.2)] scale-105"
                       : "bg-white/5 text-white/50 hover:bg-white/10 hover:text-white border border-white/5"
                   }`}
                   style={{ transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}
@@ -119,7 +119,7 @@ export function DiscographyGallery() {
                     {DISCOGRAPHY[activeIndex].certification}
                   </span>
                 </div>
-                <div className="px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest uppercase bg-white text-[#013DA6] shadow-md">
+                <div className="px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest uppercase bg-[#f0f2f8] text-[#011d5a] shadow-md">
                   {DISCOGRAPHY[activeIndex].highlight}
                 </div>
               </div>

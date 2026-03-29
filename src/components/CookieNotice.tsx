@@ -28,7 +28,7 @@ export function CookieNotice() {
           exit={{ y: 100, opacity: 0 }}
           className="fixed bottom-6 left-6 right-6 z-[100] md:left-auto md:max-w-sm"
         >
-          <div className="bg-white rounded-3xl p-6 shadow-2xl border border-[#013DA6]/10 text-[#013DA6]">
+          <div className="bg-[#f0f2f8] rounded-3xl p-6 shadow-2xl border border-[#011d5a]/10 text-[#011d5a]">
             <h4 className="font-display text-xl mb-3">Transparency.</h4>
             <p className="text-sm font-light leading-relaxed mb-6 opacity-60">
               We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
@@ -36,13 +36,13 @@ export function CookieNotice() {
             <div className="flex gap-3">
               <button 
                 onClick={accept}
-                className="flex-1 py-3 rounded-full bg-[#013DA6] text-white text-[10px] font-bold uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg"
+                className="flex-1 py-3 rounded-full bg-[#011d5a] text-white text-[10px] font-bold uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg"
               >
                 Accept All
               </button>
               <button 
                 onClick={() => setIsVisible(false)}
-                className="flex-1 py-3 rounded-full border border-[#013DA6]/10 text-[10px] font-bold uppercase tracking-widest hover:bg-[#013DA6]/5 transition-all"
+                className="flex-1 py-3 rounded-full border border-[#011d5a]/10 text-[10px] font-bold uppercase tracking-widest hover:bg-[#011d5a]/5 transition-all"
               >
                 Decline
               </button>

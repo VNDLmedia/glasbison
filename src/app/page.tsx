@@ -117,10 +117,10 @@ function HeroVideo({ progress }: { progress: number }) {
 
 function DiscographySection() {
   const { activeIndex } = useMedia();
-  const color = RECORDS[activeIndex]?.color || "#013DA6";
+  const color = RECORDS[activeIndex]?.color || "#011d5a";
   return (
     <section id="discography" className="py-12 md:py-20 px-6 text-white relative z-10 overflow-hidden transition-colors duration-1000" style={{ backgroundColor: color }}>
-      <div className="absolute inset-0 bg-[#013DA6]/85 pointer-events-none" />
+      <div className="absolute inset-0 bg-[#011d5a]/85 pointer-events-none" />
       <div className="max-w-7xl mx-auto relative z-10">
         <Reveal className="mb-8 md:mb-14 text-center lg:text-left">
           <p className="label mb-3 text-white/40">Discography</p>
@@ -157,7 +157,7 @@ export default function Home() {
   }, [hasAutoPlayed, setIsPlaying]);
 
   return (
-    <div className="min-h-screen text-white bg-[#013DA6] selection:bg-white/20 font-sans">
+    <div className="min-h-screen text-white bg-[#011d5a] selection:bg-white/20 font-sans">
       <ConstellationCanvas />
       <Navbar />
 
@@ -171,7 +171,7 @@ export default function Home() {
               {/* Scrubbing Video */}
               <div className="absolute inset-0 w-full h-full">
                 <HeroVideo progress={progress} />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[#013DA6]" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[#011d5a]" />
               </div>
 
               <div
@@ -230,15 +230,15 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             NUMBERS — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10">
+        <section className="py-24 md:py-48 px-6 bg-[#f0f2f8] text-[#011d5a] relative z-10">
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-16 md:mb-24">
-              <p className="label mb-6 !text-[#013DA6]/40">Track Record</p>
+              <p className="label mb-6 !text-[#011d5a]/40">Track Record</p>
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
-                <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#013DA6]">
+                <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#011d5a]">
                   The Numbers<br />speak.
                 </h2>
-                <p className="text-[#013DA6]/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
+                <p className="text-[#011d5a]/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
                   A legacy defined by cultural impact, chart dominance, and relentless execution.
                 </p>
               </div>
@@ -248,7 +248,7 @@ export default function Home() {
               {ACHIEVEMENTS.map((a, i) => (
                 <Reveal key={a.label} delay={i * 0.1} animation="scale" className="h-full">
                   <TiltCard>
-                    <div className="p-8 md:p-10 text-center h-full flex flex-col justify-center bg-[#013DA6]/[0.03] border border-[#013DA6]/10 rounded-[2rem] hover:bg-[#013DA6] hover:text-white hover:border-[#013DA6] transition-all duration-500 group min-h-[200px]">
+                    <div className="p-8 md:p-10 text-center h-full flex flex-col justify-center bg-[#011d5a]/[0.03] border border-[#011d5a]/10 rounded-[2rem] hover:bg-[#e11d48] hover:text-white hover:border-[#e11d48] transition-all duration-500 group min-h-[200px]">
                       <div className="font-sans font-black text-4xl md:text-5xl mb-4 tracking-tight group-hover:scale-110 transition-transform duration-500">
                         {a.value.includes("+") ? (
                           <CountUp target={parseInt(a.value)} suffix="+" duration={2} />
@@ -256,7 +256,7 @@ export default function Home() {
                           a.value
                         )}
                       </div>
-                      <div className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#013DA6]/40 group-hover:text-white/50 transition-colors duration-500">{a.label}</div>
+                      <div className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#011d5a]/40 group-hover:text-white/50 transition-colors duration-500">{a.label}</div>
                     </div>
                   </TiltCard>
                 </Reveal>
@@ -274,11 +274,11 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             ARTIST GALLERY — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="artists" className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10">
+        <section id="artists" className="py-24 md:py-48 px-6 bg-[#f0f2f8] text-[#011d5a] relative z-10">
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-24 md:mb-40">
-              <p className="label mb-6 !text-[#013DA6]/40">Artist Credits</p>
-              <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight font-normal text-[#013DA6]">
+              <p className="label mb-6 !text-[#011d5a]/40">Artist Credits</p>
+              <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight font-normal text-[#011d5a]">
                 The Visionaries<br />Behind the Hits.
               </h2>
             </Reveal>
@@ -289,7 +289,7 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             TRACK RECORD — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="track-record" className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10">
+        <section id="track-record" className="py-24 md:py-48 px-6 bg-[#f0f2f8] text-[#011d5a] relative z-10">
           <div className="absolute right-0 top-24 pointer-events-none opacity-[0.05]">
             <BisonLogo size={800} variant="blue" />
           </div>
@@ -297,13 +297,13 @@ export default function Home() {
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 md:mb-40 gap-8">
               <Reveal>
-                <p className="label mb-6 !text-[#013DA6]/40">Proven Results</p>
-                <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight font-normal text-[#013DA6]">
+                <p className="label mb-6 !text-[#011d5a]/40">Proven Results</p>
+                <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight font-normal text-[#011d5a]">
                   The Gold<br />standard.
                 </h2>
               </Reveal>
               <Reveal delay={0.2} className="max-w-md lg:text-right">
-                <p className="text-[#013DA6]/40 text-xl font-light leading-relaxed">
+                <p className="text-[#011d5a]/40 text-xl font-light leading-relaxed">
                   A legacy built on precision and cultural impact. Over 70 certifications and counting, defining the sound of a generation.
                 </p>
               </Reveal>
@@ -313,19 +313,19 @@ export default function Home() {
               <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                 <div className="space-y-8">
                   <Reveal delay={0.1} animation="scale">
-                    <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-[#013DA6]/10 group shadow-2xl bg-[#013DA6]/5">
+                    <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-[#011d5a]/10 group shadow-2xl bg-[#011d5a]/5">
                       <Image
                         src="/photos/dude-mit-award.png"
                         alt="Award Recognition"
                         fill
                         className="object-cover transition-transform duration-[3s] group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#013DA6]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#011d5a]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                     </div>
                   </Reveal>
-                  <div className="hidden md:block p-10 border border-[#013DA6]/10 rounded-[2.5rem] bg-[#013DA6]/[0.02]">
-                    <p className="text-[10px] text-[#013DA6]/30 uppercase tracking-[0.3em] mb-6 font-bold">Industry Recognition</p>
-                    <p className="text-[#013DA6]/40 font-light text-lg italic leading-relaxed">
+                  <div className="hidden md:block p-10 border border-[#011d5a]/10 rounded-[2.5rem] bg-[#011d5a]/[0.02]">
+                    <p className="text-[10px] text-[#011d5a]/30 uppercase tracking-[0.3em] mb-6 font-bold">Industry Recognition</p>
+                    <p className="text-[#011d5a]/40 font-light text-lg italic leading-relaxed">
                       "Excellence is not an act, but a habit. We strive for the habit of winning for our artists."
                     </p>
                   </div>
@@ -333,39 +333,39 @@ export default function Home() {
                 
                 <div className="space-y-8 md:pt-32">
                   <Reveal delay={0.3} animation="scale">
-                    <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-[#013DA6]/10 group shadow-2xl bg-[#013DA6]/5">
+                    <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-[#011d5a]/10 group shadow-2xl bg-[#011d5a]/5">
                       <Image
                         src="/photos/award.png"
                         alt="Industry Award"
                         fill
                         className="object-cover transition-transform duration-[3s] group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#013DA6]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#011d5a]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                     </div>
                   </Reveal>
                 </div>
               </div>
 
               <div className="lg:col-span-5 flex flex-col justify-center">
-                <div className="space-y-0 text-[#013DA6]">
+                <div className="space-y-0 text-[#011d5a]">
                   {CERTIFICATIONS.map((c, i) => (
                     <Reveal key={c.title} delay={i * 0.1} direction="left">
-                      <div className="group py-10 border-b border-[#013DA6]/10 flex items-center justify-between hover:px-4 transition-all duration-500">
+                      <div className="group py-10 border-b border-[#011d5a]/10 flex items-center justify-between hover:px-4 transition-all duration-500">
                         <div>
                           <div className="flex items-center gap-4 mb-3">
-                            <span className="text-[10px] text-[#013DA6]/40 font-black tracking-[0.2em] uppercase px-2 py-0.5 border border-[#013DA6]/20 rounded group-hover:bg-[#013DA6] group-hover:text-white transition-all">
+                            <span className="text-[10px] text-[#011d5a]/40 font-black tracking-[0.2em] uppercase px-2 py-0.5 border border-[#011d5a]/20 rounded group-hover:bg-[#011d5a] group-hover:text-white transition-all">
                               {c.certification}
                             </span>
-                            <span className="text-[10px] text-[#013DA6]/20 tracking-widest">{c.label}</span>
+                            <span className="text-[10px] text-[#011d5a]/20 tracking-widest">{c.label}</span>
                           </div>
-                          <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-[#013DA6]">{c.artist}</h3>
-                          <p className="text-sm text-[#013DA6]/40 mt-2 font-light italic">{c.title}</p>
+                          <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-[#011d5a]">{c.artist}</h3>
+                          <p className="text-sm text-[#011d5a]/40 mt-2 font-light italic">{c.title}</p>
                         </div>
                         <div className="text-right">
-                          <span className="font-sans font-black text-2xl md:text-4xl text-[#013DA6]/10 group-hover:text-[#013DA6]/30 transition-all duration-700 block leading-none mb-2">
+                          <span className="font-sans font-black text-2xl md:text-4xl text-[#011d5a]/10 group-hover:text-[#011d5a]/30 transition-all duration-700 block leading-none mb-2">
                             {c.units.split(" ")[0]}
                           </span>
-                          <span className="text-[10px] text-[#013DA6]/20 uppercase tracking-widest font-bold">Units</span>
+                          <span className="text-[10px] text-[#011d5a]/20 uppercase tracking-widest font-bold">Units</span>
                         </div>
                       </div>
                     </Reveal>
@@ -379,7 +379,7 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             SERVICES — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="services" className="py-24 md:py-40 px-6 bg-[#013DA6] text-white relative z-10">
+        <section id="services" className="py-24 md:py-40 px-6 bg-[#011d5a] text-white relative z-10">
           <div className="max-w-7xl mx-auto">
             {/* Header */}
             <Reveal className="mb-20 md:mb-28">
@@ -398,19 +398,19 @@ export default function Home() {
             <div className="border-t border-white/10">
               {SERVICES.map((s, i) => (
                 <Reveal key={s.slug} delay={i * 0.06}>
-                  <div className="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-10 md:py-14 border-b border-white/10 items-baseline hover:bg-white/[0.03] transition-colors duration-300 px-4 -mx-4 rounded-xl cursor-default">
+                  <div className="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-10 md:py-14 border-b border-white/10 items-baseline hover:bg-[#e11d48]/[0.06] hover:border-[#e11d48]/20 transition-all duration-500 px-4 -mx-4 rounded-xl cursor-default">
                     <div className="md:col-span-1">
-                      <span className="font-sans font-black text-2xl md:text-4xl text-white/10 group-hover:text-white/25 transition-colors duration-300 tracking-[0.04em]">
+                      <span className="font-sans font-black text-2xl md:text-4xl text-white/10 group-hover:text-[#e11d48]/40 transition-colors duration-500 tracking-[0.04em]">
                         {s.slug}
                       </span>
                     </div>
                     <div className="md:col-span-4">
-                      <h3 className="font-sans font-bold text-lg md:text-xl tracking-[0.02em] group-hover:translate-x-1 transition-transform duration-300">
+                      <h3 className="font-sans font-bold text-lg md:text-xl tracking-[0.02em] group-hover:translate-x-1 transition-all duration-500">
                         {s.title}
                       </h3>
                     </div>
                     <div className="md:col-span-7">
-                      <p className="text-white/35 font-light text-base md:text-lg leading-relaxed">
+                      <p className="text-white/35 font-light text-base md:text-lg leading-relaxed group-hover:text-white/50 transition-colors duration-500">
                         {s.desc}
                       </p>
                     </div>
@@ -424,15 +424,15 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             NETWORK — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="network" className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10">
+        <section id="network" className="py-24 md:py-40 px-6 bg-[#f0f2f8] text-[#011d5a] relative z-10">
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-20 md:mb-28">
-              <p className="label mb-6 !text-[#013DA6]/40">Global Network</p>
+              <p className="label mb-6 !text-[#011d5a]/40">Global Network</p>
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
-                <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#013DA6]">
+                <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#011d5a]">
                   strategic<br />Partnerships.
                 </h2>
-                <p className="text-[#013DA6]/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
+                <p className="text-[#011d5a]/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
                   Our influence spans across every major player in the music and entertainment landscape. A network built on trust and results.
                 </p>
               </div>
@@ -445,7 +445,7 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             LABELS & COLLABS — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-16 md:py-24 bg-[#013DA6] relative z-10">
+        <section className="py-16 md:py-24 bg-[#011d5a] relative z-10">
           <Marquee speed={40}>
             <div className="flex gap-20 px-10">
               {LABELS.map((l) => (
@@ -466,7 +466,7 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             ABOUT — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="about" className="py-24 md:py-40 px-6 bg-[#013DA6] relative z-10">
+        <section id="about" className="py-24 md:py-40 px-6 bg-[#011d5a] relative z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/brand/logo-white.svg"
@@ -496,19 +496,19 @@ export default function Home() {
                 { n: "03", t: "Vision", d: "We don't chase the next hit. We build sustainable, long-term careers with real cultural impact." },
               ].map((p, i) => (
                 <Reveal key={p.n} delay={i * 0.06}>
-                  <div className="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-10 md:py-14 border-b border-white/10 items-baseline hover:bg-white/[0.03] transition-colors duration-300 px-4 -mx-4 rounded-xl cursor-default">
+                  <div className="group grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-10 md:py-14 border-b border-white/10 items-baseline hover:bg-[#e11d48]/[0.06] hover:border-[#e11d48]/20 transition-all duration-500 px-4 -mx-4 rounded-xl cursor-default">
                     <div className="md:col-span-1">
-                      <span className="font-sans font-black text-2xl md:text-4xl text-white/10 group-hover:text-white/25 transition-colors duration-300 tracking-[0.04em]">
+                      <span className="font-sans font-black text-2xl md:text-4xl text-white/10 group-hover:text-[#e11d48]/40 transition-colors duration-500 tracking-[0.04em]">
                         {p.n}
                       </span>
                     </div>
                     <div className="md:col-span-3">
-                      <h3 className="font-sans font-bold text-lg md:text-xl tracking-[0.02em] group-hover:translate-x-1 transition-transform duration-300">
+                      <h3 className="font-sans font-bold text-lg md:text-xl tracking-[0.02em] group-hover:translate-x-1 transition-all duration-500">
                         {p.t}
                       </h3>
                     </div>
                     <div className="md:col-span-8">
-                      <p className="text-white/35 font-light text-base md:text-lg leading-relaxed">
+                      <p className="text-white/35 font-light text-base md:text-lg leading-relaxed group-hover:text-white/50 transition-colors duration-500">
                         {p.d}
                       </p>
                     </div>
@@ -533,7 +533,7 @@ export default function Home() {
           {(progress) => {
             const words = "We don't build hype. We build careers.".split(" ");
             return (
-              <div className="w-full h-full flex items-center justify-center px-6 bg-[#013DA6] relative overflow-hidden">
+              <div className="w-full h-full flex items-center justify-center px-6 bg-[#011d5a] relative overflow-hidden">
                 {/* Star Grid Background — scroll-coupled */}
                 <div className="absolute inset-0 pointer-events-none flex justify-around px-[10%]" style={{ opacity: Math.min(0.08, progress * 0.16) }}>
                   {[1, -1, 1, -1].map((direction, col) => {
@@ -591,27 +591,27 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             CONTACT — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="contact" className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10">
-          <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#013DA6]/[0.02] blur-[150px] pointer-events-none" />
+        <section id="contact" className="py-24 md:py-48 px-6 bg-[#f0f2f8] text-[#011d5a] relative z-10">
+          <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#011d5a]/[0.02] blur-[150px] pointer-events-none" />
 
           <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
             <div className="lg:col-span-6">
               <Reveal>
-                <p className="label mb-8 !text-[#013DA6]/40">Contact</p>
-                <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-10 font-normal text-[#013DA6]">
+                <p className="label mb-8 !text-[#011d5a]/40">Contact</p>
+                <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-10 font-normal text-[#011d5a]">
                   Let&apos;s Build<br />something Great.
                 </h2>
               </Reveal>
               <Reveal delay={0.1}>
-                <p className="text-[#013DA6]/40 text-xl font-light leading-relaxed max-w-lg mb-12">
+                <p className="text-[#011d5a]/40 text-xl font-light leading-relaxed max-w-lg mb-12">
                   Whether you&apos;re a producer looking for management, an artist seeking placements, or a label exploring partnerships.
                 </p>
               </Reveal>
               
               <Reveal delay={0.2}>
                 <div className="space-y-0 max-w-md">
-                  <a href={`mailto:${CONTACT.email}`} className="flex items-center gap-6 py-8 border-b border-[#013DA6]/10 group">
-                    <span className="text-lg md:text-2xl text-[#013DA6]/40 group-hover:text-[#013DA6] transition-colors font-light italic">{CONTACT.email}</span>
+                  <a href={`mailto:${CONTACT.email}`} className="flex items-center gap-6 py-8 border-b border-[#011d5a]/10 group">
+                    <span className="text-lg md:text-2xl text-[#011d5a]/40 group-hover:text-[#011d5a] transition-colors font-light italic">{CONTACT.email}</span>
                   </a>
                   <div className="flex gap-8 pt-10">
                     {[
@@ -623,7 +623,7 @@ export default function Home() {
                         href={s.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm font-bold uppercase tracking-widest text-[#013DA6]/30 hover:text-[#013DA6] transition-colors"
+                        className="text-sm font-bold uppercase tracking-widest text-[#011d5a]/30 hover:text-[#011d5a] transition-colors"
                       >
                         {s.label}
                       </a>

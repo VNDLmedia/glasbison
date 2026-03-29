@@ -17,7 +17,7 @@ export function SubpageHero({
   subtitle
 }: SubpageHeroProps) {
   return (
-    <section className="min-h-[90vh] flex flex-col justify-end px-6 relative bg-[#013DA6] text-white">
+    <section className="min-h-[90vh] flex flex-col justify-end px-6 relative bg-[#011d5a] text-white">
       {/* Bison Wordmark Watermark */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img

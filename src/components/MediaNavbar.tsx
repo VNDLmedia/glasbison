@@ -33,7 +33,7 @@ export function MediaNavbar() {
   return (
     <div className={`fixed top-6 right-6 z-[60] hidden lg:flex items-center transition-all duration-500 ${isScrolled ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}`}>
       <div 
-        className="liquid-glass !rounded-full px-4 py-2 flex items-center gap-4 !bg-[#013DA6]/70 !border-white/10 !backdrop-blur-2xl shadow-[0_20px_50px_rgba(1,61,166,0.4)] transition-all duration-500 hover:!bg-[#013DA6]/80 group cursor-pointer"
+        className="liquid-glass !rounded-full px-4 py-2 flex items-center gap-4 !bg-[#011d5a]/70 !border-white/10 !backdrop-blur-2xl shadow-[0_20px_50px_rgba(1,61,166,0.4)] transition-all duration-500 hover:!bg-[#011d5a]/80 group cursor-pointer"
       >
         
         {/* Album Art (Small) */}
@@ -62,8 +62,8 @@ export function MediaNavbar() {
         >
           <div className="flex items-center gap-2">
             <span className="relative flex h-1.5 w-1.5">
-              {isPlaying && <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>}
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
+              {isPlaying && <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f0f2f8] opacity-75"></span>}
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#f0f2f8]"></span>
             </span>
             <span className="text-[10px] font-bold text-white/40 uppercase tracking-widest leading-none">Now Playing</span>
           </div>
@@ -78,9 +78,9 @@ export function MediaNavbar() {
             e.stopPropagation();
             setIsPlaying(!isPlaying);
           }}
-          className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#013DA6] transition-transform active:scale-90 hover:scale-105 shrink-0"
+          className="w-8 h-8 rounded-full bg-[#e11d48] flex items-center justify-center text-white transition-transform active:scale-90 hover:scale-105 shrink-0 shadow-lg shadow-[#e11d48]/30"
         >
-          {isPlaying ? <Pause className="w-4 h-4 fill-current" /> : <Play className="w-4 h-4 fill-current ml-0.5" />}
+          {isPlaying ? <Pause className="w-4 h-4 fill-white" /> : <Play className="w-4 h-4 fill-white ml-0.5" />}
         </button>
       </div>
 

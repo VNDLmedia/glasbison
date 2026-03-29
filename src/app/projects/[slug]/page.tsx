@@ -124,7 +124,7 @@ export default function ProjectDetailPage() {
   const project = PROJECT_DATA[slug] || PROJECT_DATA["global-shaping"];
 
   return (
-    <div className="min-h-screen bg-[#013DA6] text-white flex flex-col font-sans">
+    <div className="min-h-screen bg-[#011d5a] text-white flex flex-col font-sans">
       <Navbar />
 
       <main className="flex-1">
@@ -135,12 +135,12 @@ export default function ProjectDetailPage() {
         />
 
         {/* Back Link */}
-        <div className="bg-white px-6">
+        <div className="bg-[#f0f2f8] px-6">
           <div className="max-w-7xl mx-auto py-8">
             <Reveal>
               <Link
                 href="/projects"
-                className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#013DA6]/40 hover:text-[#013DA6] transition-colors inline-block border-b border-[#013DA6]/10 pb-1"
+                className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#011d5a]/40 hover:text-[#011d5a] transition-colors inline-block border-b border-[#011d5a]/10 pb-1"
               >
                 &larr; Back to Projects
               </Link>
@@ -151,16 +151,16 @@ export default function ProjectDetailPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             HERO IMAGE — Full Width
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="px-6 bg-white relative z-10">
+        <section className="px-6 bg-[#f0f2f8] relative z-10">
           <Reveal animation="scale" className="max-w-7xl mx-auto">
-            <div className="relative aspect-[21/9] rounded-[2rem] overflow-hidden shadow-2xl border border-[#013DA6]/10">
+            <div className="relative aspect-[21/9] rounded-[2rem] overflow-hidden shadow-2xl border border-[#011d5a]/10">
               <Image
                 src={project.image}
                 alt={project.title.replace("<br />", " ")}
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#013DA6]/30 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#011d5a]/30 via-transparent to-transparent" />
             </div>
           </Reveal>
         </section>
@@ -168,12 +168,12 @@ export default function ProjectDetailPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             OVERVIEW — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10">
+        <section className="py-24 md:py-40 px-6 bg-[#f0f2f8] text-[#011d5a] relative z-10">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
             <div className="lg:col-span-7">
               <Reveal>
-                <p className="label mb-6 !text-[#013DA6]/40">Overview</p>
-                <p className="text-2xl md:text-3xl font-light leading-relaxed text-[#013DA6]/70 italic">
+                <p className="label mb-6 !text-[#011d5a]/40">Overview</p>
+                <p className="text-2xl md:text-3xl font-light leading-relaxed text-[#011d5a]/70 italic">
                   {project.description}
                 </p>
               </Reveal>
@@ -182,9 +182,9 @@ export default function ProjectDetailPage() {
               <div className="grid grid-cols-2 gap-6">
                 {project.stats.map((stat, i) => (
                   <Reveal key={stat.label} delay={i * 0.08}>
-                    <div className="py-8 px-6 border border-[#013DA6]/10 rounded-[1.5rem] text-center hover:bg-[#013DA6]/[0.02] transition-colors">
-                      <div className="font-sans font-black text-3xl md:text-4xl text-[#013DA6] tracking-tight mb-2">{stat.value}</div>
-                      <div className="text-[10px] font-bold text-[#013DA6]/30 uppercase tracking-[0.2em]">{stat.label}</div>
+                    <div className="py-8 px-6 border border-[#011d5a]/10 rounded-[1.5rem] text-center hover:bg-[#011d5a]/[0.02] transition-colors">
+                      <div className="font-sans font-black text-3xl md:text-4xl text-[#011d5a] tracking-tight mb-2">{stat.value}</div>
+                      <div className="text-[10px] font-bold text-[#011d5a]/30 uppercase tracking-[0.2em]">{stat.label}</div>
                     </div>
                   </Reveal>
                 ))}
@@ -200,7 +200,7 @@ export default function ProjectDetailPage() {
           {(progress) => {
             const words = (project.quote || "").split(" ");
             return (
-              <div className="w-full h-full flex items-center justify-center px-6 bg-[#013DA6]">
+              <div className="w-full h-full flex items-center justify-center px-6 bg-[#011d5a]">
                 <div className="max-w-4xl text-center">
                   <div
                     className="w-px bg-white/20 mx-auto mb-12 origin-top"
@@ -233,21 +233,21 @@ export default function ProjectDetailPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             CHALLENGE + APPROACH — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10">
+        <section className="py-24 md:py-40 px-6 bg-[#f0f2f8] text-[#011d5a] relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-24 md:mb-32">
               <div>
                 <Reveal>
-                  <p className="label mb-6 !text-[#013DA6]/40">The Challenge</p>
-                  <p className="text-lg md:text-xl font-light leading-relaxed text-[#013DA6]/60">
+                  <p className="label mb-6 !text-[#011d5a]/40">The Challenge</p>
+                  <p className="text-lg md:text-xl font-light leading-relaxed text-[#011d5a]/60">
                     {project.challenge}
                   </p>
                 </Reveal>
               </div>
               <div>
                 <Reveal delay={0.1}>
-                  <p className="label mb-6 !text-[#013DA6]/40">Our Approach</p>
-                  <p className="text-lg md:text-xl font-light leading-relaxed text-[#013DA6]/60">
+                  <p className="label mb-6 !text-[#011d5a]/40">Our Approach</p>
+                  <p className="text-lg md:text-xl font-light leading-relaxed text-[#011d5a]/60">
                     {project.approach}
                   </p>
                 </Reveal>
@@ -257,14 +257,14 @@ export default function ProjectDetailPage() {
             {/* Second Image */}
             {project.image2 && (
               <Reveal animation="scale">
-                <div className="relative aspect-[21/9] rounded-[2rem] overflow-hidden shadow-xl border border-[#013DA6]/10">
+                <div className="relative aspect-[21/9] rounded-[2rem] overflow-hidden shadow-xl border border-[#011d5a]/10">
                   <Image
                     src={project.image2}
                     alt="Project Detail"
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#013DA6]/20 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#011d5a]/20 via-transparent to-transparent" />
                 </div>
               </Reveal>
             )}
@@ -274,7 +274,7 @@ export default function ProjectDetailPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             RESULTS — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white">
+        <section className="py-24 md:py-40 px-6 bg-[#011d5a] text-white">
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-16 md:mb-24">
               <p className="label mb-6 text-white/40">Key Results</p>
@@ -307,17 +307,17 @@ export default function ProjectDetailPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             CONTACT — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-white text-[#013DA6] relative z-10">
+        <section className="py-24 md:py-40 px-6 bg-[#f0f2f8] text-[#011d5a] relative z-10">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <div>
               <Reveal>
-                <p className="label mb-6 !text-[#013DA6]/40">Next Steps</p>
-                <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#013DA6] mb-8">
+                <p className="label mb-6 !text-[#011d5a]/40">Next Steps</p>
+                <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#011d5a] mb-8">
                   start Your<br />Project.
                 </h2>
               </Reveal>
               <Reveal delay={0.1}>
-                <p className="text-[#013DA6]/40 text-lg font-light leading-relaxed max-w-md">
+                <p className="text-[#011d5a]/40 text-lg font-light leading-relaxed max-w-md">
                   Interested in a similar initiative? Let&apos;s discuss how we can build something impactful together.
                 </p>
               </Reveal>

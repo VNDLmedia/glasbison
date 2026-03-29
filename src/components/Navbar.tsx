@@ -29,7 +29,7 @@ export function Navbar() {
         <div
           className={`flex items-center justify-between transition-all duration-500 w-full ${
             isScrolled
-              ? "liquid-glass max-w-fit !rounded-full px-6 py-3 !overflow-visible !bg-[#013DA6]/70 !backdrop-blur-2xl shadow-[0_20px_50px_rgba(1,61,166,0.4)] !border-white/10"
+              ? "liquid-glass max-w-fit !rounded-full px-6 py-3 !overflow-visible !bg-[#011d5a]/70 !backdrop-blur-2xl shadow-[0_20px_50px_rgba(1,61,166,0.4)] !border-white/10"
               : "max-w-7xl px-0 py-0 bg-transparent border-transparent"
           }`}
           style={{ transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}
@@ -62,7 +62,7 @@ export function Navbar() {
                     {item.label}
                   </span>
                   {isActive && (
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-white rounded-full" />
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#e11d48] rounded-full" />
                   )}
                 </Link>
               );
@@ -86,7 +86,7 @@ export function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-[100] bg-[#013DA6] flex flex-col justify-center items-center transition-opacity duration-500 md:hidden ${
+        className={`fixed inset-0 z-[100] bg-[#011d5a] flex flex-col justify-center items-center transition-opacity duration-500 md:hidden ${
           isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >

@@ -148,11 +148,11 @@ export function VinylCarousel() {
             <button onClick={() => { setIsPlaying(false); prevRecord(); }} className="p-5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all group backdrop-blur-sm">
               <SkipBack className="w-5 h-5 text-white/60 group-hover:text-white" />
             </button>
-            <button onClick={() => setIsPlaying(!isPlaying)} className="p-7 rounded-full bg-white text-[#013DA6] hover:scale-105 active:scale-95 transition-all shadow-2xl flex items-center justify-center">
+            <button onClick={() => setIsPlaying(!isPlaying)} className="p-7 rounded-full bg-[#e11d48] text-white hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-[#e11d48]/30 flex items-center justify-center glow-accent">
               {isPlaying ? (
-                <Pause className="w-7 h-7 fill-[#013DA6]" />
+                <Pause className="w-7 h-7 fill-white" />
               ) : (
-                <Play className="w-7 h-7 fill-[#013DA6]" />
+                <Play className="w-7 h-7 fill-white" />
               )}
             </button>
             <button onClick={() => { setIsPlaying(false); nextRecord(); }} className="p-5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all group backdrop-blur-sm">
@@ -197,7 +197,7 @@ export function VinylCarousel() {
           <button 
             key={idx} 
             onClick={() => { setIsPlaying(false); setActiveIndex(idx); }}
-            className={`h-1 rounded-full transition-all duration-700 ${idx === activeIndex ? 'w-12 bg-white' : 'w-3 bg-white/10 hover:bg-white/20'}`}
+            className={`h-1 rounded-full transition-all duration-700 ${idx === activeIndex ? 'w-12 bg-[#e11d48]' : 'w-3 bg-white/10 hover:bg-white/20'}`}
           />
         ))}
       </div>
