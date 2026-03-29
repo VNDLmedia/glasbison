@@ -8,33 +8,11 @@ import { BisonLogo, BisonWordmark } from "./BisonLogo";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isOverLight, setIsOverLight] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 60);
-
-      // Check if navbar is over a light background
-      const navY = 40;
-      const el = document.elementFromPoint(window.innerWidth / 2, navY);
-      if (el) {
-        let target: HTMLElement | null = el as HTMLElement;
-        while (target && target !== document.body) {
-          const bg = getComputedStyle(target).backgroundColor;
-          if (bg && bg !== "rgba(0, 0, 0, 0)" && bg !== "transparent") {
-            const match = bg.match(/\d+/g);
-            if (match) {
-              const [r, g, b] = match.map(Number);
-              setIsOverLight(r > 200 && g > 200 && b > 200);
-            }
-            break;
-          }
-          target = target.parentElement;
-        }
-      }
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 60);
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
@@ -51,10 +29,8 @@ export function Navbar() {
         <div
           className={`flex items-center justify-between transition-all duration-500 w-full ${
             isScrolled
-              ? "liquid-glass max-w-fit !rounded-full px-6 py-3 !overflow-visible shadow-[0_20px_50px_rgba(1,61,166,0.4)] border-white/10 bg-[#013DA6]/90 backdrop-blur-2xl"
-              : isOverLight
-                ? "max-w-7xl px-4 py-2 bg-[#013DA6]/80 backdrop-blur-xl rounded-full border border-white/5 shadow-lg"
-                : "max-w-7xl px-0 py-0 bg-transparent border-transparent"
+              ? "max-w-fit rounded-full px-6 py-3 bg-[#013DA6] shadow-[0_20px_50px_rgba(1,61,166,0.5)] border border-white/10"
+              : "max-w-7xl px-0 py-0 bg-transparent border-transparent"
           }`}
           style={{ transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}
         >
@@ -85,7 +61,6 @@ export function Navbar() {
                   <span className="relative z-10 block transition-transform duration-300 group-hover:-translate-y-[1px]">
                     {item.label}
                   </span>
-                  {/* Active indicator */}
                   {isActive && (
                     <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-white rounded-full" />
                   )}

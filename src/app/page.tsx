@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import { useMedia } from "@/context/MediaContext";
 import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { TiltCard } from "@/components/TiltCard";
@@ -116,6 +117,27 @@ function HeroVideo({ progress }: { progress: number }) {
 }
 
 export default function Home() {
+  const { setIsPlaying } = useMedia();
+  const [hasAutoPlayed, setHasAutoPlayed] = useState(false);
+  const statementRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (hasAutoPlayed) return;
+    const el = statementRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAutoPlayed) {
+          setIsPlaying(true);
+          setHasAutoPlayed(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [hasAutoPlayed, setIsPlaying]);
+
   return (
     <div className="min-h-screen text-white bg-[#013DA6] selection:bg-white/20 font-sans">
       <ConstellationCanvas />
@@ -151,7 +173,7 @@ export default function Home() {
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
         <StickySection scrollHeight="220vh">
           {(progress) => (
-            <div className="w-full h-full flex items-center justify-center px-6">
+            <div ref={statementRef} className="w-full h-full flex items-center justify-center px-6">
               <div className="max-w-5xl text-center">
                 <h2
                   className="font-display text-4xl md:text-7xl lg:text-9xl leading-[1.05] font-normal"

@@ -105,7 +105,7 @@ export function VinylCarousel() {
 
       {/* Main Content - 2 SPALTEN GRID */}
       <main 
-        className="w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center relative cursor-grab active:cursor-grabbing touch-none z-10"
+        className="w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-32 items-center relative cursor-grab active:cursor-grabbing touch-none z-10"
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
@@ -124,10 +124,10 @@ export function VinylCarousel() {
             <div className="mb-6 inline-block px-4 py-1.5 border border-white/10 rounded-full text-[10px] font-bold text-white/40 uppercase tracking-[0.2em] bg-white/5 backdrop-blur-md">
               {RECORDS[activeIndex].genre}
             </div>
-            <h2 className="text-4xl md:text-6xl font-normal mb-4 tracking-tighter text-white drop-shadow-lg font-display">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-normal mb-3 tracking-tight text-white drop-shadow-lg font-display">
               {RECORDS[activeIndex].title}
             </h2>
-            <p className="text-xl md:text-2xl text-white/40 font-light mb-12">
+            <p className="text-lg md:text-xl text-white/40 font-light mb-8">
               {RECORDS[activeIndex].artist}
             </p>
           </div>
@@ -151,7 +151,7 @@ export function VinylCarousel() {
 
         {/* SPALTE 2: Platten (Rechts) */}
         <div className="flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-[320px] md:max-w-[420px] aspect-square">
+          <div className="relative w-full max-w-[250px] md:max-w-[320px] lg:max-w-[420px] aspect-square mx-auto">
             {RECORDS.map((record, index) => {
               const isActive = index === activeIndex && !isDragging;
               return (
@@ -180,7 +180,7 @@ export function VinylCarousel() {
       </main>
 
       {/* Progress Indicator */}
-      <div className="mt-20 flex justify-center gap-2 z-10">
+      <div className="mt-10 lg:mt-20 flex justify-center gap-2 z-10">
         {RECORDS.map((_, idx) => (
           <button 
             key={idx} 
