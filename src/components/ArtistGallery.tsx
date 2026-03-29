@@ -167,96 +167,79 @@ export function ArtistGallery() {
               className="absolute inset-0 bg-black/90 backdrop-blur-xl"
             />
 
-            {/* Modal Card */}
+            {/* Modal Card — Blue Glass */}
             <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              className="relative w-full max-w-5xl h-full max-h-[85vh] overflow-hidden rounded-[2rem] md:rounded-[3rem] liquid-glass border border-white/10 shadow-[0_0_100px_rgba(0,0,0,0.5)] flex flex-col md:flex-row"
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              className="relative w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-[#013DA6]/80 backdrop-blur-2xl border border-white/10 shadow-[0_0_80px_rgba(1,61,166,0.4)] flex flex-col md:flex-row text-white"
             >
-              {/* Close Button */}
-              <button 
+              {/* Close */}
+              <button
                 onClick={() => setSelectedArtist(null)}
-                className="absolute top-6 right-6 z-20 p-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all"
+                className="absolute top-5 right-5 z-20 p-2.5 rounded-full bg-white/10 border border-white/10 hover:bg-white/20 transition-all"
               >
-                <X className="w-5 h-5 text-white" />
+                <X className="w-4 h-4 text-white" />
               </button>
 
-              {/* Left Side: Image (Full height on desktop) */}
-              <div className="relative w-full md:w-2/5 h-64 md:h-full shrink-0">
+              {/* Image */}
+              <div className="relative w-full md:w-2/5 h-56 md:h-auto shrink-0">
                 <Image
                   src={selectedArtist.image}
                   alt={selectedArtist.name}
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#013DA6] via-transparent md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-[#013DA6]/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#013DA6]/90 via-transparent md:bg-gradient-to-r md:from-transparent md:to-[#013DA6]/60" />
               </div>
 
-              {/* Right Side: Content */}
-              <div className="flex-1 p-8 md:p-12 lg:p-16 overflow-y-auto no-scrollbar relative">
-                {/* Background ambient glow */}
-                <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-white/[0.03] blur-[80px] rounded-full -mr-20 -mt-20 pointer-events-none" />
-
+              {/* Content */}
+              <div className="flex-1 p-8 md:p-10 overflow-y-auto no-scrollbar">
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: 15 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 }}
+                  transition={{ delay: 0.15 }}
+                  className="space-y-6"
                 >
-                  <div className="mb-6 inline-block px-4 py-1.5 border border-white/10 rounded-full text-[10px] font-semibold text-white/40 uppercase tracking-widest bg-white/5">
-                    {selectedArtist.genre}
-                  </div>
-                  
-                  <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-[#013DA6] mb-4 font-sans">
-                    {selectedArtist.name}
-                  </h2>
-                  
-                  <div className="flex items-center gap-3 mb-8 text-[#013DA6]/60">
-                    <TrendingUp className="w-4 h-4 text-[#013DA6]/30" />
-                    <p className="text-sm md:text-lg font-light tracking-wide">{selectedArtist.stats}</p>
+                  <div>
+                    <span className="text-[10px] font-bold text-white/30 uppercase tracking-[0.3em]">{selectedArtist.genre}</span>
+                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight mt-2 font-sans">{selectedArtist.name}</h2>
                   </div>
 
-                  <div className="w-12 h-1 bg-[#013DA6]/10 mb-8 rounded-full" />
+                  <div className="flex items-center gap-3 text-white/50">
+                    <TrendingUp className="w-4 h-4 text-white/25" />
+                    <p className="text-sm font-light">{selectedArtist.stats}</p>
+                  </div>
 
-                  <p className="text-[#013DA6]/40 text-lg leading-relaxed font-light mb-12 max-w-xl">
+                  <p className="text-white/40 text-base leading-relaxed font-light">
                     {selectedArtist.bio}
                   </p>
 
-                  {/* Spotify Player */}
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 rounded-lg bg-[#1DB954]/10">
-                        <SpotifyIcon />
-                      </div>
-                      <p className="label !text-[#013DA6]/20">Featured Track</p>
-                    </div>
-                    <div className="rounded-2xl overflow-hidden border border-[#013DA6]/5 bg-black/5">
-                      <iframe
-                        src={`https://open.spotify.com/embed/artist/${selectedArtist.spotifyId}?utm_source=generator&theme=0`}
-                        width="100%"
-                        height="152"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"
-                        className="border-none"
-                      />
-                    </div>
+                  {/* Spotify */}
+                  <div className="rounded-xl overflow-hidden border border-white/10">
+                    <iframe
+                      src={`https://open.spotify.com/embed/artist/${selectedArtist.spotifyId}?utm_source=generator&theme=0`}
+                      width="100%"
+                      height="152"
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                      className="border-none"
+                    />
                   </div>
 
-                  {/* Socials */}
+                  {/* Instagram */}
                   {selectedArtist.instagram && (
-                    <div className="mt-12 pt-8 border-t border-[#013DA6]/5">
-                      <a 
-                        href={`https://instagram.com/${selectedArtist.instagram}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[#013DA6]/5 border border-[#013DA6]/10 hover:bg-[#013DA6]/10 transition-all group"
-                      >
-                        <Instagram className="w-4 h-4 text-[#013DA6]/40 group-hover:text-[#013DA6]" />
-                        <span className="text-xs font-bold uppercase tracking-widest text-[#013DA6]/40 group-hover:text-[#013DA6]">
-                          @{selectedArtist.instagram}
-                        </span>
-                      </a>
-                    </div>
+                    <a
+                      href={`https://instagram.com/${selectedArtist.instagram}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all group"
+                    >
+                      <Instagram className="w-4 h-4 text-white/30 group-hover:text-white" />
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-white/30 group-hover:text-white">
+                        @{selectedArtist.instagram}
+                      </span>
+                    </a>
                   )}
                 </motion.div>
               </div>

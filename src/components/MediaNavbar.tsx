@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Play, Pause } from "lucide-react";
 import { useMedia } from "@/context/MediaContext";
@@ -10,6 +10,14 @@ export function MediaNavbar() {
   const { isPlaying, setIsPlaying, currentRecord } = useMedia();
   const pathname = usePathname();
   const router = useRouter();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 60);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleContainerClick = () => {
     if (pathname === "/") {
@@ -23,7 +31,7 @@ export function MediaNavbar() {
   };
 
   return (
-    <div className="fixed top-6 right-6 z-[60] hidden lg:flex items-center">
+    <div className={`fixed top-6 right-6 z-[60] hidden lg:flex items-center transition-all duration-500 ${isScrolled ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}`}>
       <div 
         className="liquid-glass !rounded-full px-4 py-2 flex items-center gap-4 bg-white/5 border-white/10 backdrop-blur-3xl shadow-2xl transition-all duration-500 hover:bg-white/10 group cursor-pointer"
       >
