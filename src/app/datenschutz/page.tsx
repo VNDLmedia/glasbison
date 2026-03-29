@@ -94,7 +94,7 @@ export default function Datenschutz() {
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
         <section className="py-24 md:py-40 bg-[#013DA6] text-center">
           <Reveal>
-            <h2 className="font-display text-5xl md:text-7xl lg:text-8xl tracking-tight opacity-10 leading-[0.95] italic">Safe &<br />Secure.</h2>
+            <h2 className="font-display text-5xl md:text-7xl lg:text-8xl tracking-tight opacity-10 leading-[0.95] italic">safe &<br />secure.</h2>
           </Reveal>
         </section>
       </main>

@@ -18,7 +18,7 @@ export default function ServicesPage() {
       <main className="flex-1">
         <SubpageHero
           label="The Infrastructure"
-          title="Our<br />Services."
+          title="Our<br />services."
           subtitle="Strategic drive and technical precision for cultural architects."
           description="The engine for sustainable growth."
         />
@@ -62,7 +62,7 @@ export default function ServicesPage() {
         <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white text-center">
           <div className="max-w-4xl mx-auto">
             <Reveal>
-              <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-10 italic">Scale Without<br />Compromise.</h2>
+              <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-10 italic">scale Without<br />Compromise.</h2>
               <p className="text-lg md:text-xl font-light text-white/40 max-w-xl mx-auto leading-relaxed italic">
                 Great talent deserves infrastructure that matches its ambition.
               </p>
@@ -80,6 +80,7 @@ export default function ServicesPage() {
                 <p className="label mb-6 !text-[#013DA6]/40">Get Started</p>
                 <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#013DA6] mb-8">
                   Let&apos;s Work<br />Together.
+
                 </h2>
               </Reveal>
               <Reveal delay={0.1}>

@@ -12,7 +12,7 @@ import { ReturnHome } from "@/components/ReturnHome";
 const PROJECTS = [
   {
     slug: "global-shaping",
-    title: "Global Sound Shaping",
+    title: "Global sound shaping",
     category: "Strategic A&R",
     image: "/photos/kai-grammys.jpeg",
     desc: "Bridging the gap between independent creators and major label infrastructure through targeted A&R campaigns across territories.",
@@ -28,7 +28,7 @@ const PROJECTS = [
   },
   {
     slug: "strategic-placements",
-    title: "Strategic Placements",
+    title: "strategic Placements",
     category: "Network",
     image: "/photos/dude-mit-award.png",
     desc: "Curating high-impact sessions that define the Billboard charts. Connecting songwriters with A-list recording artists.",
@@ -119,7 +119,7 @@ export default function ProjectsPage() {
             <Reveal className="mb-20 md:mb-28">
               <p className="label mb-6 text-white/40">Impact</p>
               <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
-                Scale With<br />Precision.
+                scale With<br />Precision.
               </h2>
             </Reveal>
 

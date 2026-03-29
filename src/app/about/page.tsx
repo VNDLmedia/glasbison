@@ -16,7 +16,7 @@ export default function AboutPage() {
       <main className="flex-1">
         <SubpageHero 
           label="The Core Identity"
-          title="Strength Meets<br />Transparency."
+          title="strength Meets<br />Transparency."
           subtitle="A philosophy built on unyielding power protected by absolute clarity."
           description="Glass Bison stands for strength within the music industry. We provide the strategic drive creators deserve."
         />

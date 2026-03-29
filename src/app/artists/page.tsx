@@ -76,7 +76,7 @@ export default function ArtistsPage() {
       <main className="flex-1">
         <SubpageHero
           label="The Roster"
-          title="Sonic<br />Visionaries."
+          title="sonic<br />Visionaries."
           subtitle="Representing the architects behind the world's most defining records."
           description="Our artists don't just follow trends—they set them."
         />

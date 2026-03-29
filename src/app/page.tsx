@@ -192,7 +192,7 @@ export default function Home() {
                     willChange: "transform, opacity",
                   }}
                 >
-                  Strength within<br />the music industry.
+                  strength within<br />the music industry.
                 </h2>
                 <p
                   className="text-base md:text-lg text-white/40 max-w-xl mx-auto mt-12 font-light leading-relaxed"
@@ -219,7 +219,7 @@ export default function Home() {
               <p className="label mb-6 !text-[#013DA6]/40">Track Record</p>
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
                 <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#013DA6]">
-                  The Numbers<br />Speak.
+                  The Numbers<br />speak.
                 </h2>
                 <p className="text-[#013DA6]/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
                   A legacy defined by cultural impact, chart dominance, and relentless execution.
@@ -291,7 +291,7 @@ export default function Home() {
               <Reveal>
                 <p className="label mb-6 !text-[#013DA6]/40">Proven Results</p>
                 <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight font-normal text-[#013DA6]">
-                  The Gold<br />Standard.
+                  The Gold<br />standard.
                 </h2>
               </Reveal>
               <Reveal delay={0.2} className="max-w-md lg:text-right">
@@ -378,7 +378,7 @@ export default function Home() {
               <p className="label mb-6 text-white/40">What We Do</p>
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
                 <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
-                  Our<br />Services.
+                  Our<br />services.
                 </h2>
                 <p className="text-white/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
                   From high-level strategy to studio precision — we guide visionaries to build lasting legacies in a fast-paced industry.
@@ -422,7 +422,7 @@ export default function Home() {
               <p className="label mb-6 !text-[#013DA6]/40">Global Network</p>
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
                 <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#013DA6]">
-                  Strategic<br />Partnerships.
+                  strategic<br />Partnerships.
                 </h2>
                 <p className="text-[#013DA6]/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
                   Our influence spans across every major player in the music and entertainment landscape. A network built on trust and results.
@@ -471,7 +471,7 @@ export default function Home() {
               <p className="label mb-6 text-white/40">About</p>
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
                 <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
-                  Strength Meets<br />Transparency.
+                  strength Meets<br />Transparency.
                 </h2>
                 <div className="max-w-md lg:text-right">
                   <p className="text-white/30 text-lg font-light leading-relaxed">
@@ -591,7 +591,7 @@ export default function Home() {
               <Reveal>
                 <p className="label mb-8 !text-[#013DA6]/40">Contact</p>
                 <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-10 font-normal text-[#013DA6]">
-                  Let&apos;s Build<br />Something Great.
+                  Let&apos;s Build<br />something Great.
                 </h2>
               </Reveal>
               <Reveal delay={0.1}>

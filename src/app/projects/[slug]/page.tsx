@@ -27,7 +27,7 @@ interface ProjectData {
 
 const PROJECT_DATA: Record<string, ProjectData> = {
   "global-shaping": {
-    title: "Global Sound<br />Shaping",
+    title: "Global sound<br />shaping",
     category: "Strategic A&R",
     image: "/photos/kai-grammys.jpeg",
     image2: "/photos/award.png",
@@ -63,7 +63,7 @@ const PROJECT_DATA: Record<string, ProjectData> = {
     quote: "We don't just manage careers — we architect them. Every move is calculated for long-term impact.",
   },
   "strategic-placements": {
-    title: "Strategic<br />Placements",
+    title: "strategic<br />Placements",
     category: "Network",
     image: "/photos/dude-mit-award.png",
     image2: "/photos/kai-grammys.jpeg",
@@ -313,7 +313,7 @@ export default function ProjectDetailPage() {
               <Reveal>
                 <p className="label mb-6 !text-[#013DA6]/40">Next Steps</p>
                 <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#013DA6] mb-8">
-                  Start Your<br />Project.
+                  start Your<br />Project.
                 </h2>
               </Reveal>
               <Reveal delay={0.1}>

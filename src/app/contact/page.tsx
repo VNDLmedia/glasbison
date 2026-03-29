@@ -18,7 +18,7 @@ export default function ContactPage() {
       <main className="flex-1">
         <SubpageHero 
           label="Inquiry Management"
-          title="Start the<br />Dialogue."
+          title="start the<br />Dialogue."
           subtitle="Selectively expanding our roster and global network."
           description="Tell us about your vision, your goals, and your creative drive. Let's define the next sound together."
         />
