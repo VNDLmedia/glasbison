@@ -95,8 +95,7 @@ body::-webkit-scrollbar { display: none; }
 
 .font-display {
   font-family: var(--font-display);
-  padding-left: 0.06em;
-  overflow: visible;
+  padding-left: 0.15em;
 }
 
 .label {
