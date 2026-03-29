@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { SERVICES } from "@/data/content";
 import { SubpageHero } from "@/components/SubpageHero";
+import { ReturnHome } from "@/components/ReturnHome";
 
 export default function ServicesPage() {
   return (
@@ -20,10 +21,12 @@ export default function ServicesPage() {
           description="From high-level career development to studio precision—we provide the engine for sustainable growth."
         />
 
+        <ReturnHome />
+
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             DETAILED SERVICES — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-t-[4rem] -mt-20 shadow-2xl">
+        <section className="pb-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 gap-32">
               {SERVICES.map((service, i) => (

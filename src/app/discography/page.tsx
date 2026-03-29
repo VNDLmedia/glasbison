@@ -7,6 +7,7 @@ import { Reveal } from "@/components/Reveal";
 import { RECORDS } from "@/context/MediaContext";
 import { SocialIcon } from "@/components/SocialIcons";
 import { SubpageHero } from "@/components/SubpageHero";
+import { ReturnHome } from "@/components/ReturnHome";
 
 export default function DiscographyPage() {
   return (
@@ -21,11 +22,18 @@ export default function DiscographyPage() {
           description="Representing producers and songwriters behind over 70 Billion global streams and countless chart-topping moments."
         />
 
+        <ReturnHome />
+
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             CATALOG GRID — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-t-[4rem] -mt-24 shadow-2xl">
+        <section className="pb-24 md:pb-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-7xl mx-auto">
+            <Reveal className="mb-32">
+              <h2 className="font-display text-5xl md:text-8xl tracking-tighter leading-none mb-12">The<br />Hits.</h2>
+              <div className="w-24 h-1.5 bg-[#013DA6] rounded-full" />
+            </Reveal>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
               {RECORDS.map((record, i) => (
                 <Reveal key={record.id} delay={i * 0.05} animation="fade">

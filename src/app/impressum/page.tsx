@@ -6,6 +6,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { SubpageHero } from "@/components/SubpageHero";
+import { ReturnHome } from "@/components/ReturnHome";
 
 export default function Impressum() {
   return (
@@ -20,10 +21,12 @@ export default function Impressum() {
           description="Glass Bison is more than a name. It is our operational philosophy."
         />
 
+        <ReturnHome />
+
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             CONTENT — Multi-Column Layout
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-t-[4rem] -mt-24 shadow-2xl">
+        <section className="pb-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
               <div className="lg:col-span-6 space-y-24">
@@ -33,10 +36,10 @@ export default function Impressum() {
                     <div className="text-3xl md:text-5xl font-display leading-tight text-[#013DA6] tracking-tight font-normal">
                       {CONTACT.company}
                     </div>
-                    <div className="mt-8 text-xl md:text-2xl font-light text-[#013DA6]/60 leading-relaxed font-sans">
+                    <div className="mt-8 text-xl md:text-2xl font-light text-[#013DA6]/60 leading-relaxed font-sans italic">
                       <p>{CONTACT.address.street}</p>
                       <p>{CONTACT.address.zip} {CONTACT.address.city}</p>
-                      <p>Germany</p>
+                      <p className="not-italic opacity-40 mt-4 uppercase tracking-widest text-xs font-bold">Germany</p>
                     </div>
                   </section>
                 </Reveal>
@@ -48,7 +51,7 @@ export default function Impressum() {
                       <a href={`mailto:${CONTACT.email}`} className="text-2xl md:text-3xl font-medium border-b-2 border-[#013DA6]/10 pb-2 inline-block hover:opacity-60 transition-all italic">
                         {CONTACT.email}
                       </a>
-                      <p className="text-xl font-light text-[#013DA6]/40">{CONTACT.phone}</p>
+                      <p className="text-xl font-light text-[#013DA6]/40 tracking-tight">{CONTACT.phone}</p>
                     </div>
                   </section>
                 </Reveal>
@@ -59,8 +62,7 @@ export default function Impressum() {
                   <section>
                     <h2 className="text-[10px] font-black text-[#013DA6]/30 uppercase tracking-[0.3em] mb-8 italic">Editorial Responsibility</h2>
                     <div className="text-2xl md:text-3xl font-light text-[#013DA6]/60 leading-relaxed italic font-sans">
-                      <p className="text-[#013DA6] font-medium not-italic mb-2">{CONTACT.company}</p>
-                      <p>Maximilian Fritsch</p>
+                      <p className="text-[#013DA6] font-medium not-italic mb-2">Maximilian Fritsch</p>
                       <p>{CONTACT.address.street}</p>
                       <p>{CONTACT.address.zip} {CONTACT.address.city}</p>
                     </div>

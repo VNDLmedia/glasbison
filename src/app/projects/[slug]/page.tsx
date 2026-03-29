@@ -8,6 +8,7 @@ import { Reveal } from "@/components/Reveal";
 import Image from "next/image";
 import Link from "next/link";
 import { SubpageHero } from "@/components/SubpageHero";
+import { ReturnHome } from "@/components/ReturnHome";
 
 const PROJECT_DATA = {
   "global-shaping": {
@@ -19,6 +20,23 @@ const PROJECT_DATA = {
     stats: "2.4B Streams"
   }
 };
+
+export function ProjectReturn() {
+  return (
+    <div className="bg-white px-6">
+      <div className="max-w-7xl mx-auto py-8">
+        <Reveal>
+          <Link
+            href="/projects"
+            className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#013DA6]/40 hover:text-[#013DA6] transition-colors inline-block border-b border-[#013DA6]/10 pb-1"
+          >
+            &larr; Back to Projects
+          </Link>
+        </Reveal>
+      </div>
+    </div>
+  );
+}
 
 export default function ProjectDetailPage() {
   const params = useParams();
@@ -37,10 +55,12 @@ export default function ProjectDetailPage() {
           description="A multi-year initiative focused on maximizing cultural reach and commercial stability."
         />
 
+        <ProjectReturn />
+
         {/* Featured Image */}
-        <section className="px-6 relative z-10 -mt-24">
+        <section className="px-6 relative z-10 bg-white">
           <Reveal delay={0.2} animation="scale" className="max-w-7xl mx-auto">
-            <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl border border-white/10">
+            <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl border border-[#013DA6]/10">
               <Image 
                 src={project.image}
                 alt={project.title.replace("<br />", " ")}
@@ -53,7 +73,7 @@ export default function ProjectDetailPage() {
         </section>
 
         {/* Content */}
-        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] rounded-t-[4rem] -mt-24 relative z-20 shadow-2xl">
+        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] rounded-b-[4rem] relative z-20 shadow-2xl">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
             <div className="lg:col-span-7">
               <Reveal>

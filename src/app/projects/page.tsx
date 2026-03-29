@@ -7,6 +7,7 @@ import { Reveal } from "@/components/Reveal";
 import Image from "next/image";
 import Link from "next/link";
 import { SubpageHero } from "@/components/SubpageHero";
+import { ReturnHome } from "@/components/ReturnHome";
 
 const PROJECTS = [
   {
@@ -45,10 +46,12 @@ export default function ProjectsPage() {
           description="We bridge the gap between creative intent and global infrastructure through calculated, high-impact projects."
         />
 
+        <ReturnHome />
+
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             PROJECT GALLERY — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-t-[4rem] -mt-20 shadow-2xl">
+        <section className="pb-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
               {PROJECTS.map((project, i) => (

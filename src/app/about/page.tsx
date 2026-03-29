@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { SubpageHero } from "@/components/SubpageHero";
+import { ReturnHome } from "@/components/ReturnHome";
 import Image from "next/image";
 
 export default function AboutPage() {
@@ -20,8 +21,10 @@ export default function AboutPage() {
           description="Glass Bison stands for strength within the music industry. We provide the strategic drive creators deserve."
         />
 
+        <ReturnHome />
+
         {/* Narrative Section */}
-        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] rounded-t-[3rem] md:rounded-t-[5rem] relative z-10 -mt-20 shadow-2xl">
+        <section className="pb-24 md:pb-48 px-6 bg-white text-[#013DA6] rounded-b-[3rem] md:rounded-b-[5rem] relative z-10 shadow-2xl">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="space-y-12">
               <Reveal>

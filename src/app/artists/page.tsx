@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { ArtistGallery } from "@/components/ArtistGallery";
 import { SubpageHero } from "@/components/SubpageHero";
+import { ReturnHome } from "@/components/ReturnHome";
 import Image from "next/image";
 
 export default function ArtistsPage() {
@@ -21,15 +22,12 @@ export default function ArtistsPage() {
           description="Our artists don't just follow trends—they set them. We provide the strategic infrastructure for long-term cultural dominance."
         />
 
-        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-            TRANSITION — White Space
-        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 bg-white" />
+        <ReturnHome />
 
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             GALLERY — Blue on White Grid
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-t-[4rem] -mt-20 shadow-2xl">
+        <section className="pb-24 md:pb-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-7xl mx-auto">
             <Reveal className="mb-24">
               <h2 className="font-display text-5xl md:text-8xl tracking-tighter leading-none mb-8 text-[#013DA6]">Selected<br />Artists.</h2>
@@ -83,7 +81,7 @@ export default function ArtistsPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             CTA — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-64 px-6 bg-white text-[#013DA6] text-center relative z-10">
+        <section className="py-24 md:py-64 px-6 bg-white text-[#013DA6] text-center relative z-10 rounded-t-[4rem]">
           <div className="max-w-4xl mx-auto">
             <Reveal>
               <h2 className="font-display text-6xl md:text-[12rem] leading-[0.8] tracking-tighter mb-16">Define the<br />Next Sound.</h2>

@@ -8,6 +8,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { CONTACT, SOCIAL_LINKS } from "@/lib/constants";
 import { SocialIcon } from "@/components/SocialIcons";
 import { SubpageHero } from "@/components/SubpageHero";
+import { ReturnHome } from "@/components/ReturnHome";
 
 export default function ContactPage() {
   return (
@@ -22,17 +23,19 @@ export default function ContactPage() {
           description="Tell us about your vision, your goals, and your creative drive. Let's define the next sound together."
         />
 
+        <ReturnHome />
+
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             FORM SECTION — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-t-[4rem] -mt-20 shadow-2xl">
+        <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10 rounded-b-[4rem] shadow-2xl">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-32 items-start">
             {/* Left: Deep Info */}
             <div className="lg:col-span-5 space-y-24">
               <Reveal delay={0.1}>
                 <div className="space-y-6">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#013DA6]/30 italic">Direct Channel</h3>
-                  <a href={`mailto:${CONTACT.email}`} className="text-3xl md:text-5xl font-display text-[#013DA6] hover:opacity-60 transition-all border-b-2 border-[#013DA6]/10 pb-4 inline-block">
+                  <a href={`mailto:${CONTACT.email}`} className="text-3xl md:text-5xl font-display text-[#013DA6] hover:opacity-60 transition-all border-b-2 border-[#013DA6]/10 pb-4 inline-block tracking-tighter">
                     {CONTACT.email}
                   </a>
                   <p className="text-lg text-[#013DA6]/40 font-light max-w-xs italic">For general inquiries, partnership proposals and press requests.</p>
@@ -42,7 +45,7 @@ export default function ContactPage() {
               <Reveal delay={0.2}>
                 <div className="space-y-6">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#013DA6]/30 italic">HQ / Representation</h3>
-                  <p className="text-2xl md:text-4xl font-light text-[#013DA6]/60 leading-relaxed italic">
+                  <p className="text-2xl md:text-4xl font-light text-[#013DA6]/60 leading-relaxed italic tracking-tight">
                     {CONTACT.address.city}, Germany<br />
                     Operating Worldwide.
                   </p>
