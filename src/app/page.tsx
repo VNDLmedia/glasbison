@@ -511,8 +511,35 @@ export default function Home() {
           {(progress) => {
             const words = "We don't build hype. We build careers.".split(" ");
             return (
-              <div className="w-full h-full flex items-center justify-center px-6 bg-[#013DA6]">
-                <div className="max-w-5xl text-center">
+              <div className="w-full h-full flex items-center justify-center px-6 bg-[#013DA6] relative overflow-hidden">
+                {/* Star Grid Background */}
+                <div className="absolute inset-0 pointer-events-none flex justify-between px-[5%]" style={{ opacity: Math.min(0.15, progress * 0.3) }}>
+                  {Array.from({ length: 8 }).map((_, col) => (
+                    <div
+                      key={col}
+                      className="flex flex-col gap-6 text-white/30 text-lg"
+                      style={{
+                        animation: `starScroll${col % 2 === 0 ? 'Up' : 'Down'} ${18 + col * 2}s linear infinite`,
+                      }}
+                    >
+                      {Array.from({ length: 30 }).map((_, row) => (
+                        <span key={row} className="block text-center select-none" style={{ opacity: 0.3 + Math.random() * 0.7 }}>✦</span>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+                <style>{`
+                  @keyframes starScrollUp {
+                    0% { transform: translateY(0); }
+                    100% { transform: translateY(-50%); }
+                  }
+                  @keyframes starScrollDown {
+                    0% { transform: translateY(-50%); }
+                    100% { transform: translateY(0); }
+                  }
+                `}</style>
+
+                <div className="max-w-5xl text-center relative z-10">
                   <div
                     className="w-px bg-white/20 mx-auto mb-16 origin-top"
                     style={{
