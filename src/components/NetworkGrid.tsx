@@ -4,21 +4,21 @@ import React from "react";
 import { Reveal } from "./Reveal";
 
 const MAJORS = [
-  { name: "Universal Music Group", logo: "/Labels/Universal_Music_Group_logo.svg" },
-  { name: "Sony Music", logo: "/Labels/Sony_Music_Entertainment_Logo_2023.svg" },
-  { name: "Warner Music Group", logo: "/Labels/Warner_Music_Group_logo_(2021).svg" },
+  { name: "Universal Music Group", logo: "/Labels/Universal_Music_Group_logo.svg", url: "https://www.universalmusic.com" },
+  { name: "Sony Music", logo: "/Labels/Sony_Music_Entertainment_Logo_2023.svg", url: "https://www.sonymusic.com" },
+  { name: "Warner Music Group", logo: "/Labels/Warner_Music_Group_logo_(2021).svg", url: "https://www.wmg.com" },
 ];
 
 const LABELS = [
-  { name: "Atlantic Records", logo: "/Labels/Atlantic_Records_fan_logo.svg" },
-  { name: "Republic Records", logo: "/Labels/Republic_Records_logo.svg" },
-  { name: "Columbia Records", logo: "/Labels/Columbia_Records_logo.svg" },
-  { name: "RCA Records", logo: "/Labels/RCA_Records_logo.svg" },
-  { name: "Epic Records", logo: "/Labels/Epic-records-logo.svg" },
-  { name: "Capitol Records", logo: "/Labels/Capitol-Records-Logo.svg" },
-  { name: "Interscope", logo: "/Labels/Interscope_Records.svg" },
-  { name: "Def Jam", logo: "/Labels/Def_Jam_Recordings.svg" },
-  { name: "300 Ent.", logo: "/Labels/Logo_for_300_Entertainment.svg" },
+  { name: "Atlantic Records", logo: "/Labels/Atlantic_Records_fan_logo.svg", url: "https://www.atlanticrecords.com" },
+  { name: "Republic Records", logo: "/Labels/Republic_Records_logo.svg", url: "https://www.republicrecords.com" },
+  { name: "Columbia Records", logo: "/Labels/Columbia_Records_logo.svg", url: "https://www.columbiarecords.com" },
+  { name: "RCA Records", logo: "/Labels/RCA_Records_logo.svg", url: "https://www.rcarecords.com" },
+  { name: "Epic Records", logo: "/Labels/Epic-records-logo.svg", url: "https://www.epicrecords.com" },
+  { name: "Capitol Records", logo: "/Labels/Capitol-Records-Logo.svg", url: "https://www.capitolrecords.com" },
+  { name: "Interscope", logo: "/Labels/Interscope_Records.svg", url: "https://www.interscope.com" },
+  { name: "Def Jam", logo: "/Labels/Def_Jam_Recordings.svg", url: "https://www.defjam.com" },
+  { name: "300 Ent.", logo: "/Labels/Logo_for_300_Entertainment.svg", url: "https://www.300ent.com" },
 ];
 
 interface NetworkGridProps {
@@ -39,17 +39,22 @@ export function NetworkGrid({ variant = "white" }: NetworkGridProps) {
         <Reveal>
           <p className={`text-[10px] font-black uppercase tracking-[0.3em] mb-8 ${labelColor}`}>Major Labels</p>
         </Reveal>
-        <div className={`grid grid-cols-1 md:grid-cols-3 gap-4`}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {MAJORS.map((m, i) => (
             <Reveal key={m.name} delay={i * 0.05}>
-              <div className={`group flex items-center justify-center py-10 md:py-14 border ${border} rounded-[1.5rem] ${hoverBg} transition-all duration-300 cursor-default`}>
+              <a
+                href={m.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group flex items-center justify-center py-10 md:py-14 border ${border} rounded-[1.5rem] ${hoverBg} transition-all duration-300 cursor-pointer block`}
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={m.logo}
                   alt={m.name}
                   className={`h-8 md:h-10 w-auto max-w-[160px] object-contain transition-all duration-500 ${logoFilter}`}
                 />
-              </div>
+              </a>
             </Reveal>
           ))}
         </div>
@@ -60,17 +65,22 @@ export function NetworkGrid({ variant = "white" }: NetworkGridProps) {
         <Reveal>
           <p className={`text-[10px] font-black uppercase tracking-[0.3em] mb-8 ${labelColor}`}>Labels &amp; Imprints</p>
         </Reveal>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {LABELS.map((l, i) => (
             <Reveal key={l.name} delay={i * 0.04}>
-              <div className={`group flex items-center justify-center py-8 md:py-10 border ${border} rounded-[1.5rem] ${hoverBg} transition-all duration-300 cursor-default`}>
+              <a
+                href={l.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group flex items-center justify-center py-8 md:py-10 border ${border} rounded-[1.5rem] ${hoverBg} transition-all duration-300 cursor-pointer block`}
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={l.logo}
                   alt={l.name}
                   className={`h-6 md:h-8 w-auto max-w-[120px] object-contain transition-all duration-500 ${logoFilter}`}
                 />
-              </div>
+              </a>
             </Reveal>
           ))}
         </div>
