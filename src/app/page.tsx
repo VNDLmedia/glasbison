@@ -453,7 +453,7 @@ export default function Home() {
               ))}
             </div>
           </Marquee>
-          <div className="h-8" />
+          <div className="h-6" />
           <Marquee speed={50} reverse>
             <div className="flex gap-16 px-10">
               {ARTIST_CREDITS.map((a) => (
@@ -554,7 +554,7 @@ export default function Home() {
 
                 <div className="max-w-5xl text-center relative z-10">
                   <div
-                    className="w-px bg-white/20 mx-auto mb-16 origin-top"
+                    className="w-px bg-[#e11d48]/40 mx-auto mb-16 origin-top"
                     style={{
                       height: 80,
                       transform: `scaleY(${Math.min(1, progress * 3)})`,
