@@ -10,7 +10,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-[#013DA6] text-white flex flex-col font-sans">
       <Navbar />
-      <main className="flex-1 flex flex-col items-center justify-center px-6 relative overflow-hidden">
+      <main className="flex-1 flex flex-col items-center justify-center px-6 relative">
         {/* Background Bison */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-[0.03]">
           <BisonLogo size={800} variant="white" />

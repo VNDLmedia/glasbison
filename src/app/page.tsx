@@ -258,7 +258,7 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             TRACK RECORD — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="track-record" className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative overflow-hidden z-10">
+        <section id="track-record" className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10">
           <div className="absolute right-0 top-24 pointer-events-none opacity-[0.05]">
             <BisonLogo size={800} variant="blue" />
           </div>
@@ -414,7 +414,7 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             LABELS & COLLABS — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-16 md:py-24 bg-[#013DA6] overflow-hidden relative z-10">
+        <section className="py-16 md:py-24 bg-[#013DA6] relative z-10">
           <Marquee speed={40}>
             <div className="flex gap-20 px-10">
               {LABELS.map((l) => (
@@ -535,7 +535,7 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             CONTACT — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="contact" className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative overflow-hidden z-10">
+        <section id="contact" className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10">
           <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#013DA6]/[0.02] blur-[150px] pointer-events-none" />
 
           <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">

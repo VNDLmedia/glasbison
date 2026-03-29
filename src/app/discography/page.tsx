@@ -82,7 +82,7 @@ export default function DiscographyPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             ACHIEVEMENT MOMENT — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white relative overflow-hidden">
+        <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white relative">
           <div className="max-w-5xl mx-auto text-center relative z-10">
             <Reveal>
               <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-12 italic">70+ Billion<br />Streams.</h2>

@@ -46,7 +46,7 @@ export function StickySection({
 
   return (
     <div ref={containerRef} style={{ height: scrollHeight }} className={`relative ${className}`}>
-      <div className="sticky top-0 h-[100dvh] w-full overflow-hidden">
+      <div className="sticky top-0 h-[100dvh] w-full overflow-y-hidden">
         {children(progress)}
       </div>
     </div>

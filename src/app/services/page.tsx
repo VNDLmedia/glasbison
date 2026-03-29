@@ -52,7 +52,7 @@ export default function ServicesPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             MANTRA SECTION — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-48 px-6 bg-[#013DA6] text-white relative overflow-hidden text-center">
+        <section className="py-24 md:py-48 px-6 bg-[#013DA6] text-white relative text-center">
           <div className="max-w-5xl mx-auto relative z-10">
             <Reveal>
               <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-12 italic">Scale Without<br />Compromise.</h2>

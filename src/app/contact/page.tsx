@@ -88,7 +88,7 @@ export default function ContactPage() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             STATEMENT MOMENT — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white text-center relative overflow-hidden">
+        <section className="py-24 md:py-40 px-6 bg-[#013DA6] text-white text-center relative">
           <div className="max-w-4xl mx-auto relative z-10">
             <Reveal>
               <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-10 italic">Unbreakable<br />Vision.</h2>

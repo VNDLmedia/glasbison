@@ -8,7 +8,7 @@ import { SocialIcon } from "./SocialIcons";
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#013DA6] dot-grid pt-24 pb-8 overflow-hidden z-10">
+    <footer className="relative bg-[#013DA6] dot-grid pt-24 pb-8 z-10">
       {/* Schriftzug */}
       <div className="flex justify-center mb-20">
         <BisonSchriftzug height={28} className="opacity-15 md:hidden" />
