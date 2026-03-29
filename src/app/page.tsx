@@ -214,23 +214,37 @@ export default function Home() {
             NUMBERS — Blue on White
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
         <section className="py-24 md:py-48 px-6 bg-white text-[#013DA6] relative z-10">
-          <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-            {ACHIEVEMENTS.map((a, i) => (
-              <Reveal key={a.label} delay={i * 0.12} animation="scale" className="h-full">
-                <TiltCard>
-                  <div className="p-6 md:p-10 text-center h-full flex flex-col justify-center border border-[#013DA6]/10 rounded-[2rem] hover:bg-[#013DA6]/5 transition-colors group min-h-[180px]">
-                    <div className="font-sans font-black text-3xl md:text-5xl mb-4 tracking-tight group-hover:scale-110 transition-transform duration-500">
-                      {a.value.includes("+") ? (
-                        <CountUp target={parseInt(a.value)} suffix="+" duration={2} />
-                      ) : (
-                        a.value
-                      )}
+          <div className="max-w-7xl mx-auto">
+            <Reveal className="mb-16 md:mb-24">
+              <p className="label mb-6 !text-[#013DA6]/40">Track Record</p>
+              <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
+                <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-[#013DA6]">
+                  The Numbers<br />Speak.
+                </h2>
+                <p className="text-[#013DA6]/30 text-lg font-light max-w-md leading-relaxed lg:text-right">
+                  A legacy defined by cultural impact, chart dominance, and relentless execution.
+                </p>
+              </div>
+            </Reveal>
+
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              {ACHIEVEMENTS.map((a, i) => (
+                <Reveal key={a.label} delay={i * 0.1} animation="scale" className="h-full">
+                  <TiltCard>
+                    <div className="p-8 md:p-10 text-center h-full flex flex-col justify-center bg-[#013DA6]/[0.03] border border-[#013DA6]/10 rounded-[2rem] hover:bg-[#013DA6] hover:text-white hover:border-[#013DA6] transition-all duration-500 group min-h-[200px]">
+                      <div className="font-sans font-black text-4xl md:text-5xl mb-4 tracking-tight group-hover:scale-110 transition-transform duration-500">
+                        {a.value.includes("+") ? (
+                          <CountUp target={parseInt(a.value)} suffix="+" duration={2} />
+                        ) : (
+                          a.value
+                        )}
+                      </div>
+                      <div className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#013DA6]/40 group-hover:text-white/50 transition-colors duration-500">{a.label}</div>
                     </div>
-                    <div className="label !text-[#013DA6]/40 text-[10px] font-bold tracking-[0.2em]">{a.label}</div>
-                  </div>
-                </TiltCard>
-              </Reveal>
-            ))}
+                  </TiltCard>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </section>
 
