@@ -177,10 +177,10 @@ export default function Home() {
               {/* Background Bison */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/brand/wordmark-white.svg"
+                src="/brand/logo-white.svg"
                 alt=""
                 aria-hidden="true"
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] lg:w-[700px] h-auto pointer-events-none"
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] md:w-[400px] lg:w-[550px] h-auto pointer-events-none"
                 style={{ opacity: Math.min(0.04, progress * 0.08), transition: "opacity 0.3s" }}
               />
               <div className="max-w-5xl text-center relative z-10">
@@ -445,7 +445,14 @@ export default function Home() {
             ABOUT — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
         <section id="about" className="py-24 md:py-40 px-6 bg-[#013DA6] relative z-10">
-          <div className="max-w-7xl mx-auto">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/brand/logo-white.svg"
+            alt=""
+            aria-hidden="true"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] md:w-[400px] lg:w-[500px] h-auto pointer-events-none opacity-[0.04]"
+          />
+          <div className="max-w-7xl mx-auto relative z-10">
             <Reveal className="mb-20 md:mb-28">
               <p className="label mb-6 text-white/40">About</p>
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
