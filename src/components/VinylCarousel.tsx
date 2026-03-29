@@ -117,15 +117,31 @@ export function VinylCarousel() {
         {/* SPALTE 1: Steuerung (Links) */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left z-10">
           <div key={activeIndex} className="animate-fade-slide">
-            <div className="mb-6 inline-block px-4 py-1.5 border border-white/10 rounded-full text-[10px] font-bold text-white/40 uppercase tracking-[0.2em] bg-white/5 backdrop-blur-md">
-              {RECORDS[activeIndex].genre}
+            <div className="flex items-center gap-3 mb-5 flex-wrap">
+              <span className="inline-block px-4 py-1.5 border border-white/10 rounded-full text-[10px] font-bold text-white/40 uppercase tracking-[0.2em] bg-white/5">
+                {RECORDS[activeIndex].genre}
+              </span>
+              <span className="text-[10px] font-bold text-white/20 uppercase tracking-[0.2em]">
+                {RECORDS[activeIndex].year}
+              </span>
             </div>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-normal mb-3 tracking-tight text-white drop-shadow-lg font-display">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-normal mb-2 tracking-tight text-white drop-shadow-lg font-display">
               {RECORDS[activeIndex].title}
             </h2>
-            <p className="text-lg md:text-xl text-white/40 font-light mb-8">
+            <p className="text-lg md:text-xl text-white/40 font-light mb-4">
               {RECORDS[activeIndex].artist}
             </p>
+            <div className="flex items-center gap-4 mb-8 flex-wrap">
+              <span className="text-[10px] font-bold text-white/25 uppercase tracking-[0.2em] px-3 py-1 border border-white/10 rounded-full">
+                {RECORDS[activeIndex].certification}
+              </span>
+              <span className="text-[10px] text-white/20 tracking-wide">
+                {RECORDS[activeIndex].label}
+              </span>
+              <span className="text-[10px] text-white/15 italic">
+                {RECORDS[activeIndex].role}
+              </span>
+            </div>
           </div>
           
           <div className="flex gap-5 items-center">

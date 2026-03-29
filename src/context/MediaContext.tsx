@@ -9,6 +9,10 @@ export interface Record {
   genre: string;
   color: string;
   coverUrl: string;
+  year: number;
+  certification: string;
+  label: string;
+  role: string;
   spotifyId?: string;
 }
 
@@ -20,6 +24,10 @@ export const RECORDS: Record[] = [
     genre: "Pop / Hip-Hop",
     color: "#e11d48",
     coverUrl: "/Covers/Lil Nas X Montero.jpg",
+    year: 2021,
+    certification: "2x Platinum",
+    label: "Columbia Records",
+    role: "Production",
   },
   {
     id: 2,
@@ -28,6 +36,10 @@ export const RECORDS: Record[] = [
     genre: "Hip-Hop / Melodic",
     color: "#2563eb",
     coverUrl: "/Covers/Gunna Drip too Hard.jpg",
+    year: 2018,
+    certification: "Diamond",
+    label: "Young Stoner Life / 300",
+    role: "Production",
   },
   {
     id: 3,
@@ -36,6 +48,10 @@ export const RECORDS: Record[] = [
     genre: "Hip-Hop / Trap",
     color: "#f97316",
     coverUrl: "/Covers/Migos Culture.jpg",
+    year: 2017,
+    certification: "3x Platinum",
+    label: "Quality Control / Capitol",
+    role: "Production",
   },
   {
     id: 4,
@@ -44,6 +60,10 @@ export const RECORDS: Record[] = [
     genre: "Hip-Hop / Pop",
     color: "#d946ef",
     coverUrl: "/Covers/Nicki Minaj Pink Friday.jpg",
+    year: 2010,
+    certification: "3x Platinum",
+    label: "Cash Money / Universal",
+    role: "songwriting",
   },
   {
     id: 5,
@@ -52,14 +72,22 @@ export const RECORDS: Record[] = [
     genre: "Hip-Hop",
     color: "#059669",
     coverUrl: "/Covers/Latto 777.jpg",
+    year: 2022,
+    certification: "Gold",
+    label: "streamcut / RCA",
+    role: "Production",
   },
   {
     id: 6,
-    title: "Shiesty Season",
+    title: "shiesty season",
     artist: "Pooh Shiesty",
     genre: "Hip-Hop / Trap",
     color: "#4f46e5",
     coverUrl: "/Covers/Pooh Shiesty Certified.jpg",
+    year: 2021,
+    certification: "2x Platinum",
+    label: "1017 Global / Atlantic",
+    role: "Production",
   },
   {
     id: 7,
@@ -68,6 +96,10 @@ export const RECORDS: Record[] = [
     genre: "R&B / Hip-Hop",
     color: "#0891b2",
     coverUrl: "/Covers/T Pain Right Hand.jpg",
+    year: 2015,
+    certification: "Gold",
+    label: "Nappy Boy / RCA",
+    role: "Production & songwriting",
   },
   {
     id: 8,
@@ -76,6 +108,10 @@ export const RECORDS: Record[] = [
     genre: "Hip-Hop / Experimental",
     color: "#dc2626",
     coverUrl: "/Covers/Lil Yachty Lil Boat.jpg",
+    year: 2016,
+    certification: "Gold",
+    label: "Quality Control / Capitol",
+    role: "Production",
   },
 ];
 
