@@ -513,16 +513,16 @@ export default function Home() {
             return (
               <div className="w-full h-full flex items-center justify-center px-6 bg-[#013DA6] relative overflow-hidden">
                 {/* Star Grid Background — scroll-coupled */}
-                <div className="absolute inset-0 pointer-events-none flex justify-around px-[8%]" style={{ opacity: Math.min(0.2, progress * 0.4) }}>
+                <div className="absolute inset-0 pointer-events-none flex justify-around px-[10%]" style={{ opacity: Math.min(0.08, progress * 0.16) }}>
                   {[1, -1, 1, -1].map((direction, col) => {
-                    const speed = 250 + col * 80;
+                    const speed = 150 + col * 50;
                     return (
                       <div
                         key={col}
-                        className="flex flex-col gap-16 text-white/25 text-6xl md:text-7xl lg:text-8xl will-change-transform"
+                        className="flex flex-col gap-20 text-white/20 text-5xl md:text-6xl will-change-transform"
                         style={{ transform: `translate3d(0,${progress * speed * direction}px,0)` }}
                       >
-                        {Array.from({ length: 12 }).map((_, row) => (
+                        {Array.from({ length: 10 }).map((_, row) => (
                           <span key={row} className="block text-center select-none">★</span>
                         ))}
                       </div>
