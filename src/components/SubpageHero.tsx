@@ -20,10 +20,10 @@ export function SubpageHero({
   return (
     <section className="min-h-[90vh] flex flex-col justify-end px-6 relative overflow-hidden bg-[#013DA6] text-white">
       {/* Bison Wordmark Watermark */}
-      <div className="absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-[0.05]">
-        <BisonWordmarkFull height={180} className="block md:hidden" />
-        <BisonWordmarkFull height={320} className="hidden md:block lg:hidden" />
-        <BisonWordmarkFull height={420} className="hidden lg:block" />
+      <div className="absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-[0.07]">
+        <BisonWordmarkFull height={200} className="block md:hidden" />
+        <BisonWordmarkFull height={360} className="hidden md:block lg:hidden" />
+        <BisonWordmarkFull height={480} className="hidden lg:block" />
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10 pt-48 pb-20 md:pb-28">
