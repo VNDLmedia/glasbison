@@ -4,21 +4,21 @@ import React from "react";
 import { Reveal } from "./Reveal";
 
 const MAJORS = [
-  "Universal Music Group",
-  "Sony Music",
-  "Warner Music Group",
+  { name: "Universal Music Group", logo: "/Labels/Universal_Music_Group_logo.svg" },
+  { name: "Sony Music", logo: "/Labels/Sony_Music_Entertainment_Logo_2023.svg" },
+  { name: "Warner Music Group", logo: "/Labels/Warner_Music_Group_logo_(2021).svg" },
 ];
 
 const LABELS = [
-  "Atlantic Records",
-  "Republic Records",
-  "Columbia Records",
-  "RCA Records",
-  "Epic Records",
-  "Capitol Records",
-  "Interscope",
-  "Def Jam",
-  "300 Ent.",
+  { name: "Atlantic Records", logo: "/Labels/Atlantic_Records_fan_logo.svg" },
+  { name: "Republic Records", logo: "/Labels/Republic_Records_logo.svg" },
+  { name: "Columbia Records", logo: "/Labels/Columbia_Records_logo.svg" },
+  { name: "RCA Records", logo: "/Labels/RCA_Records_logo.svg" },
+  { name: "Epic Records", logo: "/Labels/Epic-records-logo.svg" },
+  { name: "Capitol Records", logo: "/Labels/Capitol-Records-Logo.svg" },
+  { name: "Interscope", logo: "/Labels/Interscope_Records.svg" },
+  { name: "Def Jam", logo: "/Labels/Def_Jam_Recordings.svg" },
+  { name: "300 Ent.", logo: "/Labels/Logo_for_300_Entertainment.svg" },
 ];
 
 interface NetworkGridProps {
@@ -29,44 +29,47 @@ export function NetworkGrid({ variant = "white" }: NetworkGridProps) {
   const isBlue = variant === "blue";
   const border = isBlue ? "border-[#013DA6]/10" : "border-white/10";
   const labelColor = isBlue ? "text-[#013DA6]/25" : "text-white/20";
-  const majorText = isBlue ? "text-[#013DA6]/70 group-hover:text-[#013DA6]" : "text-white/70 group-hover:text-white";
-  const majorTag = isBlue ? "text-[#013DA6]/20 group-hover:text-[#013DA6]/40" : "text-white/15 group-hover:text-white/30";
-  const labelText = isBlue ? "text-[#013DA6]/50 group-hover:text-[#013DA6]/80" : "text-white/50 group-hover:text-white/80";
   const hoverBg = isBlue ? "hover:bg-[#013DA6]/[0.03]" : "hover:bg-white/[0.03]";
+  const logoFilter = isBlue ? "grayscale opacity-30 group-hover:opacity-60" : "grayscale brightness-0 invert opacity-30 group-hover:opacity-60";
 
   return (
     <div className="space-y-16">
+      {/* Majors */}
       <div>
         <Reveal>
           <p className={`text-[10px] font-black uppercase tracking-[0.3em] mb-8 ${labelColor}`}>Major Labels</p>
         </Reveal>
-        <div className={`border-t ${border}`}>
-          {MAJORS.map((name, i) => (
-            <Reveal key={name} delay={i * 0.05}>
-              <div className={`group flex items-center justify-between py-6 border-b ${border} ${hoverBg} transition-colors duration-300 px-4 -mx-4 rounded-lg cursor-default`}>
-                <h3 className={`font-sans font-bold text-lg md:text-xl tracking-[0.02em] ${majorText} transition-colors duration-300`}>
-                  {name}
-                </h3>
-                <span className={`text-[10px] font-bold uppercase tracking-[0.2em] ${majorTag} transition-colors duration-300`}>
-                  Major
-                </span>
+        <div className={`grid grid-cols-1 md:grid-cols-3 gap-4`}>
+          {MAJORS.map((m, i) => (
+            <Reveal key={m.name} delay={i * 0.05}>
+              <div className={`group flex items-center justify-center py-10 md:py-14 border ${border} rounded-[1.5rem] ${hoverBg} transition-all duration-300 cursor-default`}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={m.logo}
+                  alt={m.name}
+                  className={`h-8 md:h-10 w-auto max-w-[160px] object-contain transition-all duration-500 ${logoFilter}`}
+                />
               </div>
             </Reveal>
           ))}
         </div>
       </div>
 
+      {/* Labels & Imprints */}
       <div>
         <Reveal>
           <p className={`text-[10px] font-black uppercase tracking-[0.3em] mb-8 ${labelColor}`}>Labels &amp; Imprints</p>
         </Reveal>
-        <div className={`grid grid-cols-1 md:grid-cols-3 gap-x-8 border-t ${border}`}>
-          {LABELS.map((name, i) => (
-            <Reveal key={name} delay={i * 0.04}>
-              <div className={`group py-5 border-b ${border} ${hoverBg} transition-colors duration-300 px-4 -mx-4 rounded-lg cursor-default`}>
-                <h3 className={`font-sans font-medium text-base tracking-[0.02em] ${labelText} transition-colors duration-300`}>
-                  {name}
-                </h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+          {LABELS.map((l, i) => (
+            <Reveal key={l.name} delay={i * 0.04}>
+              <div className={`group flex items-center justify-center py-8 md:py-10 border ${border} rounded-[1.5rem] ${hoverBg} transition-all duration-300 cursor-default`}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={l.logo}
+                  alt={l.name}
+                  className={`h-6 md:h-8 w-auto max-w-[120px] object-contain transition-all duration-500 ${logoFilter}`}
+                />
               </div>
             </Reveal>
           ))}
