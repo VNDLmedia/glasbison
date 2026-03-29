@@ -513,16 +513,16 @@ export default function Home() {
             return (
               <div className="w-full h-full flex items-center justify-center px-6 bg-[#013DA6] relative overflow-hidden">
                 {/* Star Grid Background */}
-                <div className="absolute inset-0 pointer-events-none flex justify-between px-[5%]" style={{ opacity: Math.min(0.15, progress * 0.3) }}>
-                  {Array.from({ length: 8 }).map((_, col) => (
+                <div className="absolute inset-0 pointer-events-none flex justify-between px-[3%]" style={{ opacity: Math.min(0.25, progress * 0.5) }}>
+                  {Array.from({ length: 12 }).map((_, col) => (
                     <div
                       key={col}
-                      className="flex flex-col gap-6 text-white/30 text-lg"
+                      className="flex flex-col gap-8 text-white/30 text-3xl md:text-4xl"
                       style={{
                         animation: `starScroll${col % 2 === 0 ? 'Up' : 'Down'} ${18 + col * 2}s linear infinite`,
                       }}
                     >
-                      {Array.from({ length: 30 }).map((_, row) => (
+                      {Array.from({ length: 40 }).map((_, row) => (
                         <span key={row} className="block text-center select-none" style={{ opacity: 0.3 + Math.random() * 0.7 }}>✦</span>
                       ))}
                     </div>
