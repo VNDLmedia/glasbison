@@ -15,52 +15,68 @@ export interface Record {
 export const RECORDS: Record[] = [
   {
     id: 1,
-    title: "Neon Nights",
-    artist: "Synthwave Collective",
-    genre: "Electronic",
-    color: "#d946ef",
-    coverUrl: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=600&h=600"
+    title: "Montero",
+    artist: "Lil Nas X",
+    genre: "Pop / Hip-Hop",
+    color: "#e11d48",
+    coverUrl: "/covers/Lil Nas X Montero.jpg",
   },
   {
     id: 2,
-    title: "Midnight Jazz",
-    artist: "The Blue Quartet",
-    genre: "Jazz Classics",
+    title: "Drip Too Hard",
+    artist: "Gunna",
+    genre: "Hip-Hop / Melodic",
     color: "#2563eb",
-    coverUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=600&h=600"
+    coverUrl: "/covers/Gunna Drip too Hard.jpg",
   },
   {
     id: 3,
-    title: "Forest Whispers",
-    artist: "Echoes of Nature",
-    genre: "Ambient",
-    color: "#059669",
-    coverUrl: "https://images.unsplash.com/photo-1493225457124-a1a2a5f5f9af?auto=format&fit=crop&q=80&w=600&h=600"
+    title: "Culture",
+    artist: "Migos",
+    genre: "Hip-Hop / Trap",
+    color: "#f97316",
+    coverUrl: "/covers/Migos Culture.jpg",
   },
   {
     id: 4,
-    title: "Urban Melancholy",
-    artist: "City Lights",
-    genre: "Lo-Fi Beats",
-    color: "#f97316",
-    coverUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600&h=600"
+    title: "Pink Friday",
+    artist: "Nicki Minaj",
+    genre: "Hip-Hop / Pop",
+    color: "#d946ef",
+    coverUrl: "/covers/Nicki Minaj Pink Friday.jpg",
   },
   {
     id: 5,
-    title: "Analog Dreams",
-    artist: "Vintage Audio",
-    genre: "Indie Rock",
-    color: "#e11d48",
-    coverUrl: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=600&h=600"
+    title: "777",
+    artist: "Latto",
+    genre: "Hip-Hop",
+    color: "#059669",
+    coverUrl: "/covers/Latto 777.jpg",
   },
   {
     id: 6,
-    title: "Deep Space",
-    artist: "Cosmic Frequencies",
-    genre: "Techno",
+    title: "Shiesty Season",
+    artist: "Pooh Shiesty",
+    genre: "Hip-Hop / Trap",
     color: "#4f46e5",
-    coverUrl: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=600&h=600"
-  }
+    coverUrl: "/covers/Pooh Shiesty Certified.jpg",
+  },
+  {
+    id: 7,
+    title: "Right Hand",
+    artist: "T-Pain",
+    genre: "R&B / Hip-Hop",
+    color: "#0891b2",
+    coverUrl: "/covers/T Pain Right Hand.jpg",
+  },
+  {
+    id: 8,
+    title: "Lil Boat",
+    artist: "Lil Yachty",
+    genre: "Hip-Hop / Experimental",
+    color: "#dc2626",
+    coverUrl: "/covers/Lil Yachty Lil Boat.jpg",
+  },
 ];
 
 interface MediaContextType {
