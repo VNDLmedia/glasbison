@@ -512,32 +512,25 @@ export default function Home() {
             const words = "We don't build hype. We build careers.".split(" ");
             return (
               <div className="w-full h-full flex items-center justify-center px-6 bg-[#013DA6] relative overflow-hidden">
-                {/* Star Grid Background */}
-                <div className="absolute inset-0 pointer-events-none flex justify-between px-[3%]" style={{ opacity: Math.min(0.25, progress * 0.5) }}>
-                  {Array.from({ length: 12 }).map((_, col) => (
-                    <div
-                      key={col}
-                      className="flex flex-col gap-8 text-white/30 text-3xl md:text-4xl"
-                      style={{
-                        animation: `starScroll${col % 2 === 0 ? 'Up' : 'Down'} ${18 + col * 2}s linear infinite`,
-                      }}
-                    >
-                      {Array.from({ length: 40 }).map((_, row) => (
-                        <span key={row} className="block text-center select-none" style={{ opacity: 0.3 + Math.random() * 0.7 }}>★</span>
-                      ))}
-                    </div>
-                  ))}
+                {/* Star Grid Background — scroll-coupled */}
+                <div className="absolute inset-0 pointer-events-none flex justify-around px-[5%]" style={{ opacity: Math.min(0.25, progress * 0.5) }}>
+                  {Array.from({ length: 6 }).map((_, col) => {
+                    const direction = col % 2 === 0 ? -1 : 1;
+                    const speed = 300 + col * 60;
+                    const offset = progress * speed * direction;
+                    return (
+                      <div
+                        key={col}
+                        className="flex flex-col gap-12 text-white/30 text-5xl md:text-6xl lg:text-7xl"
+                        style={{ transform: `translateY(${offset}px)`, transition: "transform 0.1s linear" }}
+                      >
+                        {Array.from({ length: 20 }).map((_, row) => (
+                          <span key={row} className="block text-center select-none" style={{ opacity: 0.2 + (row % 3) * 0.3 }}>★</span>
+                        ))}
+                      </div>
+                    );
+                  })}
                 </div>
-                <style>{`
-                  @keyframes starScrollUp {
-                    0% { transform: translateY(0); }
-                    100% { transform: translateY(-50%); }
-                  }
-                  @keyframes starScrollDown {
-                    0% { transform: translateY(-50%); }
-                    100% { transform: translateY(0); }
-                  }
-                `}</style>
 
                 <div className="max-w-5xl text-center relative z-10">
                   <div
