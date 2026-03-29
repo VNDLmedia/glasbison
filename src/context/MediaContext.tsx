@@ -111,6 +111,7 @@ export function MediaProvider({ children }: { children: ReactNode }) {
     if (!audioRef.current) {
       audioRef.current = new Audio("/Lil Nas X - Old Town Road (Official Video) ft. Billy Ray Cyrus.mp3");
       audioRef.current.loop = true;
+      audioRef.current.volume = 0.3;
     }
     if (isPlaying) {
       audioRef.current.play().catch(() => {});

@@ -173,8 +173,17 @@ export default function Home() {
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
         <StickySection scrollHeight="220vh">
           {(progress) => (
-            <div ref={statementRef} className="w-full h-full flex items-center justify-center px-6">
-              <div className="max-w-5xl text-center">
+            <div ref={statementRef} className="w-full h-full flex items-center justify-center px-6 relative">
+              {/* Background Bison */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/brand/wordmark-white.svg"
+                alt=""
+                aria-hidden="true"
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] lg:w-[700px] h-auto pointer-events-none"
+                style={{ opacity: Math.min(0.04, progress * 0.08), transition: "opacity 0.3s" }}
+              />
+              <div className="max-w-5xl text-center relative z-10">
                 <h2
                   className="font-display text-4xl md:text-7xl lg:text-9xl leading-[1.05] font-normal"
                   style={{
@@ -228,11 +237,11 @@ export default function Home() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             DISCOGRAPHY — White on Blue
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <section id="discography" className="py-16 md:py-28 px-6 bg-[#013DA6] text-white relative z-10">
+        <section id="discography" className="py-12 md:py-20 px-6 bg-[#013DA6] text-white relative z-10">
           <div className="max-w-7xl mx-auto">
-            <Reveal className="mb-12 md:mb-20 text-center lg:text-left">
-              <p className="label mb-4 text-white/40">Discography</p>
-              <h2 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.9] tracking-tight font-normal">
+            <Reveal className="mb-8 md:mb-14 text-center lg:text-left">
+              <p className="label mb-3 text-white/40">Discography</p>
+              <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[0.9] tracking-tight font-normal">
                 Discography.
               </h2>
             </Reveal>
